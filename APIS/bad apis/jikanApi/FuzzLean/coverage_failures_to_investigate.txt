@@ -1,0 +1,1970 @@
+This file contains the failing requests, ordered by the number of blocked dependent requests.
+To improve coverage, fix the failing requests in the order listed in this file.
+
+Note: some requests are labeled as 'sequence failure'.
+This means the request depends on another request that is failing intermittently.
+For example, a DELETE request for a resource may be skipped because the resource
+PUT request failed due to exceeding quota.  The same PUT request succeeded earlier (and may
+succeed later depending on the resource clean-up behavior in the service), so it is
+considered an intermittent failure.
+
+-----------------------------------------------
+Request: Get /manga/{id}/moreinfo
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/moreinfo HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:48 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/moreinfo\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/moreinfo HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:49 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/moreinfo\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:49 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:49 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /characters/{id}/manga
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/characters/1/manga HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:49 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1/manga\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/characters/1/manga HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:50 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1/manga\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/videos/episodes
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/videos/episodes?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:50 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/videos/episodes?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/videos/episodes HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:50 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/videos/episodes\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/reviews
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/reviews?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:51 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/reviews?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/reviews HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:51 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/reviews\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /watch/promos
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/watch/promos?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:51 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/watch/promos?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/watch/promos HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/watch/promos\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/episodes
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/episodes?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/episodes?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/episodes HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/episodes\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/reviews
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/reviews?page=1&preliminary=true&spoiler=true HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:53 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/reviews?page=1&preliminary=true&spoiler=true\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/reviews HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:53 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/reviews\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime?unapproved=true&page=1&limit=1&q=fuzzstring&type=tv&score=1.23&min_score=1.23&max_score=1.23&status=airing&rating=g&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring&producers=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:53 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime?unapproved=true&page=1&limit=1&q=fuzzstring&type=tv&score=1.23&min_score=1.23&max_score=1.23&status=airing&rating=g&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring&producers=fuzzstring&start_date=fuzzstring&end_date=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime?unapproved=true&page=1&limit=1&q=fuzzstring&type=tv&score=1.23&min_score=1.23&max_score=1.23&status=airing&rating=g&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring&producers=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:54 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime?unapproved=true&page=1&limit=1&q=fuzzstring&type=tv&score=1.23&min_score=1.23&max_score=1.23&status=airing&rating=g&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring&producers=fuzzstring&start_date=fuzzstring&end_date=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/anime?unapproved=true&page=1&limit=1&q=fuzzstring&type=tv&score=1.23&min_score=1.23&max_score=1.23&status=airing&rating=g&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=title&sort=desc&letter=fuzzstring&producers=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:54 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime?unapproved=true&page=1&limit=1&q=fuzzstring&type=tv&score=1.23&min_score=1.23&max_score=1.23&status=airing&rating=g&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=title&sort=desc&letter=fuzzstring&producers=fuzzstring&start_date=fuzzstring&end_date=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/anime?unapproved=true&page=1&limit=1&q=fuzzstring&type=tv&score=1.23&min_score=1.23&max_score=1.23&status=airing&rating=g&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=title&sort=asc&letter=fuzzstring&producers=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:54 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime?unapproved=true&page=1&limit=1&q=fuzzstring&type=tv&score=1.23&min_score=1.23&max_score=1.23&status=airing&rating=g&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=title&sort=asc&letter=fuzzstring&producers=fuzzstring&start_date=fuzzstring&end_date=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/anime?unapproved=true&page=1&limit=1&q=fuzzstring&type=tv&score=1.23&min_score=1.23&max_score=1.23&status=airing&rating=g&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=start_date&sort=desc&letter=fuzzstring&producers=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:56:55 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime?unapproved=true&page=1&limit=1&q=fuzzstring&type=tv&score=1.23&min_score=1.23&max_score=1.23&status=airing&rating=g&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=start_date&sort=desc&letter=fuzzstring&producers=fuzzstring&start_date=fuzzstring&end_date=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /producers/{id}/external
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/producers/1/external HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:02 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers/1/external\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/producers/1/external HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers/1/external\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /random/anime
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/random/anime HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/random/anime\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/random/anime HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:04 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/random/anime\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /people/{id}/manga
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/people/1/manga HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1/manga\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/people/1/manga HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1/manga\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /clubs/{id}/relations
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/clubs/1/relations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs/1/relations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/clubs/1/relations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:06 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs/1/relations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /genres/anime
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/genres/anime?filter=genres HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:06 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/genres/anime?filter=genres\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/genres/anime?filter=explicit_genres HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/genres/anime?filter=explicit_genres\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/genres/anime?filter=themes HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/genres/anime?filter=themes\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/genres/anime?filter=demographics HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/genres/anime?filter=demographics\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/genres/anime HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/genres/anime\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/characters
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/characters HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/characters\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/characters HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/characters\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/relations
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/relations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/relations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/relations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/relations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/pictures
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/pictures HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:09 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/pictures\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/pictures HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/pictures\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/history
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/history?type=anime HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/history?type=anime\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/history?type=manga HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:11 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/history?type=manga\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/history HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/history\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/episodes/{episode}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/episodes/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/episodes/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/episodes/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/episodes/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /people/{id}/pictures
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/people/1/pictures HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:13 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1/pictures\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/people/1/pictures HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:13 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1/pictures\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /random/manga
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/random/manga HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:13 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/random/manga\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/random/manga HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/random/manga\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /people
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/people?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/people?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/people?page=1&limit=1&q=fuzzstring&order_by=name&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people?page=1&limit=1&q=fuzzstring&order_by=name&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/people?page=1&limit=1&q=fuzzstring&order_by=name&sort=asc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people?page=1&limit=1&q=fuzzstring&order_by=name&sort=asc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/people?page=1&limit=1&q=fuzzstring&order_by=birthday&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people?page=1&limit=1&q=fuzzstring&order_by=birthday&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /random/users
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/random/users HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/random/users\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/random/users HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/random/users\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /random/characters
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/random/characters HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/random/characters\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/random/characters HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/random/characters\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /magazines
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/magazines?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/magazines?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/magazines?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/magazines?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/magazines?page=1&limit=1&q=fuzzstring&order_by=name&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/magazines?page=1&limit=1&q=fuzzstring&order_by=name&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/magazines?page=1&limit=1&q=fuzzstring&order_by=name&sort=asc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/magazines?page=1&limit=1&q=fuzzstring&order_by=name&sort=asc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/magazines?page=1&limit=1&q=fuzzstring&order_by=count&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:19 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/magazines?page=1&limit=1&q=fuzzstring&order_by=count&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /top/characters
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/top/characters?page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:19 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/characters?page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/top/characters HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:20 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/characters\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /recommendations/anime
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/recommendations/anime?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:20 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/recommendations/anime?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/recommendations/anime HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:20 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/recommendations/anime\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /clubs/{id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/clubs/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/clubs/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/statistics
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/statistics HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/statistics\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/statistics HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/statistics\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /watch/promos/popular
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/watch/promos/popular HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/watch/promos/popular\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/watch/promos/popular HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/watch/promos/popular\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /characters/{id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/characters/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/characters/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga?unapproved=true&page=1&limit=1&q=fuzzstring&type=manga&score=1.23&min_score=1.23&max_score=1.23&status=publishing&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring&magazines=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga?unapproved=true&page=1&limit=1&q=fuzzstring&type=manga&score=1.23&min_score=1.23&max_score=1.23&status=publishing&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring&magazines=fuzzstring&start_date=fuzzstring&end_date=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga?unapproved=true&page=1&limit=1&q=fuzzstring&type=manga&score=1.23&min_score=1.23&max_score=1.23&status=publishing&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring&magazines=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga?unapproved=true&page=1&limit=1&q=fuzzstring&type=manga&score=1.23&min_score=1.23&max_score=1.23&status=publishing&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring&magazines=fuzzstring&start_date=fuzzstring&end_date=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/manga?unapproved=true&page=1&limit=1&q=fuzzstring&type=manga&score=1.23&min_score=1.23&max_score=1.23&status=publishing&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=title&sort=desc&letter=fuzzstring&magazines=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga?unapproved=true&page=1&limit=1&q=fuzzstring&type=manga&score=1.23&min_score=1.23&max_score=1.23&status=publishing&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=title&sort=desc&letter=fuzzstring&magazines=fuzzstring&start_date=fuzzstring&end_date=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/manga?unapproved=true&page=1&limit=1&q=fuzzstring&type=manga&score=1.23&min_score=1.23&max_score=1.23&status=publishing&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=title&sort=asc&letter=fuzzstring&magazines=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga?unapproved=true&page=1&limit=1&q=fuzzstring&type=manga&score=1.23&min_score=1.23&max_score=1.23&status=publishing&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=title&sort=asc&letter=fuzzstring&magazines=fuzzstring&start_date=fuzzstring&end_date=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/manga?unapproved=true&page=1&limit=1&q=fuzzstring&type=manga&score=1.23&min_score=1.23&max_score=1.23&status=publishing&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=start_date&sort=desc&letter=fuzzstring&magazines=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga?unapproved=true&page=1&limit=1&q=fuzzstring&type=manga&score=1.23&min_score=1.23&max_score=1.23&status=publishing&sfw=true&genres=fuzzstring&genres_exclude=fuzzstring&order_by=start_date&sort=desc&letter=fuzzstring&magazines=fuzzstring&start_date=fuzzstring&end_date=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /top/reviews
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/top/reviews?page=1&type=anime&preliminary=true&spoilers=true HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/reviews?page=1&type=anime&preliminary=true&spoilers=true\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/top/reviews?page=1&type=manga&preliminary=true&spoilers=true HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/reviews?page=1&type=manga&preliminary=true&spoilers=true\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/top/reviews HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/reviews\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /characters/{id}/pictures
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/characters/1/pictures HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1/pictures\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/characters/1/pictures HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1/pictures\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/about
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/about HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/about\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/about HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:32 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/about\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/moreinfo
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/moreinfo HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:32 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/moreinfo\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/moreinfo HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:32 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/moreinfo\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /top/anime
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/top/anime?type=tv&filter=airing&rating=g&sfw=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:33 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/anime?type=tv&filter=airing&rating=g&sfw=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/top/anime?type=tv&filter=airing&rating=pg&sfw=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:33 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/anime?type=tv&filter=airing&rating=pg&sfw=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/top/anime?type=tv&filter=airing&rating=pg13&sfw=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:33 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/anime?type=tv&filter=airing&rating=pg13&sfw=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/top/anime?type=tv&filter=airing&rating=r17&sfw=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:33 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/anime?type=tv&filter=airing&rating=r17&sfw=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/top/anime?type=tv&filter=airing&rating=r&sfw=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:34 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/anime?type=tv&filter=airing&rating=r&sfw=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/forum
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/forum?filter=all HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:38 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/forum?filter=all\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/forum?filter=episode HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:38 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/forum?filter=episode\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/anime/1/forum?filter=other HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:38 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/forum?filter=other\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/anime/1/forum HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:38 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/forum\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /top/people
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/top/people?page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:39 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/people?page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/top/people HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:39 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/people\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/recommendations
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/recommendations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:39 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/recommendations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/recommendations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:39 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/recommendations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/recommendations
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/recommendations?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:40 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/recommendations?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/recommendations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:40 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/recommendations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /random/people
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/random/people HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:40 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/random/people\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/random/people HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:41 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/random/people\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /watch/episodes/popular
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/watch/episodes/popular HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:41 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/watch/episodes/popular\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/watch/episodes/popular HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:41 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/watch/episodes/popular\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /watch/episodes
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/watch/episodes HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/watch/episodes\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/watch/episodes HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/watch/episodes\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/external
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/external HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:43 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/external\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/external HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:43 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/external\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/userupdates
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/userupdates?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:43 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/userupdates?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/userupdates HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:43 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/userupdates\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/clubs
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/clubs?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:44 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/clubs?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/clubs HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:44 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/clubs\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/favorites
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/favorites HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:44 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/favorites\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/favorites HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:45 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/favorites\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /top/manga
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/top/manga?type=manga&filter=publishing&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:45 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/manga?type=manga&filter=publishing&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/top/manga?type=manga&filter=upcoming&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:45 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/manga?type=manga&filter=upcoming&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/top/manga?type=manga&filter=bypopularity&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:46 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/manga?type=manga&filter=bypopularity&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/top/manga?type=manga&filter=favorite&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:46 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/manga?type=manga&filter=favorite&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/top/manga?type=novel&filter=publishing&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:46 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/top/manga?type=novel&filter=publishing&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /people/{id}/full
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/people/1/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:50 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/people/1/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:51 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/external
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/external HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:51 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/external\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/external HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:51 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/external\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/videos
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/videos HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/videos\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/videos HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/videos\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/pictures
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/pictures HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/pictures\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/pictures HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:53 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/pictures\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /clubs/{id}/staff
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/clubs/1/staff HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:53 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs/1/staff\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/clubs/1/staff HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:53 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs/1/staff\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/full
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:54 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:54 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /people/{id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/people/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:55 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/people/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:55 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /producers/{id}/full
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/producers/1/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:55 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers/1/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/producers/1/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:55 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers/1/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /characters/{id}/full
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/characters/1/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:56 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/characters/1/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:56 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /characters/{id}/voices
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/characters/1/voices HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:56 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1/voices\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/characters/1/voices HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:57 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1/voices\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /people/{id}/anime
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/people/1/anime HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:57 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1/anime\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/people/1/anime HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:58 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1/anime\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /people/{id}/voices
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/people/1/voices HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:58 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1/voices\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/people/1/voices HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:58 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/people/1/voices\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /schedules
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/schedules?filter=monday&kids=true&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:59 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/schedules?filter=monday&kids=true&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/schedules?filter=monday&kids=true&sfw=false&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:59 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/schedules?filter=monday&kids=true&sfw=false&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/schedules?filter=monday&kids=false&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:59 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/schedules?filter=monday&kids=false&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/schedules?filter=monday&kids=false&sfw=false&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:57:59 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/schedules?filter=monday&kids=false&sfw=false&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/schedules?filter=tuesday&kids=true&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:00 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/schedules?filter=tuesday&kids=true&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /seasons
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/seasons HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/seasons HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /reviews/anime
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/reviews/anime?page=1&preliminary=true&spoiler=true HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/reviews/anime?page=1&preliminary=true&spoiler=true\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/reviews/anime HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:06 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/reviews/anime\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/characters
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/characters HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:06 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/characters\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/characters HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:06 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/characters\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/statistics
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/statistics HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:06 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/statistics\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/statistics HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/statistics\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/forum
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/forum?filter=all HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/forum?filter=all\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/forum?filter=episode HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/forum?filter=episode\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/manga/1/forum?filter=other HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/forum?filter=other\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/manga/1/forum HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/forum\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /recommendations/manga
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/recommendations/manga?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/recommendations/manga?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/recommendations/manga HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:09 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/recommendations/manga\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/external
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/external HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:09 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/external\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/external HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:09 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/external\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/userbyid/{id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/userbyid/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/userbyid/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/userbyid/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/userbyid/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/news
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/news?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:11 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/news?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/news HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:11 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/news\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /clubs
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/clubs?page=1&limit=1&q=fuzzstring&type=public&category=anime&order_by=mal_id&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs?page=1&limit=1&q=fuzzstring&type=public&category=anime&order_by=mal_id&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/clubs?page=1&limit=1&q=fuzzstring&type=public&category=anime&order_by=mal_id&sort=asc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs?page=1&limit=1&q=fuzzstring&type=public&category=anime&order_by=mal_id&sort=asc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/clubs?page=1&limit=1&q=fuzzstring&type=public&category=anime&order_by=name&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:13 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs?page=1&limit=1&q=fuzzstring&type=public&category=anime&order_by=name&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/clubs?page=1&limit=1&q=fuzzstring&type=public&category=anime&order_by=name&sort=asc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:13 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs?page=1&limit=1&q=fuzzstring&type=public&category=anime&order_by=name&sort=asc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/clubs?page=1&limit=1&q=fuzzstring&type=public&category=anime&order_by=members_count&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs?page=1&limit=1&q=fuzzstring&type=public&category=anime&order_by=members_count&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/full
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:19 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:20 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /seasons/upcoming
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/seasons/upcoming?filter=tv&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/upcoming?filter=tv&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/seasons/upcoming?filter=movie&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/upcoming?filter=movie&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/seasons/upcoming?filter=ova&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/upcoming?filter=ova&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/seasons/upcoming?filter=special&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/upcoming?filter=special&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/seasons/upcoming?filter=ona&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/upcoming?filter=ona&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/recommendations
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/recommendations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/recommendations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/recommendations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/recommendations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /characters/{id}/anime
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/characters/1/anime HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:25 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1/anime\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/characters/1/anime HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:25 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters/1/anime\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/userupdates
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/userupdates?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:26 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/userupdates?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/userupdates HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:26 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/userupdates\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users?page=1&limit=1&q=fuzzstring&gender=any&location=fuzzstring&maxAge=1&minAge=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:27 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users?page=1&limit=1&q=fuzzstring&gender=any&location=fuzzstring&maxAge=1&minAge=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users?page=1&limit=1&q=fuzzstring&gender=male&location=fuzzstring&maxAge=1&minAge=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:27 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users?page=1&limit=1&q=fuzzstring&gender=male&location=fuzzstring&maxAge=1&minAge=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/users?page=1&limit=1&q=fuzzstring&gender=female&location=fuzzstring&maxAge=1&minAge=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:27 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users?page=1&limit=1&q=fuzzstring&gender=female&location=fuzzstring&maxAge=1&minAge=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/users?page=1&limit=1&q=fuzzstring&gender=nonbinary&location=fuzzstring&maxAge=1&minAge=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:28 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users?page=1&limit=1&q=fuzzstring&gender=nonbinary&location=fuzzstring&maxAge=1&minAge=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/users HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:28 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:29 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:29 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /seasons/{year}/{season}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/seasons/1/fuzzstring?filter=tv&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/1/fuzzstring?filter=tv&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/seasons/1/fuzzstring?filter=movie&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/1/fuzzstring?filter=movie&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/seasons/1/fuzzstring?filter=ova&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/1/fuzzstring?filter=ova&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/seasons/1/fuzzstring?filter=special&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/1/fuzzstring?filter=special&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/seasons/1/fuzzstring?filter=ona&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/1/fuzzstring?filter=ona&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /genres/manga
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/genres/manga?filter=genres HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:32 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/genres/manga?filter=genres\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/genres/manga?filter=explicit_genres HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:33 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/genres/manga?filter=explicit_genres\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/genres/manga?filter=themes HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:33 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/genres/manga?filter=themes\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/genres/manga?filter=demographics HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:34 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/genres/manga?filter=demographics\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/genres/manga HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:34 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/genres/manga\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/themes
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/themes HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:34 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/themes\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/themes HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:35 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/themes\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/statistics
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/statistics HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:35 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/statistics\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/statistics HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:35 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/statistics\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /characters
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/characters?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:36 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/characters?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:36 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/characters?page=1&limit=1&q=fuzzstring&order_by=name&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:36 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters?page=1&limit=1&q=fuzzstring&order_by=name&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/characters?page=1&limit=1&q=fuzzstring&order_by=name&sort=asc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:37 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters?page=1&limit=1&q=fuzzstring&order_by=name&sort=asc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/characters?page=1&limit=1&q=fuzzstring&order_by=favorites&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:37 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/characters?page=1&limit=1&q=fuzzstring&order_by=favorites&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/reviews
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/reviews?page=1&preliminary=true&spoiler=true HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:38 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/reviews?page=1&preliminary=true&spoiler=true\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/reviews HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:39 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/reviews\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/mangalist
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/mangalist?status=all HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:39 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/mangalist?status=all\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/mangalist?status=reading HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:39 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/mangalist?status=reading\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/mangalist?status=completed HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:40 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/mangalist?status=completed\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/mangalist?status=onhold HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:40 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/mangalist?status=onhold\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/mangalist?status=dropped HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:41 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/mangalist?status=dropped\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /clubs/{id}/members
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/clubs/1/members?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs/1/members?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/clubs/1/members HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/clubs/1/members\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/staff
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/staff HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/staff\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/staff HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:43 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/staff\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/animelist
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/animelist?status=all HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:43 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/animelist?status=all\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/animelist?status=watching HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:44 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/animelist?status=watching\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/animelist?status=completed HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:44 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/animelist?status=completed\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/animelist?status=onhold HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:44 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/animelist?status=onhold\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/animelist?status=dropped HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:44 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/animelist?status=dropped\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/streaming
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/streaming HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:45 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/streaming\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/streaming HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:46 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/streaming\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/friends
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/friends?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:46 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/friends?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/friends HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:47 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/friends\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /producers/{id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/producers/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:47 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/producers/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:47 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers/1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/full
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:48 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/full HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:48 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/full\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /producers
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/producers?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:49 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/producers?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:49 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers?page=1&limit=1&q=fuzzstring&order_by=mal_id&sort=asc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/producers?page=1&limit=1&q=fuzzstring&order_by=count&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:49 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers?page=1&limit=1&q=fuzzstring&order_by=count&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/producers?page=1&limit=1&q=fuzzstring&order_by=count&sort=asc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:49 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers?page=1&limit=1&q=fuzzstring&order_by=count&sort=asc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/producers?page=1&limit=1&q=fuzzstring&order_by=favorites&sort=desc&letter=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:50 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/producers?page=1&limit=1&q=fuzzstring&order_by=favorites&sort=desc&letter=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /manga/{id}/relations
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/manga/1/relations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:51 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/relations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/manga/1/relations HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/manga/1/relations\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /seasons/now
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/seasons/now?filter=tv&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/now?filter=tv&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/seasons/now?filter=movie&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/now?filter=movie&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v4/seasons/now?filter=ova&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:53 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/now?filter=ova&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v4/seasons/now?filter=special&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:53 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/now?filter=special&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v4/seasons/now?filter=ona&sfw=true&unapproved=true&page=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:53 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/seasons/now?filter=ona&sfw=true&unapproved=true&page=1&limit=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /anime/{id}/news
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/anime/1/news?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:54 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/news?page=1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/anime/1/news HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:55 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/anime/1/news\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /reviews/manga
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/reviews/manga?page=1&preliminary=true&spoiler=true HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:55 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/reviews/manga?page=1&preliminary=true&spoiler=true\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/reviews/manga HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:55 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/reviews/manga\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /users/{username}/userupdates
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/userupdates HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:56 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/userupdates\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v4/users/fuzzstring/userupdates HTTP/1.1\r\nAccept: application/json\r\nHost: api.jikan.moe\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: nginx/1.24.0\r\nDate: Fri, 03 May 2024 15:58:56 GMT\r\nContent-Type: text/html\r\nContent-Length: 169\r\nConnection: keep-alive\r\nLocation: https://api.jikan.moe/v4/users/fuzzstring/userupdates\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n
+
+

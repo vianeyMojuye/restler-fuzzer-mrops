@@ -1,0 +1,350 @@
+This file contains the failing requests, ordered by the number of blocked dependent requests.
+To improve coverage, fix the failing requests in the order listed in this file.
+
+Note: some requests are labeled as 'sequence failure'.
+This means the request depends on another request that is failing intermittently.
+For example, a DELETE request for a resource may be skipped because the resource
+PUT request failed due to exceeding quota.  The same PUT request succeeded earlier (and may
+succeed later depending on the resource clean-up behavior in the service), so it is
+considered an intermittent failure.
+
+-----------------------------------------------
+Request: Get /v1/historic/trades/{symbol}/{date}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v1/historic/trades/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/trades/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v1/historic/trades/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/trades/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=fuzzstring\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v1/historic/trades/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2023-01-09 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/trades/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2023-01-09\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v1/historic/trades/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2019-06-26 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/trades/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2019-06-26\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v1/historic/trades/2023-01-09/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/trades/2023-01-09/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /v1/last_quote/stocks/{symbol}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v1/last_quote/stocks/fuzzstring?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last_quote/stocks/fuzzstring?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v1/last_quote/stocks/fuzzstring?apiKey=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last_quote/stocks/fuzzstring?apiKey=fuzzstring\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v1/last_quote/stocks/fuzzstring?apiKey=2023-01-09 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last_quote/stocks/fuzzstring?apiKey=2023-01-09\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v1/last_quote/stocks/fuzzstring?apiKey=2019-06-26 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last_quote/stocks/fuzzstring?apiKey=2019-06-26\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v1/last_quote/stocks/2023-01-09?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last_quote/stocks/2023-01-09?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /v1/historic/quotes/{symbol}/{date}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v1/historic/quotes/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/quotes/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v1/historic/quotes/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/quotes/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=fuzzstring\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v1/historic/quotes/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2023-01-09 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/quotes/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2023-01-09\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v1/historic/quotes/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2019-06-26 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/quotes/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2019-06-26\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v1/historic/quotes/2023-01-09/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/quotes/2023-01-09/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /v1/last/currencies/{from}/{to}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v1/last/currencies/fuzzstring/fuzzstring?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:34 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last/currencies/fuzzstring/fuzzstring?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v1/last/currencies/fuzzstring/fuzzstring?apiKey=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:34 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last/currencies/fuzzstring/fuzzstring?apiKey=fuzzstring\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v1/last/currencies/fuzzstring/fuzzstring?apiKey=2023-01-09 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:35 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last/currencies/fuzzstring/fuzzstring?apiKey=2023-01-09\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v1/last/currencies/fuzzstring/fuzzstring?apiKey=2019-06-26 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:35 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last/currencies/fuzzstring/fuzzstring?apiKey=2019-06-26\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v1/last/currencies/fuzzstring/2023-01-09?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:35 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last/currencies/fuzzstring/2023-01-09?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /v1/historic/forex/{from}/{to}/{date}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v1/historic/forex/fuzzstring/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:39 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/forex/fuzzstring/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v1/historic/forex/fuzzstring/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:40 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/forex/fuzzstring/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=fuzzstring\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v1/historic/forex/fuzzstring/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2023-01-09 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:40 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/forex/fuzzstring/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2023-01-09\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v1/historic/forex/fuzzstring/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2019-06-26 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:40 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/forex/fuzzstring/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2019-06-26\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v1/historic/forex/fuzzstring/2023-01-09/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:41 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/forex/fuzzstring/2023-01-09/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /v1/last_quote/currencies/{from}/{to}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v1/last_quote/currencies/fuzzstring/fuzzstring?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:45 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last_quote/currencies/fuzzstring/fuzzstring?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v1/last_quote/currencies/fuzzstring/fuzzstring?apiKey=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:45 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last_quote/currencies/fuzzstring/fuzzstring?apiKey=fuzzstring\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v1/last_quote/currencies/fuzzstring/fuzzstring?apiKey=2023-01-09 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:45 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last_quote/currencies/fuzzstring/fuzzstring?apiKey=2023-01-09\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v1/last_quote/currencies/fuzzstring/fuzzstring?apiKey=2019-06-26 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:46 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last_quote/currencies/fuzzstring/fuzzstring?apiKey=2019-06-26\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v1/last_quote/currencies/fuzzstring/2023-01-09?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:46 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last_quote/currencies/fuzzstring/2023-01-09?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /v1/last/stocks/{symbol}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v1/last/stocks/fuzzstring?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:51 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last/stocks/fuzzstring?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v1/last/stocks/fuzzstring?apiKey=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:51 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last/stocks/fuzzstring?apiKey=fuzzstring\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v1/last/stocks/fuzzstring?apiKey=2023-01-09 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:51 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last/stocks/fuzzstring?apiKey=2023-01-09\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v1/last/stocks/fuzzstring?apiKey=2019-06-26 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last/stocks/fuzzstring?apiKey=2019-06-26\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v1/last/stocks/2023-01-09?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/last/stocks/2023-01-09?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /v1/companies
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v1/companies?sort=fuzzstring&perpage=1.23&page=1.23?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:56 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/companies?sort=fuzzstring&perpage=1.23&page=1.23?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v1/companies?sort=fuzzstring&perpage=1.23&page=1.23?apiKey=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:57 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/companies?sort=fuzzstring&perpage=1.23&page=1.23?apiKey=fuzzstring\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v1/companies?sort=fuzzstring&perpage=1.23&page=1.23?apiKey=2023-01-09 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:57 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/companies?sort=fuzzstring&perpage=1.23&page=1.23?apiKey=2023-01-09\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v1/companies?sort=fuzzstring&perpage=1.23&page=1.23?apiKey=2019-06-26 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:57 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/companies?sort=fuzzstring&perpage=1.23&page=1.23?apiKey=2019-06-26\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v1/companies?sort=2023-01-09&perpage=1.23&page=1.23?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:44:58 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/companies?sort=2023-01-09&perpage=1.23&page=1.23?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /v1/currencies
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v1/currencies?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:45:01 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/currencies?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v1/currencies?apiKey=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:45:01 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/currencies?apiKey=fuzzstring\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v1/currencies?apiKey=2023-01-09 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:45:01 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/currencies?apiKey=2023-01-09\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v1/currencies?apiKey=2019-06-26 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:45:02 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/currencies?apiKey=2019-06-26\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v1/currencies?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:45:02 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/currencies?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /v1/historic/agg/{size}/{symbol}/{date}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v1/historic/agg/second/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:45:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/agg/second/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v1/historic/agg/second/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:45:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/agg/second/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=fuzzstring\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v1/historic/agg/second/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2023-01-09 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:45:04 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/agg/second/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2023-01-09\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v1/historic/agg/second/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2019-06-26 HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:45:04 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/agg/second/fuzzstring/2019-06-26?offset=1&limit=1?apiKey=2019-06-26\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v1/historic/agg/second/2023-01-09/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb HTTP/1.1\r\nAccept: application/json\r\nHost: api.polygon.io\r\n\r\n
+	< HTTP/1.1 308 Permanent Redirect\r\nServer: nginx/1.19.2\r\nDate: Thu, 16 May 2024 12:45:04 GMT\r\nContent-Type: text/html\r\nContent-Length: 171\r\nConnection: keep-alive\r\nLocation: https://api.polygon.io/v1/historic/agg/second/2023-01-09/2019-06-26?offset=1&limit=1?apiKey=HdKneHQE7oUcTVAy4jbD3BVdlLPsfEIb\r\n\r\n<html>\r\n<head><title>308 Permanent Redirect</title></head>\r\n<body>\r\n<center><h1>308 Permanent Redirect</h1></center>\r\n<hr><center>nginx/1.19.2</center>\r\n</body>\r\n</html>\r\n
+
+

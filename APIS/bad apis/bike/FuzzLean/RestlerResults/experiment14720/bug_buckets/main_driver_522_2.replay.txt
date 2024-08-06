@@ -1,0 +1,21 @@
+################################################################################
+ main_driver_522
+
+ Hash: main_driver_522_f0fbb971cea02777edb28929552be95b0369e91a
+
+ To attempt to reproduce this bug using restler, run restler with the command
+ line option of --replay_log <path_to_this_log>.
+ If an authentication token is required, you must also specify the token_refresh_cmd.
+
+ This log may contain specific values for IDs or names that were generated
+ during fuzzing, using the fuzzing dictionary. Such names will be re-played
+ without modification. You must update the replay log manually with any changes
+ required to execute the requests in your environment (for example, replacing
+ pre-created account, subscription, or other resource IDs, as needed).
+################################################################################
+
+-> GET /api/v2/incidents/1 HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:17:50 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=KGui9L0U21mRIO4UmMBTmUrDfXl5KvW2p0Srv%2B4IVeBxbG9YwGcyhxiBS0F08UCeP05PMhq1PhrO9WarTs8zfm1uWyDVArI17IXCoGy0ZCYMzUamAnbYcUi69R7%2BDPk%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88426074ee2595b7-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522'
+

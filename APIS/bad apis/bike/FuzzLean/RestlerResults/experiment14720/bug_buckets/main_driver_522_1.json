@@ -1,0 +1,16 @@
+{
+    "status_code": "522",
+    "checker_name": "main_driver",
+    "reproducible": true,
+    "verb": "GET",
+    "endpoint": "/v2/locations",
+    "status_text": "",
+    "request_sequence": [
+        {
+            "producer_timing_delay": 0,
+            "max_async_wait_time": 0,
+            "replay_request": "GET /api/v2/locations?occurred_before=1&occurred_after=1&incident_type=crash&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n",
+            "response": "HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:12:37 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=Iuen0CXHKMNTX6k8rOLtoQv2j%2BijrrhvEUMwkQJkIE9FaVqATU8dIGTmmob8MwWH9ZAqKouc8%2FbOypY%2B%2BIgkqzjnf2PSp8iHiHEMry82uw9ap5cFJeeEQ9%2BI07iEchs%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nNEL: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 884258d17cc36d81-LUX\r\nalt-svc: h3=\":443\"; ma=86400\r\n\r\nerror code: 522"
+        }
+    ]
+}

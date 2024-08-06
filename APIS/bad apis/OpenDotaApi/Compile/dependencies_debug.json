@@ -1,0 +1,6326 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/benchmarks",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "benchmarks",
+        "PathContainerName": "benchmarks",
+        "CandidateTypeNames": [
+          "benchmark"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/constants/{resource}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "resource",
+            "pathToParameter": [
+              "constants"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "constants",
+        "PathContainerName": "constants",
+        "CandidateTypeNames": [
+          "constant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "resource",
+        "ProducerParameterName": "resource",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/explorer",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sql"
+        },
+        "ContainerName": "explorer",
+        "PathContainerName": "explorer",
+        "CandidateTypeNames": [
+          "explorer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sql",
+        "ProducerParameterName": "sql",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/findMatches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "teamA"
+        },
+        "ContainerName": "findMatches",
+        "PathContainerName": "findMatches",
+        "CandidateTypeNames": [
+          "find__match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "teamA",
+        "ProducerParameterName": "a",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/findMatches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "teamB"
+        },
+        "ContainerName": "findMatches",
+        "PathContainerName": "findMatches",
+        "CandidateTypeNames": [
+          "find__match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "teamB",
+        "ProducerParameterName": "b",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/heroes/{hero_id}/durations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "hero_id",
+            "pathToParameter": [
+              "heroes"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "durations",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/heroes/{hero_id}/itemPopularity",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "hero_id",
+            "pathToParameter": [
+              "heroes"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "itemPopularity",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/heroes/{hero_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "hero_id",
+            "pathToParameter": [
+              "heroes"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/heroes/{hero_id}/matchups",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "hero_id",
+            "pathToParameter": [
+              "heroes"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "matchups",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/heroes/{hero_id}/players",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "hero_id",
+            "pathToParameter": [
+              "heroes"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "players",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/leagues/{league_id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "league_id",
+            "pathToParameter": [
+              "leagues"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "leagues",
+        "PathContainerName": "leagues",
+        "CandidateTypeNames": [
+          "league"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "league_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/leagues/{league_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "league_id",
+            "pathToParameter": [
+              "leagues"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "leagues",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "league"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "league_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/leagues/{league_id}/teams",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "league_id",
+            "pathToParameter": [
+              "leagues"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "leagues",
+        "PathContainerName": "teams",
+        "CandidateTypeNames": [
+          "league"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "league_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/matches/{match_id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "match_id",
+            "pathToParameter": [
+              "matches"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "match_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/parsedMatches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "less_than_match_id"
+        },
+        "ContainerName": "parsedMatches",
+        "PathContainerName": "parsedMatches",
+        "CandidateTypeNames": [
+          "parsed__match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "less_than_match_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "players",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "win"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "win",
+        "ProducerParameterName": "win",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "patch"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "patch",
+        "ProducerParameterName": "patch",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "game_mode"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "game_mode",
+        "ProducerParameterName": "mode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lobby_type"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lobby_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "region"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "region",
+        "ProducerParameterName": "region",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "date"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "is_radiant"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "is_radiant",
+        "ProducerParameterName": "radiant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "included_account_id"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "included_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "excluded_account_id"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "excluded_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "with_hero_id"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "with_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "significant"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "significant",
+        "ProducerParameterName": "significant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "against_hero_id"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "against_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "having"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "having",
+        "ProducerParameterName": "having",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "counts",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/counts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "counts",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "win"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "win",
+        "ProducerParameterName": "win",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "patch"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "patch",
+        "ProducerParameterName": "patch",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "game_mode"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "game_mode",
+        "ProducerParameterName": "mode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lobby_type"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lobby_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "region"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "region",
+        "ProducerParameterName": "region",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "date"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "is_radiant"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "is_radiant",
+        "ProducerParameterName": "radiant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "included_account_id"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "included_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "excluded_account_id"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "excluded_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "with_hero_id"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "with_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "significant"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "significant",
+        "ProducerParameterName": "significant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "against_hero_id"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "against_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "having"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "having",
+        "ProducerParameterName": "having",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "heroes",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "hero"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "win"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "win",
+        "ProducerParameterName": "win",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "patch"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "patch",
+        "ProducerParameterName": "patch",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "game_mode"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "game_mode",
+        "ProducerParameterName": "mode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lobby_type"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lobby_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "region"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "region",
+        "ProducerParameterName": "region",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "date"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "is_radiant"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "is_radiant",
+        "ProducerParameterName": "radiant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "included_account_id"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "included_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "excluded_account_id"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "excluded_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "with_hero_id"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "with_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "significant"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "significant",
+        "ProducerParameterName": "significant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "against_hero_id"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "against_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "having"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "having",
+        "ProducerParameterName": "having",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/histograms/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "field",
+            "pathToParameter": [
+              "players",
+              "{account_id}",
+              "histograms"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "histograms",
+        "PathContainerName": "histograms",
+        "CandidateTypeNames": [
+          "histogram"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "field",
+        "ProducerParameterName": "field",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "win"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "win",
+        "ProducerParameterName": "win",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "patch"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "patch",
+        "ProducerParameterName": "patch",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "game_mode"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "game_mode",
+        "ProducerParameterName": "mode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lobby_type"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lobby_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "region"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "region",
+        "ProducerParameterName": "region",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "date"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "is_radiant"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "is_radiant",
+        "ProducerParameterName": "radiant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "included_account_id"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "included_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "excluded_account_id"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "excluded_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "with_hero_id"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "with_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "significant"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "significant",
+        "ProducerParameterName": "significant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "against_hero_id"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "against_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "having"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "having",
+        "ProducerParameterName": "having",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "project"
+        },
+        "ContainerName": "matches",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "project",
+        "ProducerParameterName": "project",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "win"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "win",
+        "ProducerParameterName": "win",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "patch"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "patch",
+        "ProducerParameterName": "patch",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "game_mode"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "game_mode",
+        "ProducerParameterName": "mode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lobby_type"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lobby_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "region"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "region",
+        "ProducerParameterName": "region",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "date"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "is_radiant"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "is_radiant",
+        "ProducerParameterName": "radiant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "included_account_id"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "included_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "excluded_account_id"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "excluded_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "with_hero_id"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "with_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "significant"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "significant",
+        "ProducerParameterName": "significant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "against_hero_id"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "against_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "having"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "having",
+        "ProducerParameterName": "having",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "peers",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "peer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/peers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "peers",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "win"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "win",
+        "ProducerParameterName": "win",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "patch"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "patch",
+        "ProducerParameterName": "patch",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "game_mode"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "game_mode",
+        "ProducerParameterName": "mode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lobby_type"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lobby_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "region"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "region",
+        "ProducerParameterName": "region",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "date"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "is_radiant"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "is_radiant",
+        "ProducerParameterName": "radiant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "included_account_id"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "included_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "excluded_account_id"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "excluded_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "with_hero_id"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "with_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "significant"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "significant",
+        "ProducerParameterName": "significant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "against_hero_id"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "against_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "having"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "having",
+        "ProducerParameterName": "having",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "pros",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "pro"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/pros",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "pros",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/rankings",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "rankings",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/ratings",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "ratings",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/recentMatches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "recentMatches",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/refresh",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "refresh",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "win"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "win",
+        "ProducerParameterName": "win",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "patch"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "patch",
+        "ProducerParameterName": "patch",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "game_mode"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "game_mode",
+        "ProducerParameterName": "mode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lobby_type"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lobby_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "region"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "region",
+        "ProducerParameterName": "region",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "date"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "is_radiant"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "is_radiant",
+        "ProducerParameterName": "radiant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "included_account_id"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "included_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "excluded_account_id"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "excluded_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "with_hero_id"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "with_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "significant"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "significant",
+        "ProducerParameterName": "significant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "against_hero_id"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "against_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "having"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "having",
+        "ProducerParameterName": "having",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "totals",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "total"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/totals",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "totals",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "win"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "win",
+        "ProducerParameterName": "win",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "patch"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "patch",
+        "ProducerParameterName": "patch",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "game_mode"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "game_mode",
+        "ProducerParameterName": "mode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lobby_type"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lobby_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "region"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "region",
+        "ProducerParameterName": "region",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "date"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "is_radiant"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "is_radiant",
+        "ProducerParameterName": "radiant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "included_account_id"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "included_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "excluded_account_id"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "excluded_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "with_hero_id"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "with_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "significant"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "significant",
+        "ProducerParameterName": "significant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "against_hero_id"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "against_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "having"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "having",
+        "ProducerParameterName": "having",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "wardmap",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "wardmap"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wardmap",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "wardmap",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "win"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "win",
+        "ProducerParameterName": "win",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "patch"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "patch",
+        "ProducerParameterName": "patch",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "game_mode"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "game_mode",
+        "ProducerParameterName": "mode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lobby_type"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lobby_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "region"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "region",
+        "ProducerParameterName": "region",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "date"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "is_radiant"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "is_radiant",
+        "ProducerParameterName": "radiant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "included_account_id"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "included_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "excluded_account_id"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "excluded_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "with_hero_id"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "with_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "significant"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "significant",
+        "ProducerParameterName": "significant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "against_hero_id"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "against_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "having"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "having",
+        "ProducerParameterName": "having",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "wl",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "wl"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wl",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "wl",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "win"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "win",
+        "ProducerParameterName": "win",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "patch"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "patch",
+        "ProducerParameterName": "patch",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "game_mode"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "game_mode",
+        "ProducerParameterName": "mode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lobby_type"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lobby_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "region"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "region",
+        "ProducerParameterName": "region",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "date"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "is_radiant"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "is_radiant",
+        "ProducerParameterName": "radiant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "included_account_id"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "included_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "excluded_account_id"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "excluded_account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "with_hero_id"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "with_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "significant"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "significant",
+        "ProducerParameterName": "significant",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "against_hero_id"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "against_hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "having"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "having",
+        "ProducerParameterName": "having",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "wordcloud",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "wordcloud"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/players/{account_id}/wordcloud",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "account_id",
+            "pathToParameter": [
+              "players"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "players",
+        "PathContainerName": "wordcloud",
+        "CandidateTypeNames": [
+          "player"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "account_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/proMatches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "less_than_match_id"
+        },
+        "ContainerName": "proMatches",
+        "PathContainerName": "proMatches",
+        "CandidateTypeNames": [
+          "pro__match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "less_than_match_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/publicMatches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "less_than_match_id"
+        },
+        "ContainerName": "publicMatches",
+        "PathContainerName": "publicMatches",
+        "CandidateTypeNames": [
+          "public__match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "less_than_match_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/publicMatches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "min_rank"
+        },
+        "ContainerName": "publicMatches",
+        "PathContainerName": "publicMatches",
+        "CandidateTypeNames": [
+          "public__match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "min_rank",
+        "ProducerParameterName": "rank",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/publicMatches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "max_rank"
+        },
+        "ContainerName": "publicMatches",
+        "PathContainerName": "publicMatches",
+        "CandidateTypeNames": [
+          "public__match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "max_rank",
+        "ProducerParameterName": "rank",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/publicMatches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "mmr_descending"
+        },
+        "ContainerName": "publicMatches",
+        "PathContainerName": "publicMatches",
+        "CandidateTypeNames": [
+          "public__match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "mmr_descending",
+        "ProducerParameterName": "descending",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/publicMatches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "mmr_ascending"
+        },
+        "ContainerName": "publicMatches",
+        "PathContainerName": "publicMatches",
+        "CandidateTypeNames": [
+          "public__match"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "mmr_ascending",
+        "ProducerParameterName": "ascending",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/rankings",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "rankings",
+        "PathContainerName": "rankings",
+        "CandidateTypeNames": [
+          "ranking"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/records/{field}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "field",
+            "pathToParameter": [
+              "records"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "records",
+        "PathContainerName": "records",
+        "CandidateTypeNames": [
+          "record"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "field",
+        "ProducerParameterName": "field",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/request/{jobId}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "jobId",
+            "pathToParameter": [
+              "request"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "request",
+        "PathContainerName": "request",
+        "CandidateTypeNames": [
+          "request"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "jobId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/request/{match_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "match_id",
+            "pathToParameter": [
+              "request"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "request",
+        "PathContainerName": "request",
+        "CandidateTypeNames": [
+          "request"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "match_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/scenarios/itemTimings",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "itemTimings",
+        "PathContainerName": "itemTimings",
+        "CandidateTypeNames": [
+          "item__timing"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/scenarios/itemTimings",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "item"
+        },
+        "ContainerName": "itemTimings",
+        "PathContainerName": "itemTimings",
+        "CandidateTypeNames": [
+          "item__timing"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "item",
+        "ProducerParameterName": "item",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/scenarios/laneRoles",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "lane_role"
+        },
+        "ContainerName": "laneRoles",
+        "PathContainerName": "laneRoles",
+        "CandidateTypeNames": [
+          "lane__role"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "lane_role",
+        "ProducerParameterName": "role",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/scenarios/laneRoles",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "hero_id"
+        },
+        "ContainerName": "laneRoles",
+        "PathContainerName": "laneRoles",
+        "CandidateTypeNames": [
+          "lane__role"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "hero_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/scenarios/misc",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "scenario"
+        },
+        "ContainerName": "misc",
+        "PathContainerName": "misc",
+        "CandidateTypeNames": [
+          "misc"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "scenario",
+        "ProducerParameterName": "scenario",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/teams",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "teams",
+        "PathContainerName": "teams",
+        "CandidateTypeNames": [
+          "team"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/teams/{team_id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "team_id",
+            "pathToParameter": [
+              "teams"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "teams",
+        "PathContainerName": "teams",
+        "CandidateTypeNames": [
+          "team"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "team_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/teams/{team_id}/heroes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "team_id",
+            "pathToParameter": [
+              "teams"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "teams",
+        "PathContainerName": "heroes",
+        "CandidateTypeNames": [
+          "team"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "team_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/teams/{team_id}/matches",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "team_id",
+            "pathToParameter": [
+              "teams"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "teams",
+        "PathContainerName": "matches",
+        "CandidateTypeNames": [
+          "team"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "team_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/teams/{team_id}/players",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "team_id",
+            "pathToParameter": [
+              "teams"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "teams",
+        "PathContainerName": "players",
+        "CandidateTypeNames": [
+          "team"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "team_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  }
+]

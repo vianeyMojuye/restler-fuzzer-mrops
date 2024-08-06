@@ -20,7 +20,6 @@ if util.find_spec("test_servers"):
     from test_servers.test_socket import TestSocket
 
 DELIM = "\r\n\r\n"
-TERMINATING_CHUNK_DELIM = "0\r\n\r\n"
 UTF8 = 'utf-8'
 
 
@@ -263,7 +262,6 @@ class HttpSock(object):
 
         """
         global DELIM
-        global TERMINATING_CHUNK_DELIM
         data = ''
 
         def decode_buf (buf):
@@ -298,7 +296,7 @@ class HttpSock(object):
             'transfer-encoding: chunked\r\n' in data:
             # Handle corner case of single-chunk data transfer. Without this
             # check, the next recv call on _sock will hang until timeout.
-            if data.endswith(TERMINATING_CHUNK_DELIM):
+            if data.endswith(DELIM):
                 return data
             chuncked_encoding = True
         if chuncked_encoding:
@@ -314,7 +312,7 @@ class HttpSock(object):
 
                 data += decode_buf(buf)
 
-                if data.endswith(TERMINATING_CHUNK_DELIM):
+                if data.endswith(DELIM):
                     return data
 
         header_len = data.index(DELIM) + len(DELIM)

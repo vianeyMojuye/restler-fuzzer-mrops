@@ -69,6 +69,7 @@ class CheckerBase:
         """
         pass
 
+
     def _send_request(self, parser, rendered_data):
         """ Send a request and invoke the response parser.
 
@@ -89,14 +90,80 @@ class CheckerBase:
             threadLocal.checkers_sock = HttpSock(Settings().connection_settings)
             checkers_sock = threadLocal.checkers_sock
 
-        response = request_utilities.send_request_data(
-            rendered_data, req_timeout_sec=Settings().max_request_execution_time,
-            reconnect=Settings().reconnect_on_every_request,
-            http_sock=checkers_sock
-        )
+        import time
+        start_time = time.time()  # Start time
+
+        for i in range(11):
+            
+            response = request_utilities.send_request_data(
+                rendered_data, req_timeout_sec=Settings().max_request_execution_time,
+                reconnect=Settings().reconnect_on_every_request,
+                http_sock=checkers_sock
+            )
+            end_time = time.time()  # End time
+            execution_time = end_time - start_time
+
+        results = []
+
+      
+
+        # with(open('time_result.txt', 'a' ) as f):
+
+        # Split the request into lines and get the method and endpoint
+        data = rendered_data.strip().split('\n')[0].strip().split(" ")
+        method = data[0] 
+        endpoint = data[1] 
+        
+        
+        # Helper function to calculate the length of the endpoint
+        def calculate_endpoint_length(endpoint):
+            # Split by '/' and filter out empty strings
+            # add return the length of endpoint +  the length of parameter part of an endpoint
+            if len(endpoint.split('?'))>1 :
+                    return len([part for part in endpoint.split('/') if part]) + len(endpoint.split('?')[1].split('&') ) 
+            else:
+                return len([part for part in endpoint.split('/') if part])
+            
+
+        endpoint_length = calculate_endpoint_length(endpoint)
+
+        # f.write(f" {method} :  {endpoint} : {endpoint_length} :  {execution_time} \n")
+
+        results.append( [method, endpoint ,  endpoint_length, execution_time]) 
+
+        import csv 
+
+        # Write to CSV
+        csv_file_path = 'time_result.csv'
+
+        #header
+        header = ["method","endpoint","endpointLength","executionTime"]
+
+        # Writing to the CSV file
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            # Write the header if the file is empty
+            if file.tell() == 0:
+                writer.writerow(header)
+            
+            # Write the data rows
+            writer.writerows(results)
+
+
+        # import pandas as pd
+
+        # # Convert to DataFrame for better visualization
+        # df = pd.read_csv(csv_file_path)
+        # print(df)
+        # # Split the request into lines and get the first line
+        # first_line = rendered_data.strip().split('\n')[0].strip()
+        # f.write(f" {first_line} :  {execution_time} \n")
 
         Monitor().increment_requests_count(self.__class__.__name__)
         return response
+
+
 
     def _render_and_send_data(self, seq, request, check_async=True):
         """ Helper that renders data for a request, sends the request to the server,
@@ -130,8 +197,10 @@ class CheckerBase:
         SequenceTracker.initialize_request_trace(combination_id=seq.combination_id,
                                                  request_id=request.hex_definition,
                                                  replay_blocks=replay_blocks)
-
+       
         response = self._send_request(parser, rendered_data)
+
+
         if response.has_valid_code():
             for name,v in updated_writer_variables.items():
                 dependencies.set_variable(name, v)
@@ -250,3 +319,4 @@ class CheckerBase:
 
         return new_seq
 
+    

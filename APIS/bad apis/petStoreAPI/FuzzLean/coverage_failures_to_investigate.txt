@@ -1,0 +1,304 @@
+This file contains the failing requests, ordered by the number of blocked dependent requests.
+To improve coverage, fix the failing requests in the order listed in this file.
+
+Note: some requests are labeled as 'sequence failure'.
+This means the request depends on another request that is failing intermittently.
+For example, a DELETE request for a resource may be skipped because the resource
+PUT request failed due to exceeding quota.  The same PUT request succeeded earlier (and may
+succeed later depending on the resource clean-up behavior in the service), so it is
+considered an intermittent failure.
+
+-----------------------------------------------
+Request: Post /pet
+Number of blocked dependent requests: 5
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /api/v3/pet HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "name":"doggie",\n    "category":\n        {\n            "id":1,\n            "name":"Dogs"\n        }\n    ,\n    "photoUrls":\n    [\n        "fuzzstring"\n    ],\n    "tags":\n    [\n        {\n            "id":1,\n            "name":"fuzzstring"\n        }\n    ],\n    "status":"available"}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /api/v3/pet HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "name":"doggie",\n    "category":\n        {\n            "id":1,\n            "name":"Dogs"\n        }\n    ,\n    "photoUrls":\n    [\n        "fuzzstring"\n    ],\n    "tags":\n    [\n        {\n            "id":1,\n            "name":"fuzzstring"\n        }\n    ],\n    "status":"pending"}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> POST /api/v3/pet HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "name":"doggie",\n    "category":\n        {\n            "id":1,\n            "name":"Dogs"\n        }\n    ,\n    "photoUrls":\n    [\n        "fuzzstring"\n    ],\n    "tags":\n    [\n        {\n            "id":1,\n            "name":"fuzzstring"\n        }\n    ],\n    "status":"sold"}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> POST /api/v3/pet HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "name":"doggie",\n    "category":\n        {\n            "id":1,\n            "name":"fuzzstring"\n        }\n    ,\n    "photoUrls":\n    [\n        "fuzzstring"\n    ],\n    "tags":\n    [\n        {\n            "id":1,\n            "name":"fuzzstring"\n        }\n    ],\n    "status":"available"}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> POST /api/v3/pet HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "name":"doggie",\n    "category":\n        {\n            "id":1,\n            "name":"fuzzstring"\n        }\n    ,\n    "photoUrls":\n    [\n        "fuzzstring"\n    ],\n    "tags":\n    [\n        {\n            "id":1,\n            "name":"fuzzstring"\n        }\n    ],\n    "status":"pending"}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Post /store/order
+Number of blocked dependent requests: 2
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /api/v3/store/order HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "petId":198772,\n    "quantity":7,\n    "shipDate":"2019-06-26T20:20:39+00:00",\n    "status":"approved",\n    "complete":true}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/store/order\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /api/v3/store/order HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "petId":198772,\n    "quantity":7,\n    "shipDate":"2019-06-26T20:20:39+00:00",\n    "status":"placed",\n    "complete":true}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/store/order\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> POST /api/v3/store/order HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "petId":198772,\n    "quantity":7,\n    "shipDate":"2019-06-26T20:20:39+00:00",\n    "status":"approved",\n    "complete":true}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:16 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/store/order\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> POST /api/v3/store/order HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "petId":198772,\n    "quantity":7,\n    "shipDate":"2019-06-26T20:20:39+00:00",\n    "status":"delivered",\n    "complete":true}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:16 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/store/order\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> POST /api/v3/store/order HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "petId":198772,\n    "quantity":1,\n    "shipDate":"2019-06-26T20:20:39+00:00",\n    "status":"approved",\n    "complete":true}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:16 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/store/order\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Delete /user/{username}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> DELETE /api/v3/user/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:12:59 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> DELETE /api/v3/user/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:00 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /user/logout
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/v3/user/logout HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:00 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/logout\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/v3/user/logout HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:00 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/logout\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Post /user/createWithList
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /api/v3/user/createWithList HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n[\n    {\n        "id":10,\n        "username":"theUser",\n        "firstName":"John",\n        "lastName":"James",\n        "email":"john@email.com",\n        "password":"12345",\n        "phone":"12345",\n        "userStatus":1\n    }]\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:01 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/createWithList\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /api/v3/user/createWithList HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n[\n    {\n        "id":10,\n        "username":"theUser",\n        "firstName":"John",\n        "lastName":"James",\n        "email":"john@email.com",\n        "password":"12345",\n        "phone":"fuzzstring",\n        "userStatus":1\n    }]\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:01 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/createWithList\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> POST /api/v3/user/createWithList HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n[\n    {\n        "id":10,\n        "username":"theUser",\n        "firstName":"John",\n        "lastName":"James",\n        "email":"john@email.com",\n        "password":"fuzzstring",\n        "phone":"12345",\n        "userStatus":1\n    }]\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:01 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/createWithList\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> POST /api/v3/user/createWithList HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n[\n    {\n        "id":10,\n        "username":"theUser",\n        "firstName":"John",\n        "lastName":"James",\n        "email":"john@email.com",\n        "password":"fuzzstring",\n        "phone":"fuzzstring",\n        "userStatus":1\n    }]\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:02 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/createWithList\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> POST /api/v3/user/createWithList HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n[\n    {\n        "id":10,\n        "username":"theUser",\n        "firstName":"John",\n        "lastName":"James",\n        "email":"fuzzstring",\n        "password":"12345",\n        "phone":"12345",\n        "userStatus":1\n    }]\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:02 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/createWithList\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Post /user
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /api/v3/user HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "username":"theUser",\n    "firstName":"John",\n    "lastName":"James",\n    "email":"john@email.com",\n    "password":"12345",\n    "phone":"12345",\n    "userStatus":1}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /api/v3/user HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "username":"theUser",\n    "firstName":"John",\n    "lastName":"James",\n    "email":"john@email.com",\n    "password":"12345",\n    "phone":"fuzzstring",\n    "userStatus":1}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> POST /api/v3/user HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "username":"theUser",\n    "firstName":"John",\n    "lastName":"James",\n    "email":"john@email.com",\n    "password":"fuzzstring",\n    "phone":"12345",\n    "userStatus":1}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> POST /api/v3/user HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "username":"theUser",\n    "firstName":"John",\n    "lastName":"James",\n    "email":"john@email.com",\n    "password":"fuzzstring",\n    "phone":"fuzzstring",\n    "userStatus":1}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> POST /api/v3/user HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "username":"theUser",\n    "firstName":"John",\n    "lastName":"James",\n    "email":"fuzzstring",\n    "password":"12345",\n    "phone":"12345",\n    "userStatus":1}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:09 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /pet/findByStatus
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/v3/pet/findByStatus?status=available HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet/findByStatus?status=available\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/v3/pet/findByStatus?status=pending HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet/findByStatus?status=pending\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /api/v3/pet/findByStatus?status=sold HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet/findByStatus?status=sold\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /api/v3/pet/findByStatus HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet/findByStatus\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /store/inventory
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/v3/store/inventory HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/store/inventory\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/v3/store/inventory HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/store/inventory\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /user/login
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/v3/user/login?username=fuzzstring&password=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/login?username=fuzzstring&password=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/v3/user/login HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/login\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /pet/findByTags
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/v3/pet/findByTags?tags=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:28 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet/findByTags?tags=fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/v3/pet/findByTags HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:28 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/pet/findByTags\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /user/{username}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/v3/user/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:28 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/v3/user/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:29 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/fuzzstring\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Put /user/{username}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> PUT /api/v3/user/username832fe41aa1 HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "username":"theUser",\n    "firstName":"John",\n    "lastName":"James",\n    "email":"john@email.com",\n    "password":"12345",\n    "phone":"12345",\n    "userStatus":1}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:29 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/username832fe41aa1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> PUT /api/v3/user/username539e880d0c HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "username":"theUser",\n    "firstName":"John",\n    "lastName":"James",\n    "email":"john@email.com",\n    "password":"12345",\n    "phone":"fuzzstring",\n    "userStatus":1}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:29 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/username539e880d0c\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> PUT /api/v3/user/usernamecc06ffec4e HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "username":"theUser",\n    "firstName":"John",\n    "lastName":"James",\n    "email":"john@email.com",\n    "password":"fuzzstring",\n    "phone":"12345",\n    "userStatus":1}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/usernamecc06ffec4e\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> PUT /api/v3/user/usernameda24b1103f HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "username":"theUser",\n    "firstName":"John",\n    "lastName":"James",\n    "email":"john@email.com",\n    "password":"fuzzstring",\n    "phone":"fuzzstring",\n    "userStatus":1}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/usernameda24b1103f\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> PUT /api/v3/user/usernamed5a887d5ea HTTP/1.1\r\nAccept: application/json\r\nHost: petstore3.swagger.io\r\nContent-Type: application/json\r\n\r\n{\n    "id":10,\n    "username":"theUser",\n    "firstName":"John",\n    "lastName":"James",\n    "email":"fuzzstring",\n    "password":"12345",\n    "phone":"12345",\n    "userStatus":1}\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nServer: awselb/2.0\r\nDate: Fri, 03 May 2024 10:13:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 134\r\nConnection: keep-alive\r\nLocation: https://petstore3.swagger.io:443/api/v3/user/usernamed5a887d5ea\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n</body>\r\n</html>\r\n
+
+

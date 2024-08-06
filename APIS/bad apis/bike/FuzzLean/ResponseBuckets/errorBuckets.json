@@ -1,0 +1,594 @@
+{
+  "502": {
+    "2d8366bd-39ca-4b71-9ba8-29335d775e1d": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations/markers",
+            "query": "all=true&incident_type=unconfirmed&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 502,
+            "codeDescription": "Bad Gateway",
+            "content": "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  },
+  "522": {
+    "0642ca26-457e-4a4e-ae95-a874936d4992": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents",
+            "query": "incident_type=crash&occurred_after=1&occurred_before=1&page=1&per_page=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "0b73fee9-fca3-4708-b02a-fda6b4a4ee9d": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations",
+            "query": "all=true&incident_type=crash&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "123b46ea-7cc1-4744-a5e4-3369dbc30540": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations/markers",
+            "query": "all=true&incident_type=chop_shop&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "1ab5c3d3-0133-44c3-9e61-d10812684711": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations",
+            "query": "all=true&incident_type=crash&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "234066dc-0ff4-4ea7-9460-275051b9a3a1": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations",
+            "query": "all=true&incident_type=infrastructure_issue&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "25818318-4c06-435c-8125-61ed60543ae3": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents",
+            "query": "incident_type=infrastructure_issue&occurred_after=1&occurred_before=1&page=1&per_page=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "302cf590-689e-415c-a248-5dcc5960cf22": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations",
+            "query": "all=true&incident_type=theft&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "4a48443a-124f-4d26-967f-64a7436ada2c": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents/1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "57e24572-1c30-4382-8bf4-857f44619c24": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations/markers",
+            "query": "all=true&incident_type=unconfirmed&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "584a5392-5f75-46bc-9083-c11390f8815c": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations/markers",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "58efb470-be18-45e4-85c4-1a6c5a89ef56": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents",
+            "query": "incident_type=unconfirmed&occurred_after=1&occurred_before=1&page=1&per_page=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "689e32d6-b378-4018-ba9d-03221151c4a1": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations/markers",
+            "query": "all=true&incident_type=crash&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "778b7d81-2286-478e-bc2a-5862fe2d407f": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations/markers",
+            "query": "all=true&incident_type=theft&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "7f5ac2f5-5f2d-48e2-b9bf-bb3db59077b9": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents/1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "807203b5-fd7f-4ef4-9d61-69fd2c28063b": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations/markers",
+            "query": "all=true&incident_type=infrastructure_issue&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "9e4b31b7-0a6b-4c80-ab26-982a27b62cf7": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents",
+            "query": "incident_type=crash&occurred_after=1&occurred_before=1&page=1&per_page=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "ab603244-c0cd-4166-9f47-a54f3241ef01": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations",
+            "query": "all=true&incident_type=chop_shop&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "b4b17479-28a0-49c5-9160-d3cc4d320c58": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations",
+            "query": "all=true&incident_type=hazard&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "b8a12dbe-cfb2-4ca6-b0eb-23aadd6df3ff": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents",
+            "query": "incident_type=theft&occurred_after=1&occurred_before=1&page=1&per_page=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "bacdfa01-0276-4927-a4e9-4afd52bc880c": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations",
+            "query": "all=true&incident_type=unconfirmed&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "bcbd5cb8-f17e-4e39-84ac-8f8b13050fb5": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "bf2bd817-de33-4bbb-925b-739c6e46ac98": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents",
+            "query": "incident_type=chop_shop&occurred_after=1&occurred_before=1&page=1&per_page=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "cb77cac3-e948-49ac-80c0-a42eb570f687": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents",
+            "query": "incident_type=hazard&occurred_after=1&occurred_before=1&page=1&per_page=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "dffbff3a-bfb9-49fa-9f01-c00f82b86e79": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents/1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "e15c83c6-49b0-4304-b134-7610a2aa371c": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations/markers",
+            "query": "all=true&incident_type=crash&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "e9c52dc8-5ec8-406f-a499-b5076c21f44c": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/incidents",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "f3ef2604-fa03-42f5-a9e7-c4b3adc3aceb": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v2/locations/markers",
+            "query": "all=true&incident_type=hazard&limit=1&occurred_after=1&occurred_before=1&proximity=fuzzstring&proximity_square=1&query=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 522,
+            "codeDescription": "",
+            "content": "error code: 522",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  }
+}

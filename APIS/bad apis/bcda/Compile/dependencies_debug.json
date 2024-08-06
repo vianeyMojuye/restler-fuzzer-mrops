@@ -1,0 +1,1094 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_activity_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "organization_activity_list",
+        "PathContainerName": "organization_activity_list",
+        "CandidateTypeNames": [
+          "organization__activity__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_activity_list_html",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "organization_activity_list_html",
+        "PathContainerName": "organization_activity_list_html",
+        "CandidateTypeNames": [
+          "organization__activity__list__html"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_autocomplete",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "organization_autocomplete",
+        "PathContainerName": "organization_autocomplete",
+        "CandidateTypeNames": [
+          "organization__autocomplete"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_autocomplete",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "organization_autocomplete",
+        "PathContainerName": "organization_autocomplete",
+        "CandidateTypeNames": [
+          "organization__autocomplete"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_follower_count",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "organization_follower_count",
+        "PathContainerName": "organization_follower_count",
+        "CandidateTypeNames": [
+          "organization__follower__count"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_follower_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "organization_follower_list",
+        "PathContainerName": "organization_follower_list",
+        "CandidateTypeNames": [
+          "organization__follower__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "organization_list",
+        "PathContainerName": "organization_list",
+        "CandidateTypeNames": [
+          "organization__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "organization_list",
+        "PathContainerName": "organization_list",
+        "CandidateTypeNames": [
+          "organization__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_list_for_user",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "permission"
+        },
+        "ContainerName": "organization_list_for_user",
+        "PathContainerName": "organization_list_for_user",
+        "CandidateTypeNames": [
+          "organization__list__for__user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "permission",
+        "ProducerParameterName": "permission",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_revision_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "organization_revision_list",
+        "PathContainerName": "organization_revision_list",
+        "CandidateTypeNames": [
+          "organization__revision__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_show",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "organization_show",
+        "PathContainerName": "organization_show",
+        "CandidateTypeNames": [
+          "organization__show"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/organization_show",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "include_datasets"
+        },
+        "ContainerName": "organization_show",
+        "PathContainerName": "organization_show",
+        "CandidateTypeNames": [
+          "organization__show"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "include_datasets",
+        "ProducerParameterName": "datasets",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_activity_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "package_activity_list",
+        "PathContainerName": "package_activity_list",
+        "CandidateTypeNames": [
+          "package__activity__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_activity_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "package_activity_list",
+        "PathContainerName": "package_activity_list",
+        "CandidateTypeNames": [
+          "package__activity__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_activity_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "package_activity_list",
+        "PathContainerName": "package_activity_list",
+        "CandidateTypeNames": [
+          "package__activity__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_activity_list_html",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "package_activity_list_html",
+        "PathContainerName": "package_activity_list_html",
+        "CandidateTypeNames": [
+          "package__activity__list__html"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_activity_list_html",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "package_activity_list_html",
+        "PathContainerName": "package_activity_list_html",
+        "CandidateTypeNames": [
+          "package__activity__list__html"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_activity_list_html",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "package_activity_list_html",
+        "PathContainerName": "package_activity_list_html",
+        "CandidateTypeNames": [
+          "package__activity__list__html"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_autocomplete",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "package_autocomplete",
+        "PathContainerName": "package_autocomplete",
+        "CandidateTypeNames": [
+          "package__autocomplete"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_autocomplete",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "package_autocomplete",
+        "PathContainerName": "package_autocomplete",
+        "CandidateTypeNames": [
+          "package__autocomplete"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "package_list",
+        "PathContainerName": "package_list",
+        "CandidateTypeNames": [
+          "package__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "package_list",
+        "PathContainerName": "package_list",
+        "CandidateTypeNames": [
+          "package__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_relationships_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "package_relationships_list",
+        "PathContainerName": "package_relationships_list",
+        "CandidateTypeNames": [
+          "package__relationships__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_relationships_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id2"
+        },
+        "ContainerName": "package_relationships_list",
+        "PathContainerName": "package_relationships_list",
+        "CandidateTypeNames": [
+          "package__relationships__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id2",
+        "ProducerParameterName": "id2",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_relationships_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "rel"
+        },
+        "ContainerName": "package_relationships_list",
+        "PathContainerName": "package_relationships_list",
+        "CandidateTypeNames": [
+          "package__relationships__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "rel",
+        "ProducerParameterName": "rel",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_revision_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "package_revision_list",
+        "PathContainerName": "package_revision_list",
+        "CandidateTypeNames": [
+          "package__revision__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "package_search",
+        "PathContainerName": "package_search",
+        "CandidateTypeNames": [
+          "package__search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/package_show",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "package_show",
+        "PathContainerName": "package_show",
+        "CandidateTypeNames": [
+          "package__show"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/related_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "related_list",
+        "PathContainerName": "related_list",
+        "CandidateTypeNames": [
+          "related__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/related_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "dataset"
+        },
+        "ContainerName": "related_list",
+        "PathContainerName": "related_list",
+        "CandidateTypeNames": [
+          "related__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "dataset",
+        "ProducerParameterName": "dataset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/related_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "type_filter"
+        },
+        "ContainerName": "related_list",
+        "PathContainerName": "related_list",
+        "CandidateTypeNames": [
+          "related__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "type_filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/related_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "related_list",
+        "PathContainerName": "related_list",
+        "CandidateTypeNames": [
+          "related__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/related_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "featured"
+        },
+        "ContainerName": "related_list",
+        "PathContainerName": "related_list",
+        "CandidateTypeNames": [
+          "related__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "featured",
+        "ProducerParameterName": "featured",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/resource_search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "resource_search",
+        "PathContainerName": "resource_search",
+        "CandidateTypeNames": [
+          "resource__search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/resource_search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "resource_search",
+        "PathContainerName": "resource_search",
+        "CandidateTypeNames": [
+          "resource__search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/resource_search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "query"
+        },
+        "ContainerName": "resource_search",
+        "PathContainerName": "resource_search",
+        "CandidateTypeNames": [
+          "resource__search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "query",
+        "ProducerParameterName": "query",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/resource_search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "fields"
+        },
+        "ContainerName": "resource_search",
+        "PathContainerName": "resource_search",
+        "CandidateTypeNames": [
+          "resource__search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "fields",
+        "ProducerParameterName": "fields",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/resource_search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order_by"
+        },
+        "ContainerName": "resource_search",
+        "PathContainerName": "resource_search",
+        "CandidateTypeNames": [
+          "resource__search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order_by",
+        "ProducerParameterName": "by",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/resource_show",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "id"
+        },
+        "ContainerName": "resource_show",
+        "PathContainerName": "resource_show",
+        "CandidateTypeNames": [
+          "resource__show"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/resource_show",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "include_tracking"
+        },
+        "ContainerName": "resource_show",
+        "PathContainerName": "resource_show",
+        "CandidateTypeNames": [
+          "resource__show"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "include_tracking",
+        "ProducerParameterName": "tracking",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/tag_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "tag_list",
+        "PathContainerName": "tag_list",
+        "CandidateTypeNames": [
+          "tag__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/action/tag_list",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "tag_list",
+        "PathContainerName": "tag_list",
+        "CandidateTypeNames": [
+          "tag__list"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  }
+]

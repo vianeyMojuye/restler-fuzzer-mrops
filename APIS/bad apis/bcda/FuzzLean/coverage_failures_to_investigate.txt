@@ -1,0 +1,362 @@
+This file contains the failing requests, ordered by the number of blocked dependent requests.
+To improve coverage, fix the failing requests in the order listed in this file.
+
+Note: some requests are labeled as 'sequence failure'.
+This means the request depends on another request that is failing intermittently.
+For example, a DELETE request for a resource may be skipped because the resource
+PUT request failed due to exceeding quota.  The same PUT request succeeded earlier (and may
+succeed later depending on the resource clean-up behavior in the service), so it is
+considered an intermittent failure.
+
+-----------------------------------------------
+Request: Get /action/organization_show
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_show?id=ministry-of-agriculture&include_datasets=true HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_show?id=ministry-of-agriculture&include_datasets=true\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_show HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_show\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/package_activity_list_html
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/package_activity_list_html?id=ministry-of-agriculture&offset=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_activity_list_html?id=ministry-of-agriculture&offset=1&limit=1\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/package_activity_list_html HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_activity_list_html\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/package_revision_list
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/package_revision_list?id=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_revision_list?id=ministry-of-agriculture\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/package_revision_list HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_revision_list\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/tag_list
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/tag_list?offset=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/tag_list?offset=1&limit=1\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/tag_list HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/tag_list\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/related_list
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/related_list?id=ministry-of-agriculture&dataset=ministry-of-agriculture&type_filter=ministry-of-agriculture&sort=ministry-of-agriculture&featured=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/related_list?id=ministry-of-agriculture&dataset=ministry-of-agriculture&type_filter=ministry-of-agriculture&sort=ministry-of-agriculture&featured=ministry-of-agriculture\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/related_list HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/related_list\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/organization_autocomplete
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_autocomplete?q=ministry-of-agriculture&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_autocomplete?q=ministry-of-agriculture&limit=1\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_autocomplete HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_autocomplete\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/status_show
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/status_show HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/status_show\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/status_show HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/status_show\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/package_autocomplete
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/package_autocomplete?q=ministry-of-agriculture&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_autocomplete?q=ministry-of-agriculture&limit=1\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/package_autocomplete HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_autocomplete\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/package_search
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/package_search?q=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_search?q=ministry-of-agriculture\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/package_search HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_search\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/organization_activity_list
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_activity_list?id=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_activity_list?id=ministry-of-agriculture\r\ncache-control: no-cache\r\nconnection: close\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_activity_list HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_activity_list\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/organization_list_for_user
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_list_for_user?permission=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_list_for_user?permission=ministry-of-agriculture\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_list_for_user HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_list_for_user\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/organization_follower_count
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_follower_count?id=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_follower_count?id=ministry-of-agriculture\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_follower_count HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_follower_count\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/organization_activity_list_html
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_activity_list_html?id=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_activity_list_html?id=ministry-of-agriculture\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_activity_list_html HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_activity_list_html\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/package_activity_list
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/package_activity_list?id=ministry-of-agriculture&offset=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_activity_list?id=ministry-of-agriculture&offset=1&limit=1\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/package_activity_list HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_activity_list\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/package_list
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/package_list?offset=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_list?offset=1&limit=1\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/package_list HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_list\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/organization_list
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_list?offset=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_list?offset=1&limit=1\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_list HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_list\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/package_show
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/package_show?id=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_show?id=ministry-of-agriculture\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/package_show HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_show\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/resource_show
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/resource_show?id=ministry-of-agriculture&include_tracking=true HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/resource_show?id=ministry-of-agriculture&include_tracking=true\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/resource_show HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/resource_show\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/organization_follower_list
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_follower_list?id=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_follower_list?id=ministry-of-agriculture\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_follower_list HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_follower_list\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/organization_revision_list
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_revision_list?id=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_revision_list?id=ministry-of-agriculture\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/organization_revision_list HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/organization_revision_list\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/package_relationships_list
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/package_relationships_list?id=ministry-of-agriculture&id2=ministry-of-agriculture&rel=ministry-of-agriculture HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_relationships_list?id=ministry-of-agriculture&id2=ministry-of-agriculture&rel=ministry-of-agriculture\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/package_relationships_list HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/package_relationships_list\r\ncache-control: no-cache\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /action/resource_search
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/3/action/resource_search?query=ministry-of-agriculture&fields=ministry-of-agriculture&order_by=ministry-of-agriculture&offset=1&limit=1 HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/resource_search?query=ministry-of-agriculture&fields=ministry-of-agriculture&order_by=ministry-of-agriculture&offset=1&limit=1\r\ncache-control: no-cache\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/3/action/resource_search HTTP/1.1\r\nAccept: application/json\r\nHost: catalogue.data.gov.bc.ca\r\n\r\n
+	< HTTP/1.1 302 Found\r\ncontent-length: 0\r\nlocation: https://catalogue.data.gov.bc.ca/api/3/action/resource_search\r\ncache-control: no-cache\r\n\r\n
+
+

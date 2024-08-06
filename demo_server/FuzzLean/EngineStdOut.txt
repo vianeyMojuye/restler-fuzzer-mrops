@@ -1,0 +1,117 @@
+2024-06-27 06:20:16.312: Initializing: Garbage collection every 30 seconds.
+2024-06-27 06:20:16.373: Generation: 1 
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts')]
+>>>>>>>>>>>>>>>
+  
+resp and rule, Method ->  POST
+<engine.core.sequences.Sequence object at 0x000001AABFD9D2D0> [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}]
+Listes:
+POST = [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}],
+GET=[]
+--------------------
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts')]
+>>>>>>>>>>>>>>>
+  
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts')]
+>>>>>>>>>>>>>>>
+  
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts')]
+>>>>>>>>>>>>>>>
+  
+resp and rule, Method ->  POST
+<engine.core.sequences.Sequence object at 0x000001AABFD9D2D0> [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}]
+Listes:
+POST = [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}],
+GET=[]
+--------------------
+POST->POST   MR Equality : OK
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts')]
+>>>>>>>>>>>>>>>
+  
+resp and rule, Method ->  POST
+<engine.core.sequences.Sequence object at 0x000001AABFD9D2D0> [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}, {'status_code': '201', 'resp_body': '{"id":2799,"body":"fuzzstring"}'}]
+Listes:
+POST = [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}, {'status_code': '201', 'resp_body': '{"id":2799,"body":"fuzzstring"}'}],
+GET=[]
+--------------------
+POST->POST   MR Equality : OK
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts')]
+>>>>>>>>>>>>>>>
+  
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts')]
+>>>>>>>>>>>>>>>
+  
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('GET', '/api/doc')]
+>>>>>>>>>>>>>>>
+  
+resp and rule, Method ->  GET
+<engine.core.sequences.Sequence object at 0x000001AABFD02E90> [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}, {'status_code': '201', 'resp_body': '{"id":2799,"body":"fuzzstring"}'}]
+Listes:
+POST = [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}, {'status_code': '201', 'resp_body': '{"id":2799,"body":"fuzzstring"}'}],
+GET=[{'status_code': '200', 'resp_body': '{"message":"this is the docs"}'}]
+--------------------
+POST->POST   MR Equality : OK
+[' Status_code POST AND GET not similar: item {\'status_code\': \'200\', \'resp_body\': \'{"message":"this is the docs"}\'} not in POST List ']
+2024-06-27 06:20:18.846: Generation: 2 
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts'), ('GET', '/api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM')]
+>>>>>>>>>>>>>>>
+  
+resp and rule, Method ->  GET
+<engine.core.sequences.Sequence object at 0x000001AABFD021A0> [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}, {'status_code': '201', 'resp_body': '{"id":2799,"body":"fuzzstring"}'}]
+Listes:
+POST = [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}, {'status_code': '201', 'resp_body': '{"id":2799,"body":"fuzzstring"}'}],
+GET=[{'status_code': '200', 'resp_body': '{"message":"this is the docs"}'}, {'status_code': '200', 'resp_body': '{"id":2800,"body":"my first blog post"}'}]
+--------------------
+POST->POST   MR Equality : OK
+[' Status_code POST AND GET not similar: item {\'status_code\': \'200\', \'resp_body\': \'{"message":"this is the docs"}\'} not in POST List ', ' Status_code POST AND GET not similar: item {\'status_code\': \'200\', \'resp_body\': \'{"id":2800,"body":"my first blog post"}\'} not in POST List ']
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts'), ('PUT', '/api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM')]
+>>>>>>>>>>>>>>>
+  
+resp and rule, Method ->  PUT
+<engine.core.sequences.Sequence object at 0x000001AABFD02320> [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}, {'status_code': '201', 'resp_body': '{"id":2799,"body":"fuzzstring"}'}]
+Listes:
+POST = [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}, {'status_code': '201', 'resp_body': '{"id":2799,"body":"fuzzstring"}'}],
+GET=[{'status_code': '200', 'resp_body': '{"message":"this is the docs"}'}, {'status_code': '200', 'resp_body': '{"id":2800,"body":"my first blog post"}'}]
+--------------------
+POST->POST   MR Equality : OK
+[' Status_code POST AND GET not similar: item {\'status_code\': \'200\', \'resp_body\': \'{"message":"this is the docs"}\'} not in POST List ', ' Status_code POST AND GET not similar: item {\'status_code\': \'200\', \'resp_body\': \'{"id":2800,"body":"my first blog post"}\'} not in POST List ']
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts'), ('PUT', '/api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM')]
+>>>>>>>>>>>>>>>
+  
+resp and rule, Method ->  PUT
+<engine.core.sequences.Sequence object at 0x000001AABFD02320> [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}, {'status_code': '201', 'resp_body': '{"id":2799,"body":"fuzzstring"}'}]
+Listes:
+POST = [{'status_code': '201', 'resp_body': '{"id":2793,"body":"fuzzstring"}'}, {'status_code': '201', 'resp_body': '{"id":2798,"body":"my first blog post"}'}, {'status_code': '201', 'resp_body': '{"id":2799,"body":"fuzzstring"}'}],
+GET=[{'status_code': '200', 'resp_body': '{"message":"this is the docs"}'}, {'status_code': '200', 'resp_body': '{"id":2800,"body":"my first blog post"}'}]
+--------------------
+POST->POST   MR Equality : OK
+[' Status_code POST AND GET not similar: item {\'status_code\': \'200\', \'resp_body\': \'{"message":"this is the docs"}\'} not in POST List ', ' Status_code POST AND GET not similar: item {\'status_code\': \'200\', \'resp_body\': \'{"id":2800,"body":"my first blog post"}\'} not in POST List ']
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/blog/posts'), ('DELETE', '/api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM')]
+>>>>>>>>>>>>>>>
+  
+2024-06-27 06:20:21.798: Terminating garbage collection. Waiting for max 300 seconds. 
+Done.

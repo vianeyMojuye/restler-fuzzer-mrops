@@ -1,0 +1,703 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/incidents",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "occurred_before"
+        },
+        "ContainerName": "incidents",
+        "PathContainerName": "incidents",
+        "CandidateTypeNames": [
+          "incident"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "occurred_before",
+        "ProducerParameterName": "before",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/incidents",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "incidents",
+        "PathContainerName": "incidents",
+        "CandidateTypeNames": [
+          "incident"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/incidents",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "proximity"
+        },
+        "ContainerName": "incidents",
+        "PathContainerName": "incidents",
+        "CandidateTypeNames": [
+          "incident"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "proximity",
+        "ProducerParameterName": "proximity",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/incidents",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "occurred_after"
+        },
+        "ContainerName": "incidents",
+        "PathContainerName": "incidents",
+        "CandidateTypeNames": [
+          "incident"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "occurred_after",
+        "ProducerParameterName": "after",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/incidents",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "per_page"
+        },
+        "ContainerName": "incidents",
+        "PathContainerName": "incidents",
+        "CandidateTypeNames": [
+          "incident"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "per_page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/incidents",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "proximity_square"
+        },
+        "ContainerName": "incidents",
+        "PathContainerName": "incidents",
+        "CandidateTypeNames": [
+          "incident"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "proximity_square",
+        "ProducerParameterName": "square",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/incidents",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "incident_type"
+        },
+        "ContainerName": "incidents",
+        "PathContainerName": "incidents",
+        "CandidateTypeNames": [
+          "incident"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "incident_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "incident_type",
+            "String",
+            [
+              "crash",
+              "hazard",
+              "theft",
+              "unconfirmed",
+              "infrastructure_issue",
+              "chop_shop"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/incidents",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "query"
+        },
+        "ContainerName": "incidents",
+        "PathContainerName": "incidents",
+        "CandidateTypeNames": [
+          "incident"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "query",
+        "ProducerParameterName": "query",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/incidents/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "v2",
+              "incidents"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "incidents",
+        "PathContainerName": "incidents",
+        "CandidateTypeNames": [
+          "incident"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "occurred_before"
+        },
+        "ContainerName": "locations",
+        "PathContainerName": "locations",
+        "CandidateTypeNames": [
+          "location"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "occurred_before",
+        "ProducerParameterName": "before",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "proximity"
+        },
+        "ContainerName": "locations",
+        "PathContainerName": "locations",
+        "CandidateTypeNames": [
+          "location"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "proximity",
+        "ProducerParameterName": "proximity",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "occurred_after"
+        },
+        "ContainerName": "locations",
+        "PathContainerName": "locations",
+        "CandidateTypeNames": [
+          "location"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "occurred_after",
+        "ProducerParameterName": "after",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "proximity_square"
+        },
+        "ContainerName": "locations",
+        "PathContainerName": "locations",
+        "CandidateTypeNames": [
+          "location"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "proximity_square",
+        "ProducerParameterName": "square",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "incident_type"
+        },
+        "ContainerName": "locations",
+        "PathContainerName": "locations",
+        "CandidateTypeNames": [
+          "location"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "incident_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "incident_type",
+            "String",
+            [
+              "crash",
+              "hazard",
+              "theft",
+              "unconfirmed",
+              "infrastructure_issue",
+              "chop_shop"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "query"
+        },
+        "ContainerName": "locations",
+        "PathContainerName": "locations",
+        "CandidateTypeNames": [
+          "location"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "query",
+        "ProducerParameterName": "query",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "locations",
+        "PathContainerName": "locations",
+        "CandidateTypeNames": [
+          "location"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "all"
+        },
+        "ContainerName": "locations",
+        "PathContainerName": "locations",
+        "CandidateTypeNames": [
+          "location"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "all",
+        "ProducerParameterName": "all",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations/markers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "occurred_before"
+        },
+        "ContainerName": "markers",
+        "PathContainerName": "markers",
+        "CandidateTypeNames": [
+          "marker"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "occurred_before",
+        "ProducerParameterName": "before",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations/markers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "proximity"
+        },
+        "ContainerName": "markers",
+        "PathContainerName": "markers",
+        "CandidateTypeNames": [
+          "marker"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "proximity",
+        "ProducerParameterName": "proximity",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations/markers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "occurred_after"
+        },
+        "ContainerName": "markers",
+        "PathContainerName": "markers",
+        "CandidateTypeNames": [
+          "marker"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "occurred_after",
+        "ProducerParameterName": "after",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations/markers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "proximity_square"
+        },
+        "ContainerName": "markers",
+        "PathContainerName": "markers",
+        "CandidateTypeNames": [
+          "marker"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "proximity_square",
+        "ProducerParameterName": "square",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations/markers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "incident_type"
+        },
+        "ContainerName": "markers",
+        "PathContainerName": "markers",
+        "CandidateTypeNames": [
+          "marker"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "incident_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "incident_type",
+            "String",
+            [
+              "crash",
+              "hazard",
+              "theft",
+              "unconfirmed",
+              "infrastructure_issue",
+              "chop_shop"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations/markers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "query"
+        },
+        "ContainerName": "markers",
+        "PathContainerName": "markers",
+        "CandidateTypeNames": [
+          "marker"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "query",
+        "ProducerParameterName": "query",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations/markers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "markers",
+        "PathContainerName": "markers",
+        "CandidateTypeNames": [
+          "marker"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v2/locations/markers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "all"
+        },
+        "ContainerName": "markers",
+        "PathContainerName": "markers",
+        "CandidateTypeNames": [
+          "marker"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "all",
+        "ProducerParameterName": "all",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  }
+]

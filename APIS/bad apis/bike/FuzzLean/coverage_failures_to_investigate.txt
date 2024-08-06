@@ -1,0 +1,128 @@
+This file contains the failing requests, ordered by the number of blocked dependent requests.
+To improve coverage, fix the failing requests in the order listed in this file.
+
+Note: some requests are labeled as 'sequence failure'.
+This means the request depends on another request that is failing intermittently.
+For example, a DELETE request for a resource may be skipped because the resource
+PUT request failed due to exceeding quota.  The same PUT request succeeded earlier (and may
+succeed later depending on the resource clean-up behavior in the service), so it is
+considered an intermittent failure.
+
+-----------------------------------------------
+Request: Get /v2/locations
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/v2/locations?occurred_before=1&occurred_after=1&incident_type=crash&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:12:37 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Iuen0CXHKMNTX6k8rOLtoQv2j%2BijrrhvEUMwkQJkIE9FaVqATU8dIGTmmob8MwWH9ZAqKouc8%2FbOypY%2B%2BIgkqzjnf2PSp8iHiHEMry82uw9ap5cFJeeEQ9%2BI07iEchs%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 884258d17cc36d81-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/v2/locations?occurred_before=1&occurred_after=1&incident_type=hazard&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:13:55 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2FgBEgoMsDZVQRs5sjD2JDvezCAoOiLpexja2LP1R0ndhflwbRldsY%2F7n%2BrapnX7tTjiKcPklQmOsYM4FArbp0eNmoP1vTS1OCR7WGHhnebpBzteCIfgltckZjJAu6ic%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88425abb0a2195b7-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /api/v2/locations?occurred_before=1&occurred_after=1&incident_type=theft&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:14:34 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=NeVLHfTGaXans3mr26GgL5ejOlA9FTzPr5T1ifr8NHzdeDugXe%2FU0dnWq1%2BgtB20Q6hj8nZaZmHNXuhCzhPEcfNbKKQ%2FXiCLs3qtQZowREWaHYxvaoK1Mqf0Pdb9oro%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88425bb0bfb495b7-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /api/v2/locations?occurred_before=1&occurred_after=1&incident_type=unconfirmed&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:15:13 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ZFfEwHFCClOxu7GmOhqI9RMyPnqZOjcAEGcOW0n7szWf9SafCdsTUuMbfyxTYUb04D6PRYytOn1m3UCh8aONxZYteKFp0L7Yavqw3Al3niIq82MlT21YRTiFXDbqw0g%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88425ca3df7a95b7-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /api/v2/locations?occurred_before=1&occurred_after=1&incident_type=infrastructure_issue&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:15:53 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=3Wt8J%2BfTL6m7S%2BVnVqCpG65vMKIcNCn78gQGcQstFL1VRhjeBlsboOSgKcrOXs3Ls2XRWg7ZL5kI5zDz%2FHV4aOf%2BqTC13bNVJdi4L6JUYPad3RFHutZOurKre4aY0SU%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88425d977fc595b7-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+-----------------------------------------------
+Request: Get /v2/incidents/{id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/v2/incidents/1 HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:17:50 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=KGui9L0U21mRIO4UmMBTmUrDfXl5KvW2p0Srv%2B4IVeBxbG9YwGcyhxiBS0F08UCeP05PMhq1PhrO9WarTs8zfm1uWyDVArI17IXCoGy0ZCYMzUamAnbYcUi69R7%2BDPk%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88426074ee2595b7-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/v2/incidents/1 HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:19:09 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=tR9oE%2BKf2%2FsLn0wzR2gpwvgfJv07A1oFow9jJK047UjdLQfcYdGLbXCTboockUvMoK1MBCmeSjZtChtAwzyLTqRTPpWnqcjf%2FnfUTQm7Xm5V6LYxWSru2kustXQ0tfY%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88426261380f98be-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+-----------------------------------------------
+Request: Get /v2/locations/markers
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/v2/locations/markers?occurred_before=1&occurred_after=1&incident_type=crash&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:19:48 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=lli7I7TmB5il19iBzot9li%2BRMSI4KOmjPs%2FpkaiJd05SD4pP9tQskI%2FTqnN9mwFUZv%2FepF0tJSdm1ICOxHHDyj5DORQ1cSBRiIgN3SHdTwfyon0iVR2XV7i2pRQ3lI0%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88426357be6d98be-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/v2/locations/markers?occurred_before=1&occurred_after=1&incident_type=hazard&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:21:07 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=LeUmmGmXl88%2B%2FFCNpAI%2FUkyiXrwXy3qRexHwY0e2R%2FBT0hAllPx6%2FOwK0eyGT3lzaCBTB6INtfs0JnxRoPx6jZZ04TVA%2BsLS7uEgoqq6Vr0QaTtDLCZMs5xqxlYqibM%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 884265450e1295b8-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /api/v2/locations/markers?occurred_before=1&occurred_after=1&incident_type=theft&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:21:46 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=LoIJcEPdxj6%2F9eZPXq0l8tZrbheA67%2BbijqKLKkDVriGZZuWwG3MMfQoi9QJMoZ%2F%2FN8ruy8xB4Tn57rYI0o69iujyos3fljMIXnTDmtsGQ3VKixlBbo2LRuUH3Y9cHE%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 8842663a596195b8-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /api/v2/locations/markers?occurred_before=1&occurred_after=1&incident_type=unconfirmed&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 502 Bad Gateway\r\nServer: cloudflare\r\nDate: Wed, 15 May 2024 10:22:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 155\r\nConnection: keep-alive\r\nCF-RAY: 8842672e0bcd95b8-LUX\r\n\r\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /api/v2/locations/markers?occurred_before=1&occurred_after=1&incident_type=infrastructure_issue&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:23:37 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=pnltUI7aqOj0QMOOVfCvgU6LcQtNWJzxnj%2B78UmGICGQ17DGqkQVEoY6iCAb5tO7YPgMh6u3O0Cdke5I83r0qhnxV5vEDRBABOXDoIo1i520lGIWEfun9AQ8Tar5UAI%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 884268ec6b4b6d81-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+-----------------------------------------------
+Request: Get /v2/incidents
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/v2/incidents?page=1&per_page=1&occurred_before=1&occurred_after=1&incident_type=crash&proximity=fuzzstring&proximity_square=1&query=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:25:36 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=lFBquZdwOofAMZ1XKHSHKB2Effj4UOr1auSBBpp3UmmyymiisrbPmuBj1zXKGz6ezfs%2BKbZOMa3OGbftq1yuWnP3OXmNwXv8hhsbMzBLU4dVX2C%2BGFkXWXxRhlb1xZw%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88426bd6bf486d81-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/v2/incidents?page=1&per_page=1&occurred_before=1&occurred_after=1&incident_type=hazard&proximity=fuzzstring&proximity_square=1&query=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:26:55 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=dbHAw13ImNv4nw2owDqzjtcpomIXDFpDU4FVPa5okUNheApYLmDDGqNQzbcbDli8nMN6hsxUyMAY5dGTh3qTNpZmxxv0%2BNECsqKefu38%2FA7w9Z2JR%2BZ3ASptyYav%2FYo%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88426dc24d6c6d81-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /api/v2/incidents?page=1&per_page=1&occurred_before=1&occurred_after=1&incident_type=theft&proximity=fuzzstring&proximity_square=1&query=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:27:34 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bYr4QLhucAw9ZhdBAxAHQPQwhHludWV7tM%2BwSQeissy0vhUuZbhvYOtYAWwZtX2K%2FsZQYqX5AdhdtMtzjOwhyoV7esD9pnsnZ3ZCMDlFiSBl0w6H2%2B1hxGBozWZVo8M%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88426eb98db16d81-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /api/v2/incidents?page=1&per_page=1&occurred_before=1&occurred_after=1&incident_type=unconfirmed&proximity=fuzzstring&proximity_square=1&query=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:28:13 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Tl9v%2FDAUVniWeJ%2BS2wD377nuCZ4zs1gaxaWwfWSrSWYE26Khpem4mFm4H8JdJBnvKax9CKI6SLw9QFNwERNvamWmaiAyTvI1TjXgQ34JkGkuaVZmxRsv%2FUVsaCQacK0%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 88426fad7aca6d81-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /api/v2/incidents?page=1&per_page=1&occurred_before=1&occurred_after=1&incident_type=infrastructure_issue&proximity=fuzzstring&proximity_square=1&query=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n
+	< HTTP/1.1 522 \r\nDate: Wed, 15 May 2024 10:28:52 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\nConnection: keep-alive\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=QJtaVQG%2BW%2F16mS4gCg%2Bzr2iYPa7PSFDwKM6AUjIbVEWUUG%2Ff80KpdGRUw4A6T6ScFQx6gdaknR7qXc%2BkYhjXeQveldhQbXJ%2FdWae5hKchvVUlP5bgF6YTq0oozfbdso%3D"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nX-Frame-Options: SAMEORIGIN\r\nReferrer-Policy: same-origin\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nServer: cloudflare\r\nCF-RAY: 884270a0af866d81-LUX\r\nalt-svc: h3=":443"; ma=86400\r\n\r\nerror code: 522
+
+

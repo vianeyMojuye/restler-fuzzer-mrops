@@ -1,0 +1,4425 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/auth/claim",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "ip",
+            "fullPath": {
+              "path": [
+                "ip"
+              ]
+            }
+          }
+        },
+        "ContainerName": "claim",
+        "PathContainerName": "claim",
+        "CandidateTypeNames": [
+          "claim"
+        ],
+        "AccessPath": "ip",
+        "AccessPathParts": {
+          "path": [
+            "ip"
+          ]
+        },
+        "ResourceName": "ip",
+        "ProducerParameterName": "ip",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/auth/claim",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "origin",
+            "fullPath": {
+              "path": [
+                "origin"
+              ]
+            }
+          }
+        },
+        "ContainerName": "claim",
+        "PathContainerName": "claim",
+        "CandidateTypeNames": [
+          "claim"
+        ],
+        "AccessPath": "origin",
+        "AccessPathParts": {
+          "path": [
+            "origin"
+          ]
+        },
+        "ResourceName": "origin",
+        "ProducerParameterName": "origin",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "record_id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "corrections",
+              "species"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "record_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "correction",
+            "fullPath": {
+              "path": [
+                "correction"
+              ]
+            }
+          }
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPath": "correction",
+        "AccessPathParts": {
+          "path": [
+            "correction"
+          ]
+        },
+        "ResourceName": "correction",
+        "ProducerParameterName": "correction",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "adapted_to_coarse_textured_soils",
+            "fullPath": {
+              "path": [
+                "correction",
+                "adapted_to_coarse_textured_soils"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/adapted_to_coarse_textured_soils",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "adapted_to_coarse_textured_soils"
+          ]
+        },
+        "ResourceName": "adapted_to_coarse_textured_soils",
+        "ProducerParameterName": "soils",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "adapted_to_fine_textured_soils",
+            "fullPath": {
+              "path": [
+                "correction",
+                "adapted_to_fine_textured_soils"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/adapted_to_fine_textured_soils",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "adapted_to_fine_textured_soils"
+          ]
+        },
+        "ResourceName": "adapted_to_fine_textured_soils",
+        "ProducerParameterName": "soils",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "adapted_to_medium_textured_soils",
+            "fullPath": {
+              "path": [
+                "correction",
+                "adapted_to_medium_textured_soils"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/adapted_to_medium_textured_soils",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "adapted_to_medium_textured_soils"
+          ]
+        },
+        "ResourceName": "adapted_to_medium_textured_soils",
+        "ProducerParameterName": "soils",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "anaerobic_tolerance",
+            "fullPath": {
+              "path": [
+                "correction",
+                "anaerobic_tolerance"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/anaerobic_tolerance",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "anaerobic_tolerance"
+          ]
+        },
+        "ResourceName": "anaerobic_tolerance",
+        "ProducerParameterName": "tolerance",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "atmospheric_humidity",
+            "fullPath": {
+              "path": [
+                "correction",
+                "atmospheric_humidity"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/atmospheric_humidity",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "atmospheric_humidity"
+          ]
+        },
+        "ResourceName": "atmospheric_humidity",
+        "ProducerParameterName": "humidity",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "author",
+            "fullPath": {
+              "path": [
+                "correction",
+                "author"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/author",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "author"
+          ]
+        },
+        "ResourceName": "author",
+        "ProducerParameterName": "author",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "average_height_unit",
+            "fullPath": {
+              "path": [
+                "correction",
+                "average_height_unit"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/average_height_unit",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "average_height_unit"
+          ]
+        },
+        "ResourceName": "average_height_unit",
+        "ProducerParameterName": "unit",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "average_height_unit",
+            "String",
+            [
+              "in",
+              "ft",
+              "cm",
+              "m"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "average_height_value",
+            "fullPath": {
+              "path": [
+                "correction",
+                "average_height_value"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/average_height_value",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "average_height_value"
+          ]
+        },
+        "ResourceName": "average_height_value",
+        "ProducerParameterName": "value",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "bibliography",
+            "fullPath": {
+              "path": [
+                "correction",
+                "bibliography"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/bibliography",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "bibliography"
+          ]
+        },
+        "ResourceName": "bibliography",
+        "ProducerParameterName": "bibliography",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "bloom_months",
+            "fullPath": {
+              "path": [
+                "correction",
+                "bloom_months"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/bloom_months",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "bloom_months"
+          ]
+        },
+        "ResourceName": "bloom_months",
+        "ProducerParameterName": "months",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "common_name",
+            "fullPath": {
+              "path": [
+                "correction",
+                "common_name"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/common_name",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "common_name"
+          ]
+        },
+        "ResourceName": "common_name",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "duration",
+            "fullPath": {
+              "path": [
+                "correction",
+                "duration"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/duration",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "duration"
+          ]
+        },
+        "ResourceName": "duration",
+        "ProducerParameterName": "duration",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "edible_part",
+            "fullPath": {
+              "path": [
+                "correction",
+                "edible_part"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/edible_part",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "edible_part"
+          ]
+        },
+        "ResourceName": "edible_part",
+        "ProducerParameterName": "part",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "flower_color",
+            "fullPath": {
+              "path": [
+                "correction",
+                "flower_color"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/flower_color",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "flower_color"
+          ]
+        },
+        "ResourceName": "flower_color",
+        "ProducerParameterName": "color",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "flower_conspicuous",
+            "fullPath": {
+              "path": [
+                "correction",
+                "flower_conspicuous"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/flower_conspicuous",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "flower_conspicuous"
+          ]
+        },
+        "ResourceName": "flower_conspicuous",
+        "ProducerParameterName": "conspicuous",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "foliage_color",
+            "fullPath": {
+              "path": [
+                "correction",
+                "foliage_color"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/foliage_color",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "foliage_color"
+          ]
+        },
+        "ResourceName": "foliage_color",
+        "ProducerParameterName": "color",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "foliage_texture",
+            "fullPath": {
+              "path": [
+                "correction",
+                "foliage_texture"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/foliage_texture",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "foliage_texture"
+          ]
+        },
+        "ResourceName": "foliage_texture",
+        "ProducerParameterName": "texture",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "foliage_texture",
+            "String",
+            [
+              "fine",
+              "medium",
+              "coarse",
+              ""
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "fruit_color",
+            "fullPath": {
+              "path": [
+                "correction",
+                "fruit_color"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/fruit_color",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "fruit_color"
+          ]
+        },
+        "ResourceName": "fruit_color",
+        "ProducerParameterName": "color",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "fruit_conspicuous",
+            "fullPath": {
+              "path": [
+                "correction",
+                "fruit_conspicuous"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/fruit_conspicuous",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "fruit_conspicuous"
+          ]
+        },
+        "ResourceName": "fruit_conspicuous",
+        "ProducerParameterName": "conspicuous",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "fruit_months",
+            "fullPath": {
+              "path": [
+                "correction",
+                "fruit_months"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/fruit_months",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "fruit_months"
+          ]
+        },
+        "ResourceName": "fruit_months",
+        "ProducerParameterName": "months",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "fruit_seed_persistence",
+            "fullPath": {
+              "path": [
+                "correction",
+                "fruit_seed_persistence"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/fruit_seed_persistence",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "fruit_seed_persistence"
+          ]
+        },
+        "ResourceName": "fruit_seed_persistence",
+        "ProducerParameterName": "persistence",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "genus",
+            "fullPath": {
+              "path": [
+                "correction",
+                "genus"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/genus",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "genus"
+          ]
+        },
+        "ResourceName": "genus",
+        "ProducerParameterName": "genus",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "ground_humidity",
+            "fullPath": {
+              "path": [
+                "correction",
+                "ground_humidity"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/ground_humidity",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "ground_humidity"
+          ]
+        },
+        "ResourceName": "ground_humidity",
+        "ProducerParameterName": "humidity",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "growth_form",
+            "fullPath": {
+              "path": [
+                "correction",
+                "growth_form"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/growth_form",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "growth_form"
+          ]
+        },
+        "ResourceName": "growth_form",
+        "ProducerParameterName": "form",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "growth_habit",
+            "fullPath": {
+              "path": [
+                "correction",
+                "growth_habit"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/growth_habit",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "growth_habit"
+          ]
+        },
+        "ResourceName": "growth_habit",
+        "ProducerParameterName": "habit",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "growth_months",
+            "fullPath": {
+              "path": [
+                "correction",
+                "growth_months"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/growth_months",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "growth_months"
+          ]
+        },
+        "ResourceName": "growth_months",
+        "ProducerParameterName": "months",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "growth_rate",
+            "fullPath": {
+              "path": [
+                "correction",
+                "growth_rate"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/growth_rate",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "growth_rate"
+          ]
+        },
+        "ResourceName": "growth_rate",
+        "ProducerParameterName": "rate",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "leaf_retention",
+            "fullPath": {
+              "path": [
+                "correction",
+                "leaf_retention"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/leaf_retention",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "leaf_retention"
+          ]
+        },
+        "ResourceName": "leaf_retention",
+        "ProducerParameterName": "retention",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "light",
+            "fullPath": {
+              "path": [
+                "correction",
+                "light"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/light",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "light"
+          ]
+        },
+        "ResourceName": "light",
+        "ProducerParameterName": "light",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "ligneous_type",
+            "fullPath": {
+              "path": [
+                "correction",
+                "ligneous_type"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/ligneous_type",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "ligneous_type"
+          ]
+        },
+        "ResourceName": "ligneous_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "ligneous_type",
+            "String",
+            [
+              "liana",
+              "subshrub",
+              "shrub",
+              "tree",
+              "parasite",
+              ""
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "maximum_height_unit",
+            "fullPath": {
+              "path": [
+                "correction",
+                "maximum_height_unit"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/maximum_height_unit",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "maximum_height_unit"
+          ]
+        },
+        "ResourceName": "maximum_height_unit",
+        "ProducerParameterName": "unit",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "maximum_height_unit",
+            "String",
+            [
+              "in",
+              "ft",
+              "cm",
+              "m"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "maximum_height_value",
+            "fullPath": {
+              "path": [
+                "correction",
+                "maximum_height_value"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/maximum_height_value",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "maximum_height_value"
+          ]
+        },
+        "ResourceName": "maximum_height_value",
+        "ProducerParameterName": "value",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "maximum_precipitation_unit",
+            "fullPath": {
+              "path": [
+                "correction",
+                "maximum_precipitation_unit"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/maximum_precipitation_unit",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "maximum_precipitation_unit"
+          ]
+        },
+        "ResourceName": "maximum_precipitation_unit",
+        "ProducerParameterName": "unit",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "maximum_precipitation_unit",
+            "String",
+            [
+              "in",
+              "ft",
+              "mm",
+              "cm",
+              "m"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "maximum_precipitation_value",
+            "fullPath": {
+              "path": [
+                "correction",
+                "maximum_precipitation_value"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/maximum_precipitation_value",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "maximum_precipitation_value"
+          ]
+        },
+        "ResourceName": "maximum_precipitation_value",
+        "ProducerParameterName": "value",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "maximum_temperature_deg_c",
+            "fullPath": {
+              "path": [
+                "correction",
+                "maximum_temperature_deg_c"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/maximum_temperature_deg_c",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "maximum_temperature_deg_c"
+          ]
+        },
+        "ResourceName": "maximum_temperature_deg_c",
+        "ProducerParameterName": "c",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "minimum_precipitation_unit",
+            "fullPath": {
+              "path": [
+                "correction",
+                "minimum_precipitation_unit"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/minimum_precipitation_unit",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "minimum_precipitation_unit"
+          ]
+        },
+        "ResourceName": "minimum_precipitation_unit",
+        "ProducerParameterName": "unit",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "minimum_precipitation_unit",
+            "String",
+            [
+              "in",
+              "ft",
+              "mm",
+              "cm",
+              "m"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "minimum_precipitation_value",
+            "fullPath": {
+              "path": [
+                "correction",
+                "minimum_precipitation_value"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/minimum_precipitation_value",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "minimum_precipitation_value"
+          ]
+        },
+        "ResourceName": "minimum_precipitation_value",
+        "ProducerParameterName": "value",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "minimum_root_depth_unit",
+            "fullPath": {
+              "path": [
+                "correction",
+                "minimum_root_depth_unit"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/minimum_root_depth_unit",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "minimum_root_depth_unit"
+          ]
+        },
+        "ResourceName": "minimum_root_depth_unit",
+        "ProducerParameterName": "unit",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "minimum_root_depth_unit",
+            "String",
+            [
+              "in",
+              "ft",
+              "cm",
+              "m"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "minimum_root_depth_value",
+            "fullPath": {
+              "path": [
+                "correction",
+                "minimum_root_depth_value"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/minimum_root_depth_value",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "minimum_root_depth_value"
+          ]
+        },
+        "ResourceName": "minimum_root_depth_value",
+        "ProducerParameterName": "value",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "minimum_temperature_deg_c",
+            "fullPath": {
+              "path": [
+                "correction",
+                "minimum_temperature_deg_c"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/minimum_temperature_deg_c",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "minimum_temperature_deg_c"
+          ]
+        },
+        "ResourceName": "minimum_temperature_deg_c",
+        "ProducerParameterName": "c",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "observations",
+            "fullPath": {
+              "path": [
+                "correction",
+                "observations"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/observations",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "observations"
+          ]
+        },
+        "ResourceName": "observations",
+        "ProducerParameterName": "observations",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "ph_maximum",
+            "fullPath": {
+              "path": [
+                "correction",
+                "ph_maximum"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/ph_maximum",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "ph_maximum"
+          ]
+        },
+        "ResourceName": "ph_maximum",
+        "ProducerParameterName": "maximum",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "ph_minimum",
+            "fullPath": {
+              "path": [
+                "correction",
+                "ph_minimum"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/ph_minimum",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "ph_minimum"
+          ]
+        },
+        "ResourceName": "ph_minimum",
+        "ProducerParameterName": "minimum",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "planting_days_to_harvest",
+            "fullPath": {
+              "path": [
+                "correction",
+                "planting_days_to_harvest"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/planting_days_to_harvest",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "planting_days_to_harvest"
+          ]
+        },
+        "ResourceName": "planting_days_to_harvest",
+        "ProducerParameterName": "harvest",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "planting_description",
+            "fullPath": {
+              "path": [
+                "correction",
+                "planting_description"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/planting_description",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "planting_description"
+          ]
+        },
+        "ResourceName": "planting_description",
+        "ProducerParameterName": "description",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "planting_row_spacing_unit",
+            "fullPath": {
+              "path": [
+                "correction",
+                "planting_row_spacing_unit"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/planting_row_spacing_unit",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "planting_row_spacing_unit"
+          ]
+        },
+        "ResourceName": "planting_row_spacing_unit",
+        "ProducerParameterName": "unit",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "planting_row_spacing_unit",
+            "String",
+            [
+              "in",
+              "ft",
+              "cm",
+              "m"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "planting_row_spacing_value",
+            "fullPath": {
+              "path": [
+                "correction",
+                "planting_row_spacing_value"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/planting_row_spacing_value",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "planting_row_spacing_value"
+          ]
+        },
+        "ResourceName": "planting_row_spacing_value",
+        "ProducerParameterName": "value",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "planting_sowing_description",
+            "fullPath": {
+              "path": [
+                "correction",
+                "planting_sowing_description"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/planting_sowing_description",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "planting_sowing_description"
+          ]
+        },
+        "ResourceName": "planting_sowing_description",
+        "ProducerParameterName": "description",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "planting_spread_unit",
+            "fullPath": {
+              "path": [
+                "correction",
+                "planting_spread_unit"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/planting_spread_unit",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "planting_spread_unit"
+          ]
+        },
+        "ResourceName": "planting_spread_unit",
+        "ProducerParameterName": "unit",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "planting_spread_unit",
+            "String",
+            [
+              "in",
+              "ft",
+              "cm",
+              "m"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "planting_spread_value",
+            "fullPath": {
+              "path": [
+                "correction",
+                "planting_spread_value"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/planting_spread_value",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "planting_spread_value"
+          ]
+        },
+        "ResourceName": "planting_spread_value",
+        "ProducerParameterName": "value",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "rank",
+            "fullPath": {
+              "path": [
+                "correction",
+                "rank"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/rank",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "rank"
+          ]
+        },
+        "ResourceName": "rank",
+        "ProducerParameterName": "rank",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "rank",
+            "String",
+            [
+              "species",
+              "ssp",
+              "var",
+              "form",
+              "hybrid",
+              "subvar",
+              ""
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "scientific_name",
+            "fullPath": {
+              "path": [
+                "correction",
+                "scientific_name"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/scientific_name",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "scientific_name"
+          ]
+        },
+        "ResourceName": "scientific_name",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "soil_nutriments",
+            "fullPath": {
+              "path": [
+                "correction",
+                "soil_nutriments"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/soil_nutriments",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "soil_nutriments"
+          ]
+        },
+        "ResourceName": "soil_nutriments",
+        "ProducerParameterName": "nutriments",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "soil_salinity",
+            "fullPath": {
+              "path": [
+                "correction",
+                "soil_salinity"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/soil_salinity",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "soil_salinity"
+          ]
+        },
+        "ResourceName": "soil_salinity",
+        "ProducerParameterName": "salinity",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "soil_texture",
+            "fullPath": {
+              "path": [
+                "correction",
+                "soil_texture"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/soil_texture",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "soil_texture"
+          ]
+        },
+        "ResourceName": "soil_texture",
+        "ProducerParameterName": "texture",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "toxicity",
+            "fullPath": {
+              "path": [
+                "correction",
+                "toxicity"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/toxicity",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "toxicity"
+          ]
+        },
+        "ResourceName": "toxicity",
+        "ProducerParameterName": "toxicity",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": {
+          "Enum": [
+            "toxicity",
+            "String",
+            [
+              "none",
+              "low",
+              "medium",
+              "high",
+              ""
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "vegetable",
+            "fullPath": {
+              "path": [
+                "correction",
+                "vegetable"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/vegetable",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "vegetable"
+          ]
+        },
+        "ResourceName": "vegetable",
+        "ProducerParameterName": "vegetable",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "year",
+            "fullPath": {
+              "path": [
+                "correction",
+                "year"
+              ]
+            }
+          }
+        },
+        "ContainerName": "correction",
+        "BodyContainerName": "correction",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPath": "correction/year",
+        "AccessPathParts": {
+          "path": [
+            "correction",
+            "year"
+          ]
+        },
+        "ResourceName": "year",
+        "ProducerParameterName": "year",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "notes",
+            "fullPath": {
+              "path": [
+                "notes"
+              ]
+            }
+          }
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPath": "notes",
+        "AccessPathParts": {
+          "path": [
+            "notes"
+          ]
+        },
+        "ResourceName": "notes",
+        "ProducerParameterName": "notes",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "source_reference",
+            "fullPath": {
+              "path": [
+                "source_reference"
+              ]
+            }
+          }
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPath": "source_reference",
+        "AccessPathParts": {
+          "path": [
+            "source_reference"
+          ]
+        },
+        "ResourceName": "source_reference",
+        "ProducerParameterName": "reference",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/species/{record_id}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "source_type",
+            "fullPath": {
+              "path": [
+                "source_type"
+              ]
+            }
+          }
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPath": "source_type",
+        "AccessPathParts": {
+          "path": [
+            "source_type"
+          ]
+        },
+        "ResourceName": "source_type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "source_type",
+            "String",
+            [
+              "external",
+              "observation",
+              "report",
+              ""
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/corrections/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "corrections"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "corrections",
+        "PathContainerName": "corrections",
+        "CandidateTypeNames": [
+          "correction"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/distributions",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "distributions",
+        "PathContainerName": "distributions",
+        "CandidateTypeNames": [
+          "distribution"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/distributions/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "distributions"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "distributions",
+        "PathContainerName": "distributions",
+        "CandidateTypeNames": [
+          "distribution"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/distributions/{zone_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/distributions/{zone_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/distributions/{zone_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter_not"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter_not",
+        "ProducerParameterName": "not",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/distributions/{zone_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/distributions/{zone_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "range"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "range",
+        "ProducerParameterName": "range",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/distributions/{zone_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "zone_id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "distributions"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "distributions",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "distribution"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "zone_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/division_classes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "division_classes",
+        "PathContainerName": "division_classes",
+        "CandidateTypeNames": [
+          "division__class"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/division_classes/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "division_classes"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "division_classes",
+        "PathContainerName": "division_classes",
+        "CandidateTypeNames": [
+          "division__class"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/division_orders",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "division_orders",
+        "PathContainerName": "division_orders",
+        "CandidateTypeNames": [
+          "division__order"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/division_orders/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "division_orders"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "division_orders",
+        "PathContainerName": "division_orders",
+        "CandidateTypeNames": [
+          "division__order"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/divisions",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "divisions",
+        "PathContainerName": "divisions",
+        "CandidateTypeNames": [
+          "division"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/divisions/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "divisions"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "divisions",
+        "PathContainerName": "divisions",
+        "CandidateTypeNames": [
+          "division"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/families",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "families",
+        "PathContainerName": "families",
+        "CandidateTypeNames": [
+          "family"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/families",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "families",
+        "PathContainerName": "families",
+        "CandidateTypeNames": [
+          "family"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/families",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "families",
+        "PathContainerName": "families",
+        "CandidateTypeNames": [
+          "family"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/families/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "families"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "families",
+        "PathContainerName": "families",
+        "CandidateTypeNames": [
+          "family"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/genus",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "genus",
+        "PathContainerName": "genus",
+        "CandidateTypeNames": [
+          "genus"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/genus",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "genus",
+        "PathContainerName": "genus",
+        "CandidateTypeNames": [
+          "genus"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/genus",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "genus",
+        "PathContainerName": "genus",
+        "CandidateTypeNames": [
+          "genus"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/genus/{genus_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/genus/{genus_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/genus/{genus_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter_not"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter_not",
+        "ProducerParameterName": "not",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/genus/{genus_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/genus/{genus_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "range"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "range",
+        "ProducerParameterName": "range",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/genus/{genus_id}/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "genus_id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "genus"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "genus",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "genus"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "genus_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/genus/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "genus"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "genus",
+        "PathContainerName": "genus",
+        "CandidateTypeNames": [
+          "genus"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/kingdoms",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "kingdoms",
+        "PathContainerName": "kingdoms",
+        "CandidateTypeNames": [
+          "kingdom"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/kingdoms/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "kingdoms"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "kingdoms",
+        "PathContainerName": "kingdoms",
+        "CandidateTypeNames": [
+          "kingdom"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter_not"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter_not",
+        "ProducerParameterName": "not",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "range"
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "range",
+        "ProducerParameterName": "range",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter_not"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter_not",
+        "ProducerParameterName": "not",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "range"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "range",
+        "ProducerParameterName": "range",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "plants"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "plants",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants/{id}/report",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "plants"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "plants",
+        "PathContainerName": "report",
+        "CandidateTypeNames": [
+          "plant"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/plants/{id}/report",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "notes",
+            "fullPath": {
+              "path": [
+                "notes"
+              ]
+            }
+          }
+        },
+        "ContainerName": "report",
+        "PathContainerName": "report",
+        "CandidateTypeNames": [
+          "report"
+        ],
+        "AccessPath": "notes",
+        "AccessPathParts": {
+          "path": [
+            "notes"
+          ]
+        },
+        "ResourceName": "notes",
+        "ProducerParameterName": "notes",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter_not"
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter_not",
+        "ProducerParameterName": "not",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "range"
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "range",
+        "ProducerParameterName": "range",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter_not"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter_not",
+        "ProducerParameterName": "not",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "range"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "range",
+        "ProducerParameterName": "range",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "species"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "species",
+        "PathContainerName": "species",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species/{id}/report",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "species"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "species",
+        "PathContainerName": "report",
+        "CandidateTypeNames": [
+          "species"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/species/{id}/report",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "notes",
+            "fullPath": {
+              "path": [
+                "notes"
+              ]
+            }
+          }
+        },
+        "ContainerName": "report",
+        "PathContainerName": "report",
+        "CandidateTypeNames": [
+          "report"
+        ],
+        "AccessPath": "notes",
+        "AccessPathParts": {
+          "path": [
+            "notes"
+          ]
+        },
+        "ResourceName": "notes",
+        "ProducerParameterName": "notes",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/subkingdoms",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "subkingdoms",
+        "PathContainerName": "subkingdoms",
+        "CandidateTypeNames": [
+          "subkingdom"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/subkingdoms/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "subkingdoms"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "subkingdoms",
+        "PathContainerName": "subkingdoms",
+        "CandidateTypeNames": [
+          "subkingdom"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  }
+]

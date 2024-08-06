@@ -1,0 +1,28 @@
+      
+     -> Build Restler 
+
+ python .\build-restler.py --dest_dir .\restler_bin
+
+
+
+      -> Quick Start :
+
+ python ..\restler-quick-start.py --api_spec_path swagger.json --restler_drop_dir ..\restler_bin
+s
+
+
+      -> Compilation : 
+
+..\restler_bin\restler\Restler.exe compile --api_spec swagger.json
+
+
+
+      -> Fuzz-lean 
+
+..\restler_bin\restler\Restler.exe fuzz-lean --grammar_file "Compile\grammar.py" --dictionary_file "Compile\dict.json" --settings "Compile\engine_settings.json" --enable_checkers UseAfterFree,InvalidDynamicObject --no_ssl
+
+
+
+      -> Fuzz-lean with checkers enabled 
+
+..\restler_bin\restler\Restler.exe fuzz-lean --grammar_file "Compile\grammar.py" --dictionary_file "Compile\dict.json" --settings "Compile\engine_settings.json" --enable_checkers UseAfterFree,InvalidDynamicObject --no_ssl

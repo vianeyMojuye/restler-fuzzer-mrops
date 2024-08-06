@@ -109,15 +109,13 @@ def get_variable(type):
 
     # Make sure the value is properly escaped for being sent
     value = tlb[type]
-    if not Settings().encode_dynamic_objects:
-        return value
-
     encoded_value = json.dumps(value)
     if isinstance(value, (str)):
         encoded_value = encoded_value[1:-1]
 
     # thread_id = threading.current_thread().ident
     # print("Getting: {} / Value: {} ({})".format(type, encoded_value, thread_id))
+
     return encoded_value
 
 def __add_variable_to_dyn_cache(type, value, obj_cache, cache_lock):
@@ -660,3 +658,114 @@ class GarbageCollectorThread(threading.Thread):
         # Set the cleanup event flag to immediately stop the GC loop from waiting
         self._garbage_collector.cleanup_event.set()
 
+
+#########################################################
+equivalence_delete_codes = []
+equivalence_post_codes = []
+equivalence_put_codes = []
+equivalence_get_codes = []
+def set_equivalence_method_codes(resp_code , resp_body,  method="POST"):
+         """ Appends the value code of a respond to post / Delete request to the respond's list
+
+        @param resp_code: string ex: "500" , "200", etc.
+        @type  resp_code: string  
+        @param resp_body: string ex: '{"id":929,"body":"fuzzstring"}' respond of a post request
+        @type  resp_body: string  
+        @param resp_id: string ex: "570" , "875", etc.
+        @type  resp_id: string  
+
+        @return: None
+        @type  : None
+
+        """
+         if resp_code is not None:
+            if method == "POST":
+                equivalence_post_codes.append({'status_code' : resp_code , 'resp_body' : resp_body })  
+            elif method == "PUT":
+                equivalence_put_codes.append({'status_code' : resp_code , 'resp_body' : resp_body })  
+
+            elif method == "DELETE":
+                equivalence_delete_codes.append({'status_code' : resp_code , 'resp_body' : resp_body  })  
+
+            elif method == "GET":
+                equivalence_get_codes.append({'status_code' : resp_code , 'resp_body' : resp_body})  
+
+
+#  Python Program  to compare status_code basant resp_id
+def compare_status_codes(L1, method,L2=[]):
+    results = []
+
+    if method == "PUT":
+        L2 = equivalence_put_codes
+    elif method == "DELETE":
+        L2 = equivalence_delete_codes
+    L = L1 + L2
+    print(f"{'--'*10}\n Listes:\nPOST = {L1}")
+    if len(L2)>0 :
+        print(f"{method}={L2}\n" )
+    
+    # print(f"{'--'*10}" )
+    for item in L:
+
+        if not (item['status_code'].startswith('2') ) :
+            results.append(f" Status_code POST AND {method} not similar :  {item['status_code']} not 2XX")
+
+    return results
+    #     # Trouver l'élément correspondant dans L1
+    #     match = next((elem for elem in L1 if elem['resp_id'] == item['resp_id']), None)
+    #     if match:
+    #         # Vérifier si les deux status_code commencent par '2'
+    #         if match['status_code'].startswith('2') and item['status_code'].startswith('2'):
+    #             pass
+    #         else:
+    #             results.append(f" Status_code POST AND {method} not similar : POST: {item['resp_id']} = {match['status_code']}  and  {method} : {item['resp_id']} = {item['status_code']}    ")
+    #     else:
+    #         results.append(f" {method} : {item['resp_id']} =  not found")
+    # return results
+
+
+
+def compare_for_equality_mrop(L1, L2,method):
+    """
+       @param L1 : responses value of POST request
+       @param L2 : responses value of method request
+       @method : method to compare with post    
+    """
+    results = []
+    v_post = []
+    # print(L1,L2)
+
+    # POST, POST comparaison :Here we  want to make sure that different post requests lead to different response body but same status_code
+    # ex :  POST request 1 => 'status_code': '201', 'resp_body': '{"id":114,"body":"fuzzstring"}
+    #       POST request 2 => 'status_code': '201', 'resp_body': '{"id":11,"body":"abcd"}
+    #                    id1 != id2 and status_code1 == status_code2
+
+    print(f"Listes:\nPOST = {L1},\n{method}={L2}\n{'--'*10}")
+
+    r = all(
+        e1['status_code'] == e2['status_code'] and e1['resp_body'] != e2['resp_body']
+        for i, e1 in enumerate(L1)
+        for j, e2 in enumerate(L1) if i < j
+    )
+    if (not r) :
+        v_post.append(" Two mismatch POST requests were found")
+
+    #POST -> GET comparaison : He we want to make sure that POST/id and Get/id return the same body code 
+    
+    for item in L2:
+        if item not in L1:
+            results.append(f" Status_code POST AND {method} not similar: item {item} not in POST List ")
+
+
+    # for item in L2:
+    #     # Trouver l'élément correspondant dans L1
+    #     match = next((elem for elem in L1 if elem['resp_id'] == item['resp_id']), None)
+    #     if match:
+    #         # Vérifier si les deux status_code commencent par '2'
+    #         if (match['status_code'].startswith('2') and item['status_code'].startswith('2')) and (match['resp_body'] == item['resp_body'] ):
+    #             pass
+    #         else:
+    #             results.append(f" Status_code POST AND {method} not similar : POST: {item['resp_id']} = {match['status_code']},{match['resp_body']}   <and>  {method} : {item['resp_id']} = {item['status_code']} ,   {item['resp_body']}  ")
+    #     else:
+    #         results.append(f" {method} : {item['resp_id']} =  not found")
+    return v_post, results

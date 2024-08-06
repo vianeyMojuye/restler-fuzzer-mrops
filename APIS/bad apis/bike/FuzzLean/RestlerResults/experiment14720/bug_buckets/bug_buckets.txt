@@ -1,0 +1,25 @@
+main_driver_522: 4
+main_driver_502: 1
+Total Buckets: 5
+-------------
+main_driver_522 - Bug was reproduced - main_driver_522_1.replay.txt
+Hash: main_driver_522_9253ad369599599f0d165d2e7758504b8aa78472
+GET /api/v2/locations?occurred_before=1&occurred_after=1&incident_type=incident_type&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_522 - Bug was reproduced - main_driver_522_2.replay.txt
+Hash: main_driver_522_f0fbb971cea02777edb28929552be95b0369e91a
+GET /api/v2/incidents/1 HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_522 - Bug was reproduced - main_driver_522_3.replay.txt
+Hash: main_driver_522_35b59257706b2ee6e10f5c6fa12b8f3f92233ee1
+GET /api/v2/locations/markers?occurred_before=1&occurred_after=1&incident_type=incident_type&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_522 - Bug was reproduced - main_driver_522_4.replay.txt
+Hash: main_driver_522_f94175940fa4ecde57dbba19ba1e4ce49f98e6f6
+GET /api/v2/incidents?page=1&per_page=1&occurred_before=1&occurred_after=1&incident_type=incident_type&proximity=fuzzstring&proximity_square=1&query=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_502 - Unable to reproduce bug - main_driver_502_1.replay.txt
+Attempted to reproduce 1 time(s); Reproduced 0 time(s)
+Hash: main_driver_502_35b59257706b2ee6e10f5c6fa12b8f3f92233ee1
+GET /api/v2/locations/markers?occurred_before=1&occurred_after=1&incident_type=incident_type&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------

@@ -1,0 +1,16 @@
+{
+    "status_code": "502",
+    "checker_name": "main_driver",
+    "reproducible": false,
+    "verb": "GET",
+    "endpoint": "/v2/locations/markers",
+    "status_text": "Bad Gateway",
+    "request_sequence": [
+        {
+            "producer_timing_delay": 0,
+            "max_async_wait_time": 0,
+            "replay_request": "GET /api/v2/locations/markers?occurred_before=1&occurred_after=1&incident_type=unconfirmed&proximity=fuzzstring&proximity_square=1&query=fuzzstring&limit=1&all=true HTTP/1.1\r\nAccept: application/json\r\nHost: bikewise.org\r\n\r\n",
+            "response": "HTTP/1.1 502 Bad Gateway\r\nServer: cloudflare\r\nDate: Wed, 15 May 2024 10:22:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 155\r\nConnection: keep-alive\r\nCF-RAY: 8842672e0bcd95b8-LUX\r\n\r\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+method,endpoint,endpointLength,executionTime
+POST,/api/blog/posts,3,0.04190826416015625
+POST,/api/blog/posts,3,0.038605690002441406
+POST,/api/blog/posts,3,0.03779125213623047
+POST,/api/blog/posts,3,0.05751633644104004
+POST,/api/blog/posts,3,0.04822897911071777
+POST,/api/blog/posts,3,0.0328059196472168
+POST,/api/blog/posts,3,0.0364837646484375
+GET,/api/doc,2,0.03175950050354004
+GET,/api/blog/posts/2800,4,0.035848140716552734
+PUT,/api/blog/posts/2802,4,0.03710341453552246
+PUT,/api/blog/posts/2803,4,0.03276801109313965
+DELETE,/api/blog/posts/2805,4,0.03288388252258301

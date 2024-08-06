@@ -1,0 +1,820 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/breeds",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "breeds",
+        "PathContainerName": "breeds",
+        "CandidateTypeNames": [
+          "breed"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/breeds",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "breeds",
+        "PathContainerName": "breeds",
+        "CandidateTypeNames": [
+          "breed"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/breeds/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "attach_image"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "attach_image",
+        "ProducerParameterName": "image",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/breeds/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/breeds/{breed_id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "breed_id",
+            "pathToParameter": [
+              "breeds"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "breeds",
+        "PathContainerName": "breeds",
+        "CandidateTypeNames": [
+          "breed"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "breed_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/breeds/{breed_id}/facts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "facts",
+        "PathContainerName": "facts",
+        "CandidateTypeNames": [
+          "fact"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/breeds/{breed_id}/facts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "facts",
+        "PathContainerName": "facts",
+        "CandidateTypeNames": [
+          "fact"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/breeds/{breed_id}/facts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "facts",
+        "PathContainerName": "facts",
+        "CandidateTypeNames": [
+          "fact"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/breeds/{breed_id}/facts",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "breed_id",
+            "pathToParameter": [
+              "breeds"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "breeds",
+        "PathContainerName": "facts",
+        "CandidateTypeNames": [
+          "breed"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "breed_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/favourites/{favourite_id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "favourite_id",
+            "pathToParameter": [
+              "favourites"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "favourites",
+        "PathContainerName": "favourites",
+        "CandidateTypeNames": [
+          "favourite"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "favourite_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/favourites/{favourite_id}",
+          "method": "Delete"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "favourite_id",
+            "pathToParameter": [
+              "favourites"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "favourites",
+        "PathContainerName": "favourites",
+        "CandidateTypeNames": [
+          "favourite"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "favourite_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "images",
+        "PathContainerName": "images",
+        "CandidateTypeNames": [
+          "image"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "images",
+        "PathContainerName": "images",
+        "CandidateTypeNames": [
+          "image"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "images",
+        "PathContainerName": "images",
+        "CandidateTypeNames": [
+          "image"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "size"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "size",
+        "ProducerParameterName": "size",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "mime_types"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "mime_types",
+        "ProducerParameterName": "types",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "format"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "format",
+        "ProducerParameterName": "format",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order",
+        "ProducerParameterName": "order",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/search",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "has_breeds"
+        },
+        "ContainerName": "search",
+        "PathContainerName": "search",
+        "CandidateTypeNames": [
+          "search"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "has_breeds",
+        "ProducerParameterName": "breeds",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/{image_id}",
+          "method": "Delete"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "image_id",
+            "pathToParameter": [
+              "images"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "images",
+        "PathContainerName": "images",
+        "CandidateTypeNames": [
+          "image"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "image_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/{image_id}/breeds",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "image_id",
+            "pathToParameter": [
+              "images"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "images",
+        "PathContainerName": "breeds",
+        "CandidateTypeNames": [
+          "image"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "image_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/{image_id}/breeds",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "image_id",
+            "pathToParameter": [
+              "images"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "images",
+        "PathContainerName": "breeds",
+        "CandidateTypeNames": [
+          "image"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "image_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/{image_id}/breeds/{breed_id}",
+          "method": "Delete"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "breed_id",
+            "pathToParameter": [
+              "images",
+              "{image_id}",
+              "breeds"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "breeds",
+        "PathContainerName": "breeds",
+        "CandidateTypeNames": [
+          "breed"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "breed_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/images/{image_id}/breeds/{breed_id}",
+          "method": "Delete"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "image_id",
+            "pathToParameter": [
+              "images"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "images",
+        "PathContainerName": "breeds",
+        "CandidateTypeNames": [
+          "image"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "image_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/vote/{vote_id}",
+          "method": "Delete"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "vote_id",
+            "pathToParameter": [
+              "vote"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "vote",
+        "PathContainerName": "vote",
+        "CandidateTypeNames": [
+          "vote"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "vote_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/votes/{vote_id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "vote_id",
+            "pathToParameter": [
+              "votes"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "votes",
+        "PathContainerName": "votes",
+        "CandidateTypeNames": [
+          "vote"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "vote_id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  }
+]

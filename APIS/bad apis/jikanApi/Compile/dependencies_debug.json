@@ -1,0 +1,6745 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sfw"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sfw",
+        "ProducerParameterName": "sfw",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "unapproved"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "unapproved",
+        "ProducerParameterName": "unapproved",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "type"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "type",
+            "String",
+            [
+              "tv",
+              "movie",
+              "ova",
+              "special",
+              "ona",
+              "music",
+              "cm",
+              "pv",
+              "tv_special"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "score"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "score",
+        "ProducerParameterName": "score",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "min_score"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "min_score",
+        "ProducerParameterName": "score",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "max_score"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "max_score",
+        "ProducerParameterName": "score",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "status"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "status",
+        "ProducerParameterName": "status",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "status",
+            "String",
+            [
+              "airing",
+              "complete",
+              "upcoming"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "rating"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "rating",
+        "ProducerParameterName": "rating",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "rating",
+            "String",
+            [
+              "g",
+              "pg",
+              "pg13",
+              "r17",
+              "r",
+              "rx"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "genres"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "genres",
+        "ProducerParameterName": "genres",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "genres_exclude"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "genres_exclude",
+        "ProducerParameterName": "exclude",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order_by"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order_by",
+        "ProducerParameterName": "by",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "order_by",
+            "String",
+            [
+              "mal_id",
+              "title",
+              "start_date",
+              "end_date",
+              "episodes",
+              "score",
+              "scored_by",
+              "rank",
+              "popularity",
+              "members",
+              "favorites"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "sort",
+            "String",
+            [
+              "desc",
+              "asc"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "letter"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "letter",
+        "ProducerParameterName": "letter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "producers"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "producers",
+        "ProducerParameterName": "producers",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "start_date"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "start_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "end_date"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "end_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/characters",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/episodes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "episodes",
+        "PathContainerName": "episodes",
+        "CandidateTypeNames": [
+          "episode"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/episodes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "episodes",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/episodes/{episode}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "episodes",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/episodes/{episode}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "episode",
+            "pathToParameter": [
+              "anime",
+              "{id}",
+              "episodes"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "episodes",
+        "PathContainerName": "episodes",
+        "CandidateTypeNames": [
+          "episode"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "episode",
+        "ProducerParameterName": "episode",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/external",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "external",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/forum",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "forum",
+        "PathContainerName": "forum",
+        "CandidateTypeNames": [
+          "forum"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "filter",
+            "String",
+            [
+              "all",
+              "episode",
+              "other"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/forum",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "forum",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/full",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "full",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/moreinfo",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "moreinfo",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/news",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "news",
+        "PathContainerName": "news",
+        "CandidateTypeNames": [
+          "news"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/news",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "news",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/pictures",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "pictures",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/recommendations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "recommendations",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/relations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "relations",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "preliminary"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "preliminary",
+        "ProducerParameterName": "preliminary",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "spoiler"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "spoiler",
+        "ProducerParameterName": "spoiler",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/staff",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "staff",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/statistics",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "statistics",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/streaming",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "streaming",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/themes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "themes",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/userupdates",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "userupdates",
+        "PathContainerName": "userupdates",
+        "CandidateTypeNames": [
+          "userupdate"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/userupdates",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "userupdates",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/videos",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "videos",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/videos/episodes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "episodes",
+        "PathContainerName": "episodes",
+        "CandidateTypeNames": [
+          "episode"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/anime/{id}/videos/episodes",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "anime"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "episodes",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order_by"
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order_by",
+        "ProducerParameterName": "by",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "order_by",
+            "String",
+            [
+              "mal_id",
+              "name",
+              "favorites"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "sort",
+            "String",
+            [
+              "desc",
+              "asc"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "letter"
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "letter",
+        "ProducerParameterName": "letter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "characters"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters/{id}/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "characters"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters/{id}/full",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "characters"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "full",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters/{id}/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "characters"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters/{id}/pictures",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "characters"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "pictures",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/characters/{id}/voices",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "characters"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "voices",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "type"
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "type",
+            "String",
+            [
+              "public",
+              "private",
+              "secret"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order_by"
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order_by",
+        "ProducerParameterName": "by",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "order_by",
+            "String",
+            [
+              "mal_id",
+              "name",
+              "members_count",
+              "created"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "sort",
+            "String",
+            [
+              "desc",
+              "asc"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "letter"
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "letter",
+        "ProducerParameterName": "letter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "category"
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "category",
+        "ProducerParameterName": "category",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "category",
+            "String",
+            [
+              "anime",
+              "manga",
+              "actors_and_artists",
+              "characters",
+              "cities_and_neighborhoods",
+              "companies",
+              "conventions",
+              "games",
+              "japan",
+              "music",
+              "other",
+              "schools"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "clubs"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs/{id}/members",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "members",
+        "PathContainerName": "members",
+        "CandidateTypeNames": [
+          "member"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs/{id}/members",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "clubs"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "members",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs/{id}/relations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "clubs"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "relations",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/clubs/{id}/staff",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "clubs"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "staff",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/genres/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "filter",
+            "String",
+            [
+              "genres",
+              "explicit_genres",
+              "themes",
+              "demographics"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/genres/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "filter",
+            "String",
+            [
+              "genres",
+              "explicit_genres",
+              "themes",
+              "demographics"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/magazines",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "magazines",
+        "PathContainerName": "magazines",
+        "CandidateTypeNames": [
+          "magazine"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/magazines",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "magazines",
+        "PathContainerName": "magazines",
+        "CandidateTypeNames": [
+          "magazine"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/magazines",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "magazines",
+        "PathContainerName": "magazines",
+        "CandidateTypeNames": [
+          "magazine"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/magazines",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order_by"
+        },
+        "ContainerName": "magazines",
+        "PathContainerName": "magazines",
+        "CandidateTypeNames": [
+          "magazine"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order_by",
+        "ProducerParameterName": "by",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "order_by",
+            "String",
+            [
+              "mal_id",
+              "name",
+              "count"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/magazines",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "magazines",
+        "PathContainerName": "magazines",
+        "CandidateTypeNames": [
+          "magazine"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "sort",
+            "String",
+            [
+              "desc",
+              "asc"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/magazines",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "letter"
+        },
+        "ContainerName": "magazines",
+        "PathContainerName": "magazines",
+        "CandidateTypeNames": [
+          "magazine"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "letter",
+        "ProducerParameterName": "letter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sfw"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sfw",
+        "ProducerParameterName": "sfw",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "unapproved"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "unapproved",
+        "ProducerParameterName": "unapproved",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "type"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "type",
+            "String",
+            [
+              "manga",
+              "novel",
+              "lightnovel",
+              "oneshot",
+              "doujin",
+              "manhwa",
+              "manhua"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "score"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "score",
+        "ProducerParameterName": "score",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "min_score"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "min_score",
+        "ProducerParameterName": "score",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "max_score"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "max_score",
+        "ProducerParameterName": "score",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "status"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "status",
+        "ProducerParameterName": "status",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "status",
+            "String",
+            [
+              "publishing",
+              "complete",
+              "hiatus",
+              "discontinued",
+              "upcoming"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "genres"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "genres",
+        "ProducerParameterName": "genres",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "genres_exclude"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "genres_exclude",
+        "ProducerParameterName": "exclude",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order_by"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order_by",
+        "ProducerParameterName": "by",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "order_by",
+            "String",
+            [
+              "mal_id",
+              "title",
+              "start_date",
+              "end_date",
+              "chapters",
+              "volumes",
+              "score",
+              "scored_by",
+              "rank",
+              "popularity",
+              "members",
+              "favorites"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "sort",
+            "String",
+            [
+              "desc",
+              "asc"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "letter"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "letter",
+        "ProducerParameterName": "letter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "start_date"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "start_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "end_date"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "end_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "magazines"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "magazines",
+        "ProducerParameterName": "magazines",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/characters",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/external",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "external",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/forum",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "forum",
+        "PathContainerName": "forum",
+        "CandidateTypeNames": [
+          "forum"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "filter",
+            "String",
+            [
+              "all",
+              "episode",
+              "other"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/forum",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "forum",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/full",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "full",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/moreinfo",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "moreinfo",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/news",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "news",
+        "PathContainerName": "news",
+        "CandidateTypeNames": [
+          "news"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/news",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "news",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/pictures",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "pictures",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/recommendations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "recommendations",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/relations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "relations",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "preliminary"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "preliminary",
+        "ProducerParameterName": "preliminary",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "spoiler"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "spoiler",
+        "ProducerParameterName": "spoiler",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/statistics",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "statistics",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/userupdates",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "userupdates",
+        "PathContainerName": "userupdates",
+        "CandidateTypeNames": [
+          "userupdate"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/manga/{id}/userupdates",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "manga"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "userupdates",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "people",
+        "PathContainerName": "people",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "people",
+        "PathContainerName": "people",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "people",
+        "PathContainerName": "people",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order_by"
+        },
+        "ContainerName": "people",
+        "PathContainerName": "people",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order_by",
+        "ProducerParameterName": "by",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "order_by",
+            "String",
+            [
+              "mal_id",
+              "name",
+              "birthday",
+              "favorites"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "people",
+        "PathContainerName": "people",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "sort",
+            "String",
+            [
+              "desc",
+              "asc"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "letter"
+        },
+        "ContainerName": "people",
+        "PathContainerName": "people",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "letter",
+        "ProducerParameterName": "letter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "people"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "people",
+        "PathContainerName": "people",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people/{id}/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "people"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "people",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people/{id}/full",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "people"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "people",
+        "PathContainerName": "full",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people/{id}/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "people"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "people",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people/{id}/pictures",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "people"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "people",
+        "PathContainerName": "pictures",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/people/{id}/voices",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "people"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "people",
+        "PathContainerName": "voices",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/producers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "producers",
+        "PathContainerName": "producers",
+        "CandidateTypeNames": [
+          "producer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/producers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "producers",
+        "PathContainerName": "producers",
+        "CandidateTypeNames": [
+          "producer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/producers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "producers",
+        "PathContainerName": "producers",
+        "CandidateTypeNames": [
+          "producer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/producers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "order_by"
+        },
+        "ContainerName": "producers",
+        "PathContainerName": "producers",
+        "CandidateTypeNames": [
+          "producer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "order_by",
+        "ProducerParameterName": "by",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "order_by",
+            "String",
+            [
+              "mal_id",
+              "count",
+              "favorites",
+              "established"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/producers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "producers",
+        "PathContainerName": "producers",
+        "CandidateTypeNames": [
+          "producer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "sort",
+            "String",
+            [
+              "desc",
+              "asc"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/producers",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "letter"
+        },
+        "ContainerName": "producers",
+        "PathContainerName": "producers",
+        "CandidateTypeNames": [
+          "producer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "letter",
+        "ProducerParameterName": "letter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/producers/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "producers"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "producers",
+        "PathContainerName": "producers",
+        "CandidateTypeNames": [
+          "producer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/producers/{id}/external",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "producers"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "producers",
+        "PathContainerName": "external",
+        "CandidateTypeNames": [
+          "producer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/producers/{id}/full",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "producers"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "producers",
+        "PathContainerName": "full",
+        "CandidateTypeNames": [
+          "producer"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/recommendations/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/recommendations/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/reviews/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/reviews/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "preliminary"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "preliminary",
+        "ProducerParameterName": "preliminary",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/reviews/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "spoiler"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "spoiler",
+        "ProducerParameterName": "spoiler",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/reviews/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/reviews/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "preliminary"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "preliminary",
+        "ProducerParameterName": "preliminary",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/reviews/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "spoiler"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "spoiler",
+        "ProducerParameterName": "spoiler",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/schedules",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "schedules",
+        "PathContainerName": "schedules",
+        "CandidateTypeNames": [
+          "schedule"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/schedules",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "schedules",
+        "PathContainerName": "schedules",
+        "CandidateTypeNames": [
+          "schedule"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "filter",
+            "String",
+            [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday",
+              "saturday",
+              "sunday",
+              "unknown",
+              "other"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/schedules",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "kids"
+        },
+        "ContainerName": "schedules",
+        "PathContainerName": "schedules",
+        "CandidateTypeNames": [
+          "schedule"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "kids",
+        "ProducerParameterName": "kids",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "kids",
+            "String",
+            [
+              "true",
+              "false"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/schedules",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sfw"
+        },
+        "ContainerName": "schedules",
+        "PathContainerName": "schedules",
+        "CandidateTypeNames": [
+          "schedule"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sfw",
+        "ProducerParameterName": "sfw",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "sfw",
+            "String",
+            [
+              "true",
+              "false"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/schedules",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "unapproved"
+        },
+        "ContainerName": "schedules",
+        "PathContainerName": "schedules",
+        "CandidateTypeNames": [
+          "schedule"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "unapproved",
+        "ProducerParameterName": "unapproved",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/schedules",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "schedules",
+        "PathContainerName": "schedules",
+        "CandidateTypeNames": [
+          "schedule"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/now",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "now",
+        "PathContainerName": "now",
+        "CandidateTypeNames": [
+          "now"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/now",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "now",
+        "PathContainerName": "now",
+        "CandidateTypeNames": [
+          "now"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "filter",
+            "String",
+            [
+              "tv",
+              "movie",
+              "ova",
+              "special",
+              "ona",
+              "music"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/now",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sfw"
+        },
+        "ContainerName": "now",
+        "PathContainerName": "now",
+        "CandidateTypeNames": [
+          "now"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sfw",
+        "ProducerParameterName": "sfw",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/now",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "unapproved"
+        },
+        "ContainerName": "now",
+        "PathContainerName": "now",
+        "CandidateTypeNames": [
+          "now"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "unapproved",
+        "ProducerParameterName": "unapproved",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/now",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "now",
+        "PathContainerName": "now",
+        "CandidateTypeNames": [
+          "now"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/upcoming",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "upcoming",
+        "PathContainerName": "upcoming",
+        "CandidateTypeNames": [
+          "upcoming"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/upcoming",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "upcoming",
+        "PathContainerName": "upcoming",
+        "CandidateTypeNames": [
+          "upcoming"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "filter",
+            "String",
+            [
+              "tv",
+              "movie",
+              "ova",
+              "special",
+              "ona",
+              "music"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/upcoming",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sfw"
+        },
+        "ContainerName": "upcoming",
+        "PathContainerName": "upcoming",
+        "CandidateTypeNames": [
+          "upcoming"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sfw",
+        "ProducerParameterName": "sfw",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/upcoming",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "unapproved"
+        },
+        "ContainerName": "upcoming",
+        "PathContainerName": "upcoming",
+        "CandidateTypeNames": [
+          "upcoming"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "unapproved",
+        "ProducerParameterName": "unapproved",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/upcoming",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "upcoming",
+        "PathContainerName": "upcoming",
+        "CandidateTypeNames": [
+          "upcoming"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/{year}/{season}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "CandidateTypeNames": [
+          "page"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/{year}/{season}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "CandidateTypeNames": [
+          "filter"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "filter",
+            "String",
+            [
+              "tv",
+              "movie",
+              "ova",
+              "special",
+              "ona",
+              "music"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/{year}/{season}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sfw"
+        },
+        "CandidateTypeNames": [
+          "sfw"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sfw",
+        "ProducerParameterName": "sfw",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/{year}/{season}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "unapproved"
+        },
+        "CandidateTypeNames": [
+          "unapproved"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "unapproved",
+        "ProducerParameterName": "unapproved",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/{year}/{season}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "CandidateTypeNames": [
+          "limit"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/{year}/{season}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "year",
+            "pathToParameter": [
+              "seasons"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "seasons",
+        "CandidateTypeNames": [
+          "season"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "year",
+        "ProducerParameterName": "year",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/seasons/{year}/{season}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "season",
+            "pathToParameter": [
+              "seasons",
+              "{year}"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "seasons",
+        "CandidateTypeNames": [
+          "season"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "season",
+        "ProducerParameterName": "season",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "filter",
+            "String",
+            [
+              "airing",
+              "upcoming",
+              "bypopularity",
+              "favorite"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sfw"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sfw",
+        "ProducerParameterName": "sfw",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "type"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "type",
+            "String",
+            [
+              "tv",
+              "movie",
+              "ova",
+              "special",
+              "ona",
+              "music",
+              "cm",
+              "pv",
+              "tv_special"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/anime",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "rating"
+        },
+        "ContainerName": "anime",
+        "PathContainerName": "anime",
+        "CandidateTypeNames": [
+          "anime"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "rating",
+        "ProducerParameterName": "rating",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "rating",
+            "String",
+            [
+              "g",
+              "pg",
+              "pg13",
+              "r17",
+              "r",
+              "rx"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/characters",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/characters",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "characters",
+        "PathContainerName": "characters",
+        "CandidateTypeNames": [
+          "character"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "filter"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "filter",
+        "ProducerParameterName": "filter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "filter",
+            "String",
+            [
+              "publishing",
+              "upcoming",
+              "bypopularity",
+              "favorite"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/manga",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "type"
+        },
+        "ContainerName": "manga",
+        "PathContainerName": "manga",
+        "CandidateTypeNames": [
+          "manga"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "type",
+            "String",
+            [
+              "manga",
+              "novel",
+              "lightnovel",
+              "oneshot",
+              "doujin",
+              "manhwa",
+              "manhua"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/people",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "people",
+        "PathContainerName": "people",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/people",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "people",
+        "PathContainerName": "people",
+        "CandidateTypeNames": [
+          "person"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "preliminary"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "preliminary",
+        "ProducerParameterName": "preliminary",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "type"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "type",
+            "String",
+            [
+              "anime",
+              "manga"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/top/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "spoilers"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "spoilers",
+        "ProducerParameterName": "spoilers",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Bool"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "users",
+        "PathContainerName": "users",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "users",
+        "PathContainerName": "users",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "users",
+        "PathContainerName": "users",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "gender"
+        },
+        "ContainerName": "users",
+        "PathContainerName": "users",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "gender",
+        "ProducerParameterName": "gender",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "gender",
+            "String",
+            [
+              "any",
+              "male",
+              "female",
+              "nonbinary"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "location"
+        },
+        "ContainerName": "users",
+        "PathContainerName": "users",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "location",
+        "ProducerParameterName": "location",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "maxAge"
+        },
+        "ContainerName": "users",
+        "PathContainerName": "users",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "maxAge",
+        "ProducerParameterName": "age",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "minAge"
+        },
+        "ContainerName": "users",
+        "PathContainerName": "users",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "minAge",
+        "ProducerParameterName": "age",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/userbyid/{id}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "id",
+            "pathToParameter": [
+              "users",
+              "userbyid"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "userbyid",
+        "PathContainerName": "userbyid",
+        "CandidateTypeNames": [
+          "userbyid"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "users",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/about",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "about",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/animelist",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "status"
+        },
+        "ContainerName": "animelist",
+        "PathContainerName": "animelist",
+        "CandidateTypeNames": [
+          "animelist"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "status",
+        "ProducerParameterName": "status",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "status",
+            "String",
+            [
+              "all",
+              "watching",
+              "completed",
+              "onhold",
+              "dropped",
+              "plantowatch"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/animelist",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "animelist",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/clubs",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "clubs",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "club"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/clubs",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "clubs",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/external",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "external",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/favorites",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "favorites",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/friends",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "friends",
+        "PathContainerName": "friends",
+        "CandidateTypeNames": [
+          "friend"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/friends",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "friends",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/full",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "full",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/history",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "type"
+        },
+        "ContainerName": "history",
+        "PathContainerName": "history",
+        "CandidateTypeNames": [
+          "history"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "type",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "type",
+            "String",
+            [
+              "anime",
+              "manga"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/history",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "history",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/mangalist",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "status"
+        },
+        "ContainerName": "mangalist",
+        "PathContainerName": "mangalist",
+        "CandidateTypeNames": [
+          "mangalist"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "status",
+        "ProducerParameterName": "status",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "status",
+            "String",
+            [
+              "all",
+              "reading",
+              "completed",
+              "onhold",
+              "dropped",
+              "plantoread"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/mangalist",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "mangalist",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/recommendations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "recommendations",
+        "PathContainerName": "recommendations",
+        "CandidateTypeNames": [
+          "recommendation"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/recommendations",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "recommendations",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "reviews",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "review"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/reviews",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "reviews",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/statistics",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "statistics",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/users/{username}/userupdates",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "username",
+            "pathToParameter": [
+              "users"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "users",
+        "PathContainerName": "userupdates",
+        "CandidateTypeNames": [
+          "user"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "username",
+        "ProducerParameterName": "username",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/watch/promos",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "promos",
+        "PathContainerName": "promos",
+        "CandidateTypeNames": [
+          "promo"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  }
+]

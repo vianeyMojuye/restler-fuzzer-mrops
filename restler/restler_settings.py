@@ -532,9 +532,6 @@ class RestlerSettings(object):
         if self._generate_random_seed.val:
             self._random_seed.val = time.time()
 
-        ## Do not encode dynamic objects (workaround for incorrect encoding for headers)
-        self._encode_dynamic_objects = SettingsArg('encode_dynamic_objects', bool, True, user_args)
-
         self._connection_settings = ConnectionSettings(self._target_ip.val,
                                                        self._target_port.val,
                                                        not self._no_ssl.val,
@@ -635,10 +632,6 @@ class RestlerSettings(object):
     @property
     def trace_db_replay_file(self):
         return self._replay_settings.val.get('trace_database_file_path')
-
-    @property
-    def trace_db_omit_request_text(self):
-        return self._trace_db_settings.val.get('omit_request_text')
 
     @property
     def trace_db_replay_include_origins(self):
@@ -769,10 +762,6 @@ class RestlerSettings(object):
     @property
     def generate_random_seed(self):
         return self._generate_random_seed.val
-
-    @property
-    def encode_dynamic_objects(self):
-        return self._encode_dynamic_objects.val
 
     @property
     def no_tokens_in_logs(self):
@@ -1138,3 +1127,8 @@ class RestlerSettings(object):
         validate_auth_options()
 
 
+
+
+primitives.restler_static_string("?"),
+primitives.restler_static_string("api_key="),
+primitives.restler_fuzzable_string("ktFu4PsacB460SztfIX8Z9UZxk0Uxgmk6vMsoCGn", quoted=False),

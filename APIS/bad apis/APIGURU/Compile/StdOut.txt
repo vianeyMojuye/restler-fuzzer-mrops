@@ -1,0 +1,191 @@
+[16-05-24 11:55:50] Generating grammar...
+[16-05-24 11:55:51] Getting requests...
+found unsupported format: url
+found unsupported format: url
+found unsupported format: url
+[16-05-24 11:55:51] Getting dependencies...
+[16-05-24 11:55:51] Getting path consumers...
+[16-05-24 11:55:51] Getting query consumers...
+[16-05-24 11:55:51] Getting header consumers...
+[16-05-24 11:55:51] Getting body consumers...
+[16-05-24 11:55:51] Getting producers...
+[16-05-24 11:55:51] Done processing producers
+[16-05-24 11:55:51] Compute dependencies
+[[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/specs/{provider}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/{provider}.json"
+  xMsPath = None
+  method = Get }
+16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/metrics.json"
+  xMsPath = None
+  method = Get }[
+16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/providers.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/specs/{provider}/{service}/{api}.json"
+  xMsPath = None
+  method = Get }[
+16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/providers.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/{provider}/services.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/specs/{provider}/{api}.json"
+  xMsPath = None
+  method = Get }[16-05-24 11:55:51] Done dependencies for request { endpoint = "/{provider}.json"
+  xMsPath = None
+  method = Get }
+
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/list.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/metrics.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/specs/{provider}/{service}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/{provider}/services.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/providers.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/{provider}/services.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/list.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/specs/{provider}/{service}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/{provider}/services.json"
+  xMsPath = None
+  method = Get }[[16-05-24 11:55:51] Done dependencies for request { endpoint = "/list.json"
+  xMsPath = None
+  method = Get }[16-05-24 11:55:51] Done dependencies for request { endpoint = "/specs/{provider}/{service}/{api}.json"
+  xMsPath = None
+  method = Get }
+
+16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/{provider}.json"
+  xMsPath = None
+  method = Get }
+
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/providers.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/list.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/list.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/{provider}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/providers.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/specs/{provider}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/metrics.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/list.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/{provider}/services.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/providers.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/specs/{provider}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/specs/{provider}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/metrics.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/metrics.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/{provider}/services.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/{provider}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/metrics.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/specs/{provider}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/providers.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/metrics.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/{provider}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/metrics.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/specs/{provider}/{service}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/providers.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/specs/{provider}/{service}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/specs/{provider}/{service}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/{provider}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/specs/{provider}/{api}.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/specs/{provider}/{service}/{api}.json"
+  xMsPath = None
+  method = Get }
+[[16-05-24 11:55:5116-05-24 11:55:51] Done dependencies for request { endpoint = "/specs/{provider}/{api}.json"
+  xMsPath = None
+  method = Get }] Done dependencies for request { endpoint = "/{provider}.json"
+  xMsPath = None
+  method = Get }
+
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/list.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Second pass dependencies for request { endpoint = "/{provider}/services.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/list.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Done dependencies for request { endpoint = "/{provider}/services.json"
+  xMsPath = None
+  method = Get }
+[16-05-24 11:55:51] Assigning equality constraints...
+[16-05-24 11:55:51] Getting ordering constraints...
+[16-05-24 11:55:51] Dependency analysis completed.
+[16-05-24 11:55:51] Generating request primitives...
+Writing new dictionary to C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler_mrops\APIS\APIGURU\Compile\dict.json
+[16-05-24 11:55:51] Generating python grammar...
+[16-05-24 11:55:51] Get requests
+[16-05-24 11:55:51] Done get requests
+[16-05-24 11:55:51] Done generating python grammar.
+Workflow completed.  See C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler_mrops\APIS\APIGURU\Compile for REST-ler grammar.

@@ -1,0 +1,182 @@
+This file contains the failing requests, ordered by the number of blocked dependent requests.
+To improve coverage, fix the failing requests in the order listed in this file.
+
+Note: some requests are labeled as 'sequence failure'.
+This means the request depends on another request that is failing intermittently.
+For example, a DELETE request for a resource may be skipped because the resource
+PUT request failed due to exceeding quota.  The same PUT request succeeded earlier (and may
+succeed later depending on the resource clean-up behavior in the service), so it is
+considered an intermittent failure.
+
+-----------------------------------------------
+Request: Get /metrics.json
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v2/metrics.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nLocation: https://api.apis.guru/v2/metrics.json\r\nX-GitHub-Request-Id: 3C96:27CDFA:2D43954:2E6DC5C:6645D82E\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:55:58 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853359.786384,VS0,VE93\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 23fa9d3a8ccc1deda140dd6f43d7d49cf28f9f56\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v2/metrics.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nLocation: https://api.apis.guru/v2/metrics.json\r\nX-GitHub-Request-Id: 3C96:27CDFA:2D43954:2E6DC5C:6645D82E\r\nAccept-Ranges: bytes\r\nDate: Thu, 16 May 2024 09:55:59 GMT\r\nVia: 1.1 varnish\r\nAge: 0\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Timer: S1715853359.060971,VS0,VE1\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 4f6e4dbc10ee7fe111a2f0f60b3df557493b7ddd\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /specs/{provider}/{api}.json
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v2/specs/apis.guru/2.1.0.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nLocation: https://api.apis.guru/v2/specs/apis.guru/2.1.0.json\r\nX-GitHub-Request-Id: 3CCC:0DBE:956B87:997062:6645D82E\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:55:59 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853359.332489,VS0,VE93\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 19b5faab18e62980a40b613043de89832a340afd\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v2/specs/apis.guru/fuzzstring.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nLocation: https://api.apis.guru/v2/specs/apis.guru/fuzzstring.json\r\nX-GitHub-Request-Id: 7370:3073C4:6A66EC7:6D1C7E4:6645D82F\r\nAccept-Ranges: bytes\r\nDate: Thu, 16 May 2024 09:55:59 GMT\r\nVia: 1.1 varnish\r\nAge: 0\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853360.597671,VS0,VE98\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 81b5699604af58afaf244cd486d28c55409468b3\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v2/specs/fuzzstring/2.1.0.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nLocation: https://api.apis.guru/v2/specs/fuzzstring/2.1.0.json\r\nX-GitHub-Request-Id: E524:20582C:26FDF61:280518C:6645D82F\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:55:59 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853360.880112,VS0,VE98\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: daebb5ffe8fc895e8ec8d23d19febbcdb97598cc\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v2/specs/fuzzstring/fuzzstring.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nLocation: https://api.apis.guru/v2/specs/fuzzstring/fuzzstring.json\r\nX-GitHub-Request-Id: AB4E:0E85:1BFF3D7:1CAD2D0:6645D82E\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:00 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853360.177293,VS0,VE98\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: a1be55b48c57bda206b22c3d7f0f90f02be103d6\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v2/specs/apis.guru/2.1.0.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nLocation: https://api.apis.guru/v2/specs/apis.guru/2.1.0.json\r\nX-GitHub-Request-Id: 3CCC:0DBE:956B87:997062:6645D82E\r\nAccept-Ranges: bytes\r\nDate: Thu, 16 May 2024 09:56:00 GMT\r\nVia: 1.1 varnish\r\nAge: 1\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Timer: S1715853361.740348,VS0,VE2\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 3883e7a50cb4da0dae95e2fc5b4fd6e64e7716b1\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /specs/{provider}/{service}/{api}.json
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v2/specs/apis.guru/graph/2.1.0.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nLocation: https://api.apis.guru/v2/specs/apis.guru/graph/2.1.0.json\r\nX-GitHub-Request-Id: EC94:2BE004:33D2AC9:350B7EF:6645D831\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:02 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853363.563448,VS0,VE84\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: e11666e3f20884b02acf1cb7972d3bce7a326378\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v2/specs/apis.guru/graph/fuzzstring.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/specs/apis.guru/graph/fuzzstring.json\r\nX-GitHub-Request-Id: 8466:31B68F:67C5229:6A657BC:6645D832\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:02 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853363.834229,VS0,VE97\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 1030016a1499ce8c2717332dafb385d1ddc1682d\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v2/specs/apis.guru/fuzzstring/2.1.0.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/specs/apis.guru/fuzzstring/2.1.0.json\r\nX-GitHub-Request-Id: 5AB2:B77D5:4FDA231:51D2D71:6645D833\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:03 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853364.615124,VS0,VE100\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: a2f5be924e8b4fd99d2d950d5d90e12e8aeb32ce\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v2/specs/apis.guru/fuzzstring/fuzzstring.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/specs/apis.guru/fuzzstring/fuzzstring.json\r\nX-GitHub-Request-Id: 3832:148959:4DEA316:4FD5CE3:6645D833\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:04 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853364.949726,VS0,VE87\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: a95142dae8b7099c05c2c2e1cf60b6fe65319ea7\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> GET /v2/specs/fuzzstring/graph/2.1.0.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/specs/fuzzstring/graph/2.1.0.json\r\nX-GitHub-Request-Id: CB34:27CDFA:2D43EC5:2E6E1F1:6645D834\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:04 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853365.544883,VS0,VE96\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 7d8adb7f3ed4c5d503a7ad1be1ee46b215595fe2\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /{provider}.json
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v2/apis.guru.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/apis.guru.json\r\nX-GitHub-Request-Id: 8A20:92572:53AE2A2:55CE16E:6645D83A\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:10 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853370.101707,VS0,VE100\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: c163b7fd21e8f20670489f5a5d59823bfaa0470c\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v2/fuzzstring.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/fuzzstring.json\r\nX-GitHub-Request-Id: A0BE:B77D5:4FDA849:51D33A7:6645D83A\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:10 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853370.373371,VS0,VE97\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: f2f2053e53bfa8a98ac64ce554149a2bfeec6d86\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v2/apis.guru.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/apis.guru.json\r\nX-GitHub-Request-Id: 8A20:92572:53AE2A2:55CE16E:6645D83A\r\nAccept-Ranges: bytes\r\nDate: Thu, 16 May 2024 09:56:10 GMT\r\nVia: 1.1 varnish\r\nAge: 0\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Timer: S1715853371.640702,VS0,VE1\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 912d5a8357afdfdc2d0ff5d89e48ba4eb295b514\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v2/fuzzstring.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/fuzzstring.json\r\nX-GitHub-Request-Id: A0BE:B77D5:4FDA849:51D33A7:6645D83A\r\nAccept-Ranges: bytes\r\nDate: Thu, 16 May 2024 09:56:10 GMT\r\nVia: 1.1 varnish\r\nAge: 0\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Timer: S1715853371.848875,VS0,VE2\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: a670b5bb365b2817df9bc76ccbb0e6db73098620\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /{provider}/services.json
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v2/apis.guru/services.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/apis.guru/services.json\r\nX-GitHub-Request-Id: 6B46:3073C4:6A67B3B:6D1D49D:6645D83B\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:11 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853371.175446,VS0,VE87\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: eb82fda6be65a7c2722e984bfbb2e2f0c0e529fa\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v2/fuzzstring/services.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/fuzzstring/services.json\r\nX-GitHub-Request-Id: C1C4:1E73DA:2A402BA:2B4E906:6645D83B\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:11 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853371.456366,VS0,VE88\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: c6de4059aec01024d14f395b1d67e92868948efa\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> GET /v2/apis.guru/services.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/apis.guru/services.json\r\nX-GitHub-Request-Id: 6B46:3073C4:6A67B3B:6D1D49D:6645D83B\r\nAccept-Ranges: bytes\r\nDate: Thu, 16 May 2024 09:56:11 GMT\r\nVia: 1.1 varnish\r\nAge: 0\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Timer: S1715853372.694146,VS0,VE2\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: bda9bd52bf27f73d4afd099990caa5e4cc9a5937\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> GET /v2/fuzzstring/services.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/fuzzstring/services.json\r\nX-GitHub-Request-Id: C1C4:1E73DA:2A402BA:2B4E906:6645D83B\r\nAccept-Ranges: bytes\r\nDate: Thu, 16 May 2024 09:56:11 GMT\r\nVia: 1.1 varnish\r\nAge: 0\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Timer: S1715853372.877073,VS0,VE2\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 2e51dc2ddb87844d0cc004abf13268af17f7dbb5\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /list.json
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v2/list.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/list.json\r\nX-GitHub-Request-Id: CDB6:0DDA:7D8E51:810303:6645D83B\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:12 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853372.223540,VS0,VE89\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 07b3bb6cc7bddbf4ea026a03b372cab4a30d634d\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v2/list.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nx-origin-cache: HIT\r\nLocation: https://api.apis.guru/v2/list.json\r\nX-GitHub-Request-Id: CDB6:0DDA:7D8E51:810303:6645D83B\r\nAccept-Ranges: bytes\r\nDate: Thu, 16 May 2024 09:56:12 GMT\r\nVia: 1.1 varnish\r\nAge: 0\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Timer: S1715853373.507983,VS0,VE1\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 34ff4aa058373322aa8bbe7bd4f2510e8ddc82f0\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /providers.json
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /v2/providers.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nLocation: https://api.apis.guru/v2/providers.json\r\nX-GitHub-Request-Id: 16C2:1E73DA:2A40486:2B4EADC:6645D83C\r\nAccept-Ranges: bytes\r\nAge: 0\r\nDate: Thu, 16 May 2024 09:56:12 GMT\r\nVia: 1.1 varnish\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Timer: S1715853373.779872,VS0,VE98\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: 26b4514cdd3ef6cba95840e2d9c6798e6a4eb15d\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /v2/providers.json HTTP/1.1\r\nAccept: application/json\r\nHost: api.apis.guru\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nConnection: keep-alive\r\nContent-Length: 162\r\nServer: GitHub.com\r\nContent-Type: text/html\r\nLocation: https://api.apis.guru/v2/providers.json\r\nX-GitHub-Request-Id: 16C2:1E73DA:2A40486:2B4EADC:6645D83C\r\nAccept-Ranges: bytes\r\nDate: Thu, 16 May 2024 09:56:13 GMT\r\nVia: 1.1 varnish\r\nAge: 0\r\nX-Served-By: cache-fra-eddf8230082-FRA\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Timer: S1715853373.031000,VS0,VE1\r\nVary: Accept-Encoding\r\nX-Fastly-Request-ID: b6b8197b71f5873b5591b1843f34928582ab03e7\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n
+
+

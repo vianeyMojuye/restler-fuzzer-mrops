@@ -1,0 +1,890 @@
+This file contains the failing requests, ordered by the number of blocked dependent requests.
+To improve coverage, fix the failing requests in the order listed in this file.
+
+Note: some requests are labeled as 'sequence failure'.
+This means the request depends on another request that is failing intermittently.
+For example, a DELETE request for a resource may be skipped because the resource
+PUT request failed due to exceeding quota.  The same PUT request succeeded earlier (and may
+succeed later depending on the resource clean-up behavior in the service), so it is
+considered an intermittent failure.
+
+-----------------------------------------------
+Request: Get /scenarios/itemTimings
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/scenarios/itemTimings?item=fuzzstring&hero_id=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:01 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:01 GMT\r\nLocation: https://api.opendota.com/api/scenarios/itemTimings?item=fuzzstring&hero_id=1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=8LfR0oEUFs3NfZSeHhQRmbt%2B2lLB6OI5ZHzzCM6JWS72slnJg96TmVJmDCa2rXU9AwqxCXp6Iwncf5hpzAIg3O7z0uvoowuYTsOQLpI2c4ZQ4Da%2BIhASWBTcKlrvfogKcQYb"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b524fd2b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/scenarios/itemTimings HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:01 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:01 GMT\r\nLocation: https://api.opendota.com/api/scenarios/itemTimings\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=1gK9I%2FWlKf10HKVuEl3Gyo7EMLU3dH214nE93%2F5fb%2B59gKYyOAh%2BC6P4k6xxPojiRuoL9ShdO7vivFcMaRSgEKToMiq5OTOrZzSagNBiueaRurYO513aT0oo%2BCpJC%2F9SYaiZ"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b534883b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /schema
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/schema HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:01 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:01 GMT\r\nLocation: https://api.opendota.com/api/schema\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=kTMMpA%2BmuBudWG9clOiyU0Z6s6Z%2FOAHDy03%2BJMLrIlb51GblqM6Rk6dBZUDydmPIgsl7Tr3WrkCPp9iXEFUKd8Esxfbw0a9rhhXTQ1GEGB79OvgacWdRV%2FF8P8ZYVhVWHxgB"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b55aa14b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/schema HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:02 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:02 GMT\r\nLocation: https://api.opendota.com/api/schema\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=C1XhW8RdvI5nWqnMkT5uJBDLr9HM6XUDMgY6R3tJlMQc8X%2FmotZuJAgJAz%2F5WOBkb74xkWOAmIrql4plb1WcMv1rMD8AKBp3XcYNVHFRRCIPCWftS%2Fqe%2FOwyr12h%2FMFjWW1n"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b56fad9b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /leagues
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/leagues HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:02 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:02 GMT\r\nLocation: https://api.opendota.com/api/leagues\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=0f2pa6X1oxUeT416QvTEKB0k6JQ%2FR2yXjOa4KjJkpTSidJzMmKz6pQVhkf4JzvTDC6dJVqYWqBq3LXEsG%2FJLENO1a53crItPDqwj%2BVEyU52hoYKvApiC689V7y3VBnS8o%2BD0"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b589beab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/leagues HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:02 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:02 GMT\r\nLocation: https://api.opendota.com/api/leagues\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=PzyPmtI15sOLtZzSTk4bzdaA7p%2BnNH4nLlALvHc90Ual58EpCPbb0lmf3zyK5F6lfaYnPtbjzOaRck%2F9gnJV4L1fXEdazfD7%2FWKSeCBdPOaRFspl2Zq%2FK2GJ%2B34vzEvaGPb5"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b59ccaab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /teams/{team_id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/teams/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:02 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:02 GMT\r\nLocation: https://api.opendota.com/api/teams/1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4gIl8gcRnps3pu%2Fx0%2B3kaStZE0BZ9Z6pLStHVrpwgupCr9ZRcNs%2BTv05GIT7oVf9mdA%2FZnBPe0IFyJ4aut1NzLnEv6HXl3QjNyUoUYLj%2Fcg0JE7ybAMnwZpVBNZpKExTjp09"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b5b7dbcb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/teams/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:03 GMT\r\nLocation: https://api.opendota.com/api/teams/1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=9YH6AjgNOxJu8G0GHvbS7Kfk6JpJtJSAKb7afiiYY9a0aHAXECCYEtOz6%2BzE8KcTWjnIk4YtnZSgv5c7S5Sz42wHsQgpv3FI5XCsK2r%2Fzed5qgbQojnnvEGJeMAdiKYZ9rz0"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b5cbe84b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/wl
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/wl?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:03 GMT\r\nLocation: https://api.opendota.com/api/players/1/wl?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=rIyTNgDkCD3%2B8KcdRLpA0PosC5%2BZjQVnzWtg1olks30fFFWlFwE7ZtSzKIqW0DxV5BjGftFnicwXjznVcxSNkyIhRwDE8MNnIvJuq6M5QDnlVh4NFgqGovgnAbwgpvJju1o7"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b5e5f83b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/wl HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:03 GMT\r\nLocation: https://api.opendota.com/api/players/1/wl\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=0Q1iY9c%2Bm0mI1lBIhn3nuXITzAMIeFIqRzgpQVI0eFSq0AAkwrwSMmyqkJdFuSbkPVI48Bi4TMXFLF86RhZhKEekvfV2ieFv0tQbEqOOwHZPDx6FYvr368dLskCdK4wcLXwh"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b5f686bb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /leagues/{league_id}/matches
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/leagues/1/matches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:03 GMT\r\nLocation: https://api.opendota.com/api/leagues/1/matches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=odMwf%2FldVCAA8POI%2BOpCP0H7YSwLq%2F7fEOpNjKk0%2FN7fgH55w99%2F377zq13xqI7qrv6qhPBwV%2FWorF2P35JF2%2BW2DhxWpNc%2B3xvHpuKSHwJ5SmaL8gCd1C%2B5qrBEcUffnqBl"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b60da76b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/leagues/1/matches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:03 GMT\r\nLocation: https://api.opendota.com/api/leagues/1/matches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=O%2FNkFvQq4so5ZdLqNDrbVHyU%2BPyfbAzph9PnOuGkZzefQZzTcq%2BjIP%2B95ghNNj7HswVxnnEPGwmyMHRjFLuzZaXXKudQyCmNgMLJcukIDhHVNEkzhLd%2FkKHEHtIVCH%2BdGcZi"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b61fb3bb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /heroes/{hero_id}/matches
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/heroes/1/matches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:04 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:04 GMT\r\nLocation: https://api.opendota.com/api/heroes/1/matches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=WJGAUtJTpJdR9XyQWlgmijeCXKgnsjdaLZJ%2BVAPQrnhDwmCoVryyCcdFnQ%2FPUQJgtfyJXBtp%2F38jIi8etyeFi9Go22Ed8S%2FEWs7gDPnraxZKRZS5JWXops5uhizEKZzkdN9w"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b63fc99b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/heroes/1/matches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:04 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:04 GMT\r\nLocation: https://api.opendota.com/api/heroes/1/matches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=CnU1NgWNy8cmB8IM9MutcpzqnRX5ThfCXI%2FNHa9U6ztgPxQgcl6VQKtz%2BdoRf04WwwUSSxuTkZqo4NOWCihuKXmsEvbggm5nyLd%2B4EYGfnm3yblOUnfwZgoEfusYuTloPriO"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b65ee3ab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/peers
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/peers?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:04 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:04 GMT\r\nLocation: https://api.opendota.com/api/players/1/peers?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=6FBD3qfYgOvHqabvTX3%2FA1elbED%2FSlDG2igRHFsmaXEeUtheGwMPImcSgU%2BaqtOr6tQNYpfAfbOpqE86f9WWvR1qNf7FyunACDFff97MJHLw%2BczUKC5LI%2BbTTnjGl6qPLWP%2F"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b68384db71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/peers HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:05 GMT\r\nLocation: https://api.opendota.com/api/players/1/peers\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=0EMrGIb%2FRKdbUg2RB4iIZMLStDV4t6LZjNLTU3JQ6A4JVpnbHcNB%2B%2FzUz%2B14n7EBKpLsFTZYzR3t%2BWznR%2By98h3O8ISlzrNosbYOBC40w%2BQ7dsasmi6VVFuubwf7zA0l%2Fu05"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b69695ab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /proPlayers
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/proPlayers HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:05 GMT\r\nLocation: https://api.opendota.com/api/proPlayers\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=dDmdc7fmChQJB9srngaaEy4yEcaygQVee%2Fj8KMFrLAbciqJTKMbMYaQ%2BTv9VHM1mUehLLDyMdEdSicOlyDgWDXjPFre0rANm8ilcZFvhcRFvezLsDz38z5%2BVD6s6RTzYjqgu"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b6afa72b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/proPlayers HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:05 GMT\r\nLocation: https://api.opendota.com/api/proPlayers\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=DJpr7hvt%2FA%2B1bUYVKV9PBD%2F9J1KxxXnjs1QCgpuhabDPzFxdAu6%2FFTxYSBG%2Bjdsndmzykj9hAjgguy4yNSW52YQNV7RxvXYglmUFZTZnLCG9l5vcJwfSiFBZyh6E4U5ldR8T"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b6c0b4ab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /teams/{team_id}/matches
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/teams/1/matches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:05 GMT\r\nLocation: https://api.opendota.com/api/teams/1/matches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bBCxzZ%2F2x%2BEepCp6EAuUTM7N2CZaYxxrjLiatfLrkOPGEbaTE%2Br9O0BH1HPU3SZzmOcyFG3WyP95f%2BWfvgpaiflk6u42W%2B1MxfvNFO4ZiT0HuPzGDXQUCKksNJ7ay2WA%2FP01"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b6dac94b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/teams/1/matches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:05 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:05 GMT\r\nLocation: https://api.opendota.com/api/teams/1/matches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=VQXP2MBUseMr5zelplFL3DBfS49x%2FNcjzw1cVWcsdWlt6HOQpUaYplycP3RJ%2FlvDg9EHt9w7fjBPkAor%2Fy0x8p0WFOQFMgXDE4YProSbdmEI%2BLRooDNFRjNqMEUg9nYkUSyr"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b6ecda6b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /heroes/{hero_id}/durations
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/heroes/1/durations HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:06 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:06 GMT\r\nLocation: https://api.opendota.com/api/heroes/1/durations\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=mFc9KLvTY3Da%2FvIawAXpo1BMTnMUPwrKj%2Bf9C3sfZ8JtWbLxuRO3gMFy%2FKUD67EIVkits4fsdBvw%2FibhQDD6L95XNx6QGn0%2FTxBtmdIWbioXlvp0fnlaxwoDy7GzLpWn1Dsz"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b705f15b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/heroes/1/durations HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:06 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:06 GMT\r\nLocation: https://api.opendota.com/api/heroes/1/durations\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=eqGqoC8qfm%2B5iDwLsWj%2BvISrqjRLjDO8bduS5DAPwDj67cteJuLtf%2BBvJ%2FNTjxRST%2FaJ8gGLnjyZCIOIaxKNOvKAOooVTHKAbU30NzqpJMO0znhPEtj3V3rzwVtJxz4M5PZ2"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b71c81bb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /findMatches
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/findMatches?teamA=1&teamB=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:06 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:06 GMT\r\nLocation: https://api.opendota.com/api/findMatches?teamA=1&teamB=1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=nxL0hYXYpx0PdMA6Xq0rp3NH9mky%2F%2FvXVbLv7uMks6AlYOEgzMv5QIbB%2F4Q58qdRptHzWNfDwXW4OCvVl6snSxPmi%2Fh2Y6Fs89JM%2BvZDlbnwWOX%2F77H1%2Fr9NkCGY827ivLPh"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b737971b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/findMatches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:06 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:06 GMT\r\nLocation: https://api.opendota.com/api/findMatches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=lUwyY2Rs8GzAlnMtMO142Aq7akfUqRIkwdaR3MW%2B%2Bg9pSJvWAnEGPCifhOwFIu%2BETtWoJLJxC6wkXLjX%2Bynj0YfRT9nvzrrkNh%2FwI25H%2FszcHvwsyRxv2zt6IQwPzizZiCqV"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b74aa12b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /parsedMatches
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/parsedMatches?less_than_match_id=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:07 GMT\r\nLocation: https://api.opendota.com/api/parsedMatches?less_than_match_id=1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=R8JCVIeiWoOOFEcKMYOCzhRRIq6JXS7G2NLhU%2Fd02pd6i12AeYI%2BRZPhteUt4m%2BWYLFSJ5ylxBkIqQ6AjsLj1MBKBd0QHHgapzsVD3ZD9rY9r3uVdSQc2pG%2FMkpoySqGSGMn"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b764b4db71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/parsedMatches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:07 GMT\r\nLocation: https://api.opendota.com/api/parsedMatches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=vEuYKNK7NQUp0XHQmazRIv3g%2FyQngB75TcFQT0%2FkDCih%2FKFFfEWgh%2BFkHoNcKH7JWfVPLInvUdLZ%2FIBRznwAMz4Yu%2FFJCFp%2Be%2F%2Bcexg3XrNw76YUXt0QdG55PqA6Fhg8%2Bxu2"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b775c0bb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /rankings
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/rankings?hero_id=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:07 GMT\r\nLocation: https://api.opendota.com/api/rankings?hero_id=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=hBs7pnTkHVLXLUjbAwLF6t0gmEjgEFzEXRMBdifj7SzrRjO1rIhaW0TsMgdAZ3DpJtmklisl45ecC8Glc971ckBp%2BjLdthktsqfIHeb1Ilj1Ih5TwWwNZdUoTFBVc8HhP%2BnO"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b78bd29b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/rankings?hero_id=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:07 GMT\r\nLocation: https://api.opendota.com/api/rankings?hero_id=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=XlhCRjFm%2FWfAbhb6puOaNCWbpsFkgfuq72J7cflN%2FB1b2Ko4QOEge%2FOn947BKpeeBpkLeTKVG7CY3ltbwWoKg0Z2oXSDjCAtonH3%2BN2XG6ys%2BFG4eg2tS41FQvW5fJKTM%2Bd6"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b79de01b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/pros
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/pros?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:07 GMT\r\nLocation: https://api.opendota.com/api/players/1/pros?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ni6Vft253jcjrXLNrwTxGnFYXp5tL8VSiXegZLKeYLgBV4hJeRgleDOM3ZalJdJEx%2Fr2Kwc2SCewojaXocYYhCCDhiyyhbQ8OFOEyNTT%2FfZQIEw7dH%2FxgeT7itvLrLP%2FXLmx"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b7befe1b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/pros HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:08 GMT\r\nLocation: https://api.opendota.com/api/players/1/pros\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ITId064vEA%2BIqrbm0NqBMEcjjxtG%2FU81QUpvUsb%2BVraAhXouxEccQBxhqttdg8x2EQh4O6ELDjfOmz95Y1lRG%2Bdb7AG8bu3fa3Vjb%2BhfdcNM6QoSk%2BfPWk2Ir6F01By1FYMU"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b7d38eab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /records/{field}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/records/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:08 GMT\r\nLocation: https://api.opendota.com/api/records/fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=MC29DkPRjP5SPscpwJRge6UmVkVvqbuL%2BSbTiow7XvAzFoh%2BVG%2BkbmHGBVmOxlNp45DhrApjm2IFbr%2FnQs1SrMJ%2FCDMc3HwWYYK9RdwrWj%2FmmI3AfSXF%2BMY8mJN4P2%2BEiNJ6"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b7eda62b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/records/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:08 GMT\r\nLocation: https://api.opendota.com/api/records/fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=xJskkOwlGRoHgqxb6SeoPFM5VPAQz0O7fMnGxvLtTCfOMQibAuSCiC47JCzxAI1JEstUk%2BMssu4IYoXHfExIR%2F1GH9SYi7bsFomcg9tLvtaeDbPlFdkktIKdHcZlesM5FJjp"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b802bd3b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /heroes/{hero_id}/players
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/heroes/1/players HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:08 GMT\r\nLocation: https://api.opendota.com/api/heroes/1/players\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=9%2BDTuUAOJO8X410L%2BkOY3sVRSuX92tt77SXoix8SRn5CBBSGuHW2cgvV8S79dEmJwaiI8WUxJMvZEavSFRDxOt9eNxq5zsZEGGAatnXNsIkYw1O%2Bk321VGzhUJUcJ3vjLKv0"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b81cd24b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/heroes/1/players HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:09 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:09 GMT\r\nLocation: https://api.opendota.com/api/heroes/1/players\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=UT%2BipHOk5aHzVN6mmBtb4e2lWKHE9yA704M6Y7h1udFwetKAXOAE3maRJ1AQTLVDhcjV%2Bhq6LmlpjPCPiedhw7V%2Fdopx9rD510bTYUsKZ%2FLmhfLiLrcpvlecb1G5gqt%2F5s%2F%2F"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b82cdf7b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /heroes/{hero_id}/itemPopularity
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/heroes/1/itemPopularity HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:09 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:09 GMT\r\nLocation: https://api.opendota.com/api/heroes/1/itemPopularity\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bfrblK5KJ0Z1O%2FHxFNpbwxdpSQh4KXnT9YSTGk8cq%2FTjK9%2Fh15SiaEhLBKAhFPK20ZbYujhpjLL7%2FbsFBATLpyjnCo3FsLXJDU75ZQDljgXHuwUqG7yK4nGtiZyMWzCGQ%2Fep"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b845f6cb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/heroes/1/itemPopularity HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:09 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:09 GMT\r\nLocation: https://api.opendota.com/api/heroes/1/itemPopularity\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bpevRqUjtuQLp6A9y1xZNycyJ%2BUF4xtW9eTWeY39TkYq%2Bgz9cPwJ3vLJqtziCoaFr7KjOU2t%2FCFcb4%2B7tlliLw5RouyfWHUtBvHkEIMdGvXqEW1zienst5jWIqAGkjKwzwN%2B"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b85785fb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /teams
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/teams?page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:09 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:09 GMT\r\nLocation: https://api.opendota.com/api/teams?page=1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=HDSrgytswnaiNJF17SqZSDVxHqz2%2BjnE0RIJ%2F5R2dMFeekUnWVBt8DL22mqevdYnFoIuRZx90oxUdo2gXqk5WUaBp8KO7vpv%2Fvd23LqeU7NeFwSmXkb1JhviY6ORMbxXWvQb"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b8739eab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/teams HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:09 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:09 GMT\r\nLocation: https://api.opendota.com/api/teams\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Rm1TiT5POgdZEzA2UkS3Dd3ruJXhdYfazZA5HCjiqbfUUPvcLC%2B%2B1BDInTVPV9%2FuigpZ6DFD0%2BUDyFsOjkPFmYD1aejX9O9w6Pyj3qfnUT08v4rMfM7IShWWJPsCWuognHbN"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b886b0cb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/wordcloud
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/wordcloud?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:10 GMT\r\nLocation: https://api.opendota.com/api/players/1/wordcloud?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=lV4rBXuKfUDWzoYoamCyxFOyH%2FsVVOpPDe8Ngk9KC6SCqY1kXmQqN0fKBXSPHWwltN4QNruwA16kRvnvJ9taWwsH1yDHtcA2VNv4K0hfXZSrHsYoYjnd8Q9qv5PoRlmDrkW%2B"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b89ec52b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/wordcloud HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:10 GMT\r\nLocation: https://api.opendota.com/api/players/1/wordcloud\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=j1KIyMtq0AyRWCMJQ9KgTByvjcE%2FTg4pmnq%2BKJ1i6JJ5g%2FKpaN8PJNgFnE16ikyt%2B7NhvvmZ7MD8aEkIDE6lgwqxkQFll3E6szNM%2B%2FdqQtuKR5OroSns14F%2B6UvJS4lkIUnj"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b8afd6ab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/counts
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/counts?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:10 GMT\r\nLocation: https://api.opendota.com/api/players/1/counts?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=E%2BrCPd1O8q9Cifdlebl21I4mU4SK1pHW4snaMLG9gbyJWdJr7EGORVsvL%2BjCUXGzhnVtCcrMKuhoULPEqL9mPMEsK61MtRG2aW2xF1Fz2QXYyn13EUi2YGiXmZDu0pKnSnRY"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b8c5e5fb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/counts HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:10 GMT\r\nLocation: https://api.opendota.com/api/players/1/counts\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=FkwsJrn%2BtfEwLYbJkeYZYJM%2FNGPV93f8757kqkBy7X77sDMOKP%2FntmucdyVR5IZQZxl6%2FF81AROPw3qvtOz4uAn7QLsoe8QnfrPbpib8ql1Nw3zKOeAbBPHDlN261mdGG0VU"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b8daf5fb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /status
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/status HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:11 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:11 GMT\r\nLocation: https://api.opendota.com/api/status\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=uYtO%2BUbTpm5sZPH6t3J0%2BAfDBsXr9WwePaxkf2teB0c1uDLNV4b3T%2FIoTHcnlqVbs3N29YR9gTuke%2Brl%2BCEVYZD7%2BteS1Zp0NA56qKprXoXWPKXLo79iYGhdPr6SGzs2lIlI"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b8f28a8b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/status HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:11 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:11 GMT\r\nLocation: https://api.opendota.com/api/status\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=cVOBZwobcmOXW3If%2B9%2F55DCjf%2B2Zy7rpErvNQ8cfh5mGUMsBnxSPvBQp4sZeajpvIKwoGRWCTL6kxm0N2VuefBmLpa5ub151%2FdFRffcjnA7NNFSjAHdhY4xaMEktiTtKvWn%2B"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b90397eb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/wardmap
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/wardmap?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:11 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:11 GMT\r\nLocation: https://api.opendota.com/api/players/1/wardmap?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=KXKz3WH%2FHG4guB05K7mn98UNB9KDaOfmqRESQlTutV1K27WHyD4AImUa8mHZ9oa7k1IkB%2BfVAoFRweZz2o7pVNOnPiR5rplJzuXCk60DJPJWa%2FMGFyq7i7VAMNGxRs0oA0tg"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b925ad6b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/wardmap HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:11 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:11 GMT\r\nLocation: https://api.opendota.com/api/players/1/wardmap\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=gFRb6fjNrv%2BN9HlMMEc%2FXkqtnwFZ97VvC2LdB9j5%2F8iLl1L3Gkv%2FyJylDORrFbBKpbj5Xp9IWF3MREP%2BYmLjV%2BVcM7L6k626gcSq5GRf4Xou8n1Ti2H%2FpwjVdCfx6xuw53Mh"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b939b8eb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/rankings
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/rankings HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:12 GMT\r\nLocation: https://api.opendota.com/api/players/1/rankings\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=CvjDMuo%2FM0%2Bg7v6FAHxC2J7%2BAU7UsOADAp56zm7%2BUcZNA6eeW%2FGtGWsJP%2Bm9pECouFDN0pGeH2sE2l0MKelMSd2gLSzWa0QZXeDpJ9SFMnhm8%2FFDVQtofBpFIs9NuRaOM0kb"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b955cb1b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/rankings HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:12 GMT\r\nLocation: https://api.opendota.com/api/players/1/rankings\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=42Jb%2FuOCoLFiNv16GDCy4hzCLyfmrGoUWjrT14riFfyhoZuRmf8leAgXIKOskKPwivVgXtY%2Fzt8ZMzh7ZbznfoxmtWdbBE%2BiXoMDqtofsj2mlb%2BYhznhGGOAGvnDveSz1rdl"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b968d8db71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /search
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/search?q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:12 GMT\r\nLocation: https://api.opendota.com/api/search?q=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=n0Xez9BfLJbfswnMfS9d2RhSqmkVMLp7tSrfJ7rcwJkMM20RH6bHyxi6%2ByScA9nrqm1I9JaZsXeH9LYQvhi4gsxoRnvBCdZOsTbsWoqt4NLGq7tYx5JdJ5iP9qtcCdbvUHkr"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b981eaab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/search?q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:12 GMT\r\nLocation: https://api.opendota.com/api/search?q=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=comi92ZN%2FtmVPLOf5TPYQb1h%2Fl6p7PD5yH50DlvdJVAjp5eKDM2fhj8DhHESp6ev12OOkicN1CLwlKpG%2BGgkeIcOmhwofJNT3SNzF9xB0RJars6xtWFsVJ5pfVjrYTGSjrln"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b993f70b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /live
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/live HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:12 GMT\r\nLocation: https://api.opendota.com/api/live\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ONuR2W8qnFIC5YNhYcMZSznzGUJPAliN0iHB4gD60j4vR64EqTMijNRDlDdSvo7mJ7mNCLGNVIYcUWPIgVeu7a8pVwFv9b6GUh5aoFCmetvAph5%2FoLymedS%2BY0bsdThf5WMw"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b9ae8dfb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/live HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:13 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:13 GMT\r\nLocation: https://api.opendota.com/api/live\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=xMzFoYWfTgCUUW88J7BMX8F02XzRQkZLCJbpACtJv%2BVPOZgwrch60aXVxudUk6ZrfN69MDA8LfSVj99BD3sIHw%2F0Fj2GU5NoYXfExHnHaJnouiPRA%2B2PbO3AMkpQxsuIhNbH"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b9bf994b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /matches/{match_id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/matches/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:13 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:13 GMT\r\nLocation: https://api.opendota.com/api/matches/1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=icBojab9ShM%2F%2B9fS%2FeZC9SulagKgujIY7aRJYSDfG6PvfFY9xKhKpz%2FkHmih0cu4uMvSrniXJrv0zMxV7mmuXTkhcpzXKzZRW7fq%2BtowLTqn7e9UfyhaZ5OaMpLmL82U%2BgvK"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b9d6aa0b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/matches/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:13 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:13 GMT\r\nLocation: https://api.opendota.com/api/matches/1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Qo%2BEQCsbbkL2igoEmQtishEMXaek5r2igQvZhnXBJOat2sC4Ygr9XFWszfxP3ck55HyBy75ftf5ier95uH0HMIWvrBOGMLsDcAeQeSxHLbubhImaiqT8g81WJnE3BVdkp8gm"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7b9e9b9cb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /proMatches
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/proMatches?less_than_match_id=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:13 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:13 GMT\r\nLocation: https://api.opendota.com/api/proMatches?less_than_match_id=1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ml4RCWvcTjhmx0ZjEUxrMPrB7NIsSPNnSfzPf1JJCYkmZjT1az7PEGnC%2F1Wl1ey1lkYkTmZTYw9HPafSxjcTG%2FS6YXIDM06XDK%2BnseNYNDicAk7imlTLMZW6RhEncDtzlEyp"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7ba03d80b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/proMatches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:13 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:13 GMT\r\nLocation: https://api.opendota.com/api/proMatches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4cdvYG4HjcQtv5Hw8CglyuMED5cfzy4%2FRKUdpMX1g9hzv7gTeA%2B26Q11tpXlIWLl8qv1aIX8qCF1CduBctd%2FxtVaWgOUkEt%2BtjT0s9hoU6QnQyWcmrHZWZHN5JWqKas%2FrYD9"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7ba14e4eb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /publicMatches
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/publicMatches?less_than_match_id=1&min_rank=1&max_rank=1&mmr_ascending=1&mmr_descending=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:14 GMT\r\nLocation: https://api.opendota.com/api/publicMatches?less_than_match_id=1&min_rank=1&max_rank=1&mmr_ascending=1&mmr_descending=1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=m4o9BZ%2Bajkm%2BvNqBKoYwjSJRZS9ba2YxCI%2F9Mhm%2B08qn8JRTlFvycbQHkcR2T3fU6SWo7jhs3yiGw9hK8uqp6F%2BAKgGCERbIPXsvzv8kI%2BPc4HP7yQsfDwX%2BYt6M8Czqsd4v"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7ba2cf61b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/publicMatches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:14 GMT\r\nLocation: https://api.opendota.com/api/publicMatches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=krvw34JPlPGbWdphry7cIRDZFCYKW0Wv0h55iLI9qqXf%2FlkaA%2FF%2FjAUmtZJs2r%2BkG56FSAYrgErYY7do3G9Dv97AtEcIeUmMLgiBnfz90tFXrn56SG0dwqS37orTO4mqo6o7"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7ba3d813b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /leagues/{league_id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/leagues/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:14 GMT\r\nLocation: https://api.opendota.com/api/leagues/1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=BRyGyBJqhuC5D%2B0H69qGGuWFqehx1zGYx4b5UQdm25UsdJwt0rNt8w%2B2RihPZpybvxzcAGOHP6b%2F9Bg73hFzS%2FtzpOrgz5bT7%2BC8URZtb1n4%2BPVT7Q9pGEy3tr4IyOlWnFlb"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7ba55941b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/leagues/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:15 GMT\r\nLocation: https://api.opendota.com/api/leagues/1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=J7EqkIOtOJve2qKqYejRC1pftM7YK%2FKIB4X8rbBy4Ht5n0Fdr%2B9bbZyLITn%2BP35ke8ZbaBH8NuDZru8MAAz6LqlXbJerLWgRX4vxIGax4gU1HT4cTuOhzIza0S8OpW%2FIHMKX"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7ba7fb56b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /scenarios/laneRoles
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/scenarios/laneRoles?lane_role=fuzzstring&hero_id=1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:15 GMT\r\nLocation: https://api.opendota.com/api/scenarios/laneRoles?lane_role=fuzzstring&hero_id=1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=V25ICMgyTd8escRlEzab5O5Qx1q9V5O%2Fzg4rfvQe8RyonUAHCr6gLbkntzzBOOl7EFKMmJQXE7AKZfP4QftXA1EwDJAvCfdZs0hqxp59g7%2F7Tb0AeszYoG8b8WKgbD3ku7t6"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7baabd8ab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/scenarios/laneRoles HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:15 GMT\r\nLocation: https://api.opendota.com/api/scenarios/laneRoles\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=9eQO2IUBSxmSip0pgIGCYW46eXAdK4RenPnLVe%2BpaVjC%2BZ0Jn%2BKB0Cn3E2Bd7R5lgL9IgUgOU7zrIEfOq%2B%2BTE2mDgQE%2BekMRgwAa5sLsw8690uXfhZpGitck22hjKmPQaqLi"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7babfe85b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /teams/{team_id}/heroes
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/teams/1/heroes HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:15 GMT\r\nLocation: https://api.opendota.com/api/teams/1/heroes\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=kL7%2F1yK3%2BQ6QW7uiHnZtELtfpKyEcM8RrstyjbdgrMaRrfek8DeYFB3f%2F4%2BQpFDLf05TvLtKfYssRQCt6DN%2BKssgDPiXbdYMBBs9L9t7O4RBe8DTuYYLX841k8xHazzvVEm4"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bad9fadb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/teams/1/heroes HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:16 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:16 GMT\r\nLocation: https://api.opendota.com/api/teams/1/heroes\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ZXEW42u3avpjGK1xE21o6YU%2BOPqWLxorq9CbelsBa1Dn05ezWPDxR9GgYuHmEcPatcNxGffwT8tI8qgIWCahKLzB5Fy2UgOxLpoHVP3w0alY7maeFCg%2B0mElAz553J8Alxao"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7baeb887b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/recentMatches
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/recentMatches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:16 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:16 GMT\r\nLocation: https://api.opendota.com/api/players/1/recentMatches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4oHTQfOSvkRLVgGFntDT%2Fo3sbvq51Dl91nZd2vm3jUP7s1Qc%2F1ffRUS3Na0mcALOp49weDsaAPziVAQhccg%2BSnT6bjE3bfeuSznBuRv8cIR7YEhuVnUAeCocpJ4YWiHuIZyk"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bb04964b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/recentMatches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:16 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:16 GMT\r\nLocation: https://api.opendota.com/api/players/1/recentMatches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=FLNI435B6HZa9FY3bGJoYt%2Bb%2FTqrU5w%2B2bADUVA13vDTk7dnWz82GTo9%2FmVgwYmHMvEOLoMAiV6eDu2RPsK0Ha915ifBdZeloELilc5%2F%2BcaAvY40fMjNcmrOYSFzsBzp2ouT"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bb17a48b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /benchmarks
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/benchmarks?hero_id=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:16 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:16 GMT\r\nLocation: https://api.opendota.com/api/benchmarks?hero_id=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=dQv4iNhXLOQosQfbOhbzFeHS8GVrS9l3mghLskOE%2FFc5DZ5lZO0HaX8CSF41XC4HW%2BPG6XVweayvFq%2BlPsGyZ9OclOlJA6IxvV07F241uj95EIPxuwJ%2FdqweanG78M%2BoXq9Q"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bb30b80b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/benchmarks?hero_id=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:16 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:16 GMT\r\nLocation: https://api.opendota.com/api/benchmarks?hero_id=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=fxRGAC1%2BMrrZwcpODeAu8G9lzF2mmC33iZGcBtXs4h6xbpH7X4dmgz6SQoAdYeSX886rkXqI6pbANHxgN5WcTc6b%2F30%2FnnDsgiQJdqkKAr9D9i2BGoCMx3KBOI108NxP7CLF"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bb42c64b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /constants/{resource}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/constants/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:17 GMT\r\nLocation: https://api.opendota.com/api/constants/fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=lm3n05qaXGN4DmZHdrlsn9iBMyRFuT9sfnh7cqjnsI011Hxb%2BBFpsyodrctqrWTjMwIeGotTE9lWEDWqKD9RGXtIQetZzKPZHK6PY6ZO5todrXsrWJ65RXeVand5iBoiqVRL"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bb5adfeb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/constants/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:17 GMT\r\nLocation: https://api.opendota.com/api/constants/fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bQ9TYYpv0CdUcYNwJXuKxRm19bUBm2R25s0Zy3J5xsBJiZLjgTEy0bYSEBZP3%2FbGaPcpEtC6m3P264tZCRS69MxOwL7Qrdt6zF7JZsQWPoBlEL2npUm%2Bv%2F6TC6O5ty%2Ftyyfm"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bb72f20b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/totals
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/totals?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:17 GMT\r\nLocation: https://api.opendota.com/api/players/1/totals?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=abAkVjdLpeiTUNXpxSfYh9%2FN%2BfzquobGj0zLI3K%2FIdyZRbOwXz5ZD0nbHOLEJWXY9BFvgEPfqHyny0sX%2FzSYL05BcvspOCz%2FTdBySyKrL8sy5sAjEfv7A7EfxkhnDOekrGlH"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bb8d85fb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/totals HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:17 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:17 GMT\r\nLocation: https://api.opendota.com/api/players/1/totals\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=QSrjLNOgpVfc21d3Rzi1c%2F0yNrXpxy%2FyiuUDW%2FrFqENqM9iIaplFpIlGLSjo3a4%2B1xS7Y5WbNIVY2hYS2kTBxjmKLJtD1hasI8SkoAqrQ7rj4fyJyPk0YsKxKzalg4x0aYDs"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bb9f913b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /request/{jobId}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/request/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:18 GMT\r\nLocation: https://api.opendota.com/api/request/fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=5hoYHioM4%2B2Cn%2Ff2XrNqn9qBIH7yzu1ljJx7MCU9UWM%2FcptwNj2bmCnLBQ1hU9B1GXxV49L09t%2FHbsrCXCzZl40fBgtAOSZUvIVm%2F5eEuZdMbzbXZc%2FcX41srupiELW4xQbf"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bbbaa1fb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/request/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:18 GMT\r\nLocation: https://api.opendota.com/api/request/fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=PEzVn2LRV39%2B4muuU6wJohZzXCuCD5UBJb3ttOCSvARTv36Z0HsOCa%2B%2FSjESd%2BMMMgmfRFbg3Vy7rAOCUgpce%2F9Usov4q%2FtQQyCUkNfsC8DNQrpl9FXDxGsY6xtcRnBV9wtX"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bbccadcb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /teams/{team_id}/players
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/teams/1/players HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:18 GMT\r\nLocation: https://api.opendota.com/api/teams/1/players\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=7d8eDm72rJBdlm3RD8kIz1CTZprY%2BhxdPUE5MPYLZJ9vsQWDb1JfigkM4RIdjf4CWMOnFEieGDmQcR4bFrJEl5M9bMsI5ZRpkJx06JN4STvVICIO2whM2RbvNNkYy8gfUHoW"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bbebca0b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/teams/1/players HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:18 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:18 GMT\r\nLocation: https://api.opendota.com/api/teams/1/players\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=6j0i03VYFFks8pN%2BQ9rFcCALvj1f8iQnMmWQWF1oPfajhYp%2Bsib34u21U53uqFtyLQo3svd17GTgdlO4ojjezAfqvC5f47jJzXnNAH6xIGhj4bbteFq%2BN73NvD2ueiM1ohw0"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bc02da5b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/heroes
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/heroes?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:19 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:19 GMT\r\nLocation: https://api.opendota.com/api/players/1/heroes?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=xQCs6suq3zMZQbh1tKsrfbVFg0hQG1mBBR%2FvVC88FDUMrPvqiyeo9lKnWYjrx2LLGbOy8TMYa3pJF3fYbQilXy1P3vQHEBKyrxoMwrjVfEDKAC6DMtHQea3NhQ%2BdrDbt73kx"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bc1aefdb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/heroes HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:19 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:19 GMT\r\nLocation: https://api.opendota.com/api/players/1/heroes\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=1g7xMpCQPgSx15nxR1bXc708TCFxMFERnMWYePVsOOAWbnhgOredyW7GHjeZ95bBlVosWQsmA6muxlqfituuQYof4KNfCligR%2FEKI9ZV0CwzcgriQ%2FwWDEpDpgs%2B4UrqXdMK"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bc2c803b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Post /players/{account_id}/refresh
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /api/players/1/refresh HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:19 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:19 GMT\r\nLocation: https://api.opendota.com/api/players/1/refresh\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=k8wX3aPDZOawnr5GGbQ30GARSjpBNnTdNPpiWkrRCxmDQ4w3w6Bnze44agRTn2nzDxoymRu86OFgAyHWpSR%2Fpug0QJMiCm7YNFWvQ8DsnAnulxWrTqMxknGflx2yYgnV8qsu"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bc47981b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /api/players/1/refresh HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:19 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:19 GMT\r\nLocation: https://api.opendota.com/api/players/1/refresh\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=XTTPOdbfMgXQoyGjHDUellwLco5OQdKRv3Fq0Lbltdhum0zBDjFsR%2BgEE4qDzwSZiQ3aB%2FwTbTVq9vuA1P%2FCFJtcCutm1hr0ic7lkQ8GW8dYYEpqnRiDqm0YLHvOohnP2EWc"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bc5cac9b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /heroes/{hero_id}/matchups
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/heroes/1/matchups HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:20 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:20 GMT\r\nLocation: https://api.opendota.com/api/heroes/1/matchups\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bNGxULop6HQN74aS8bDbuejSA9XiNZKKKAUCpv0qykzYXgWEeIili3p8ZYZXsUbUdzLziBT8aHamy443sCrJ09ZKL0M6O5fp1dbrcnqMT7L31KBaKWG9gNIFfVqk%2BL1iNa9x"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bc75becb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/heroes/1/matchups HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:20 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:20 GMT\r\nLocation: https://api.opendota.com/api/heroes/1/matchups\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4jB4AM%2Fv5fOD7Qu6NMVvKrcJDDy0SWUCNY7EIM32Z2Yj9SfATCpg9FEQIEYJwSW3QLEpqXOuyRx5%2BmeakjeYAfR5LgUQc%2B%2BQABY6z%2B%2BsU7talVw%2F4iwloQp%2BIE%2FKHxsL4NAr"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bc88cc4b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /explorer
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/explorer?sql=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:20 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:20 GMT\r\nLocation: https://api.opendota.com/api/explorer?sql=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=cQ4hfSAV%2FzXqxFBEs7nfzmyVVGKt4GVm%2Fd24tsEDG7PUtKSKxODL221EgM7%2FWu9DQwu2GgVwqElQVULJiMZqtug%2FswNf%2FyM2K15922yobuRzTK87i9sMWaMAtkUJ0kGxNl%2Fu"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bca3e5bb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/explorer HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:20 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:20 GMT\r\nLocation: https://api.opendota.com/api/explorer\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=P%2F%2Bq7fIBvdCk6%2FPdZkPgjuxqxd4BXlwrV4WHxLW0MsrhVKNLE0XvvUv4AVeDpSD4GlHosYq7JsvA2cXfh%2BdB0i%2F5KwGhravAvvFjLJGlTMsyWyszhG5Bzj2QKHcsQVPYNHNc"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bcb6f0ab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /constants
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/constants HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:20 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:20 GMT\r\nLocation: https://api.opendota.com/api/constants\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4ktT0VuVCQibJrhlWZpRzVVIKJ1Ipb30v%2BJmnfzNO2rzwfy8lShVE%2Bc%2FalsFOYMPU%2BU%2F0xWhZlbiwZ8MELQIUVrj7vXO9YDc25MBXfvzsLGinKyJ9h1Q5xooQnAaLRF%2B44nR"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bcd0fecb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/constants HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:21 GMT\r\nLocation: https://api.opendota.com/api/constants\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Hm30jgq9U%2BnKzU0KXwR%2FzIHuuvuPILPIoY8att79H7uBR3HejIBtAmznhkjtV05GuR7ydYxZnYgk1kITJSBhkJ5rnbhJv6mdfy%2BIANNwLZ1TfjgpbdIqSEeWiqhM1ib3E6sZ"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bce38b5b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /leagues/{league_id}/teams
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/leagues/1/teams HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:21 GMT\r\nLocation: https://api.opendota.com/api/leagues/1/teams\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=CWTW68ydSAVjBLuM3NO5saW%2B3yRnltLqm710%2Be%2Br10PO2dtogSA6cDTh4LNqWp7eZTotyMEdsIei6LFDMQFBxjHiz0e8joFiodbqW81Pzv3u8FWnYSyHZ24U%2BVRympG8j3s%2F"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bcfc9a4b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/leagues/1/teams HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:21 GMT\r\nLocation: https://api.opendota.com/api/leagues/1/teams\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=rzeODzZKvJfEG7EC7dM2UXJeR0%2F%2B2LhaQrzXgb6wUR4FRGc4l3%2BJiHPI7Isu5d%2F%2FKwaV%2B3V9I0hVlpj3rUSXoGMpZUgfx8USSMsVB4vLRwCf%2F%2FW2%2BJNcmCVJIh4LeT30BZFD"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bd0fad3b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/ratings
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/ratings HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:21 GMT\r\nLocation: https://api.opendota.com/api/players/1/ratings\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=fp9OxrZYazom7d4Uks3AySx6DrcET8X%2F1FPWxgIZ%2BHZEV68akJySnjkhBccVwKsu6qZyBk5u6CaLooShb%2Be9dDG8HtgU2JtxTGv3RhhKJTIjjkUGPcvnp8FxUjfc9Rp%2F1l9I"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bd2ec28b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/ratings HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:22 GMT\r\nLocation: https://api.opendota.com/api/players/1/ratings\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=06z3PtKyWqq%2BPTtu3blj4FC28Sg3fiXeAfzmyqlQ72aJAWSXjA8qP2ckYdciDqyx5K5YgTpy9Qx94eJy7ezdtUvqasQdjHk9v8AdeY08Rjv0XAuDeo%2BDRmyxK%2BYVYMq2ZrTd"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bd46d36b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /heroStats
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/heroStats HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:22 GMT\r\nLocation: https://api.opendota.com/api/heroStats\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=K1hkiiCygdvD7I68Qs36oj0OI%2FsyFBwcG7Ge8uvs%2FNh5lfQZ%2BbN3JuLzmDygYWBZCl5gQYKp2BmOvqsC%2BffDBWkMDI2AgUdcvqqULL%2FjDrZFHW39rwM9z2UhY2B7NJKASP96"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bd61ed9b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/heroStats HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:22 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:22 GMT\r\nLocation: https://api.opendota.com/api/heroStats\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=kwpUPfOpzh9C3qDv81QY4vDdwkw%2B9wIVVp8TjA2KhW4LaSedLrZJ5CYFO%2Ft3pHx7gS2TqxnxVihCcBb0EyU%2FWZ742uW9o9MS%2FarsotPKfkLozXgkKUKAYiGQDB8Ae%2F5zVJdg"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bd7683cb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/matches
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/matches?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring&project=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:23 GMT\r\nLocation: https://api.opendota.com/api/players/1/matches?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring&project=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=l0z7LjWpKcBwvYh99JLC9wAaqr8uAQ4AG4Pv4d59Jt9sdTsu0HyQa57tVE4ea%2FsyiuPmvKbllUdKjng8uhnTErQ1vU3d28gATg9hh9XlUyPbdt0cxRxjXao5GDHcQEgyR4Uw"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bda1a27b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/matches HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:23 GMT\r\nLocation: https://api.opendota.com/api/players/1/matches\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=JXT0vbOlGwOAQCwMj6CVdnwGMvRoz33zTeAav7Fj6uSao31se7uwr3SMZ%2BRGcFbLIS2ObtTAoJyOE2c8vOpZg98OQSZCmP11BDFE7tjXbS4kaRAW3Nmg%2BtQRK414cmk1fARI"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bdb3af2b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}/histograms/{field}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1/histograms/fuzzstring?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:23 GMT\r\nLocation: https://api.opendota.com/api/players/1/histograms/fuzzstring?limit=1&offset=1&win=1&patch=1&game_mode=1&lobby_type=1&region=1&date=1&lane_role=1&hero_id=1&is_radiant=1&included_account_id=1&excluded_account_id=1&with_hero_id=1&against_hero_id=1&significant=1&having=1&sort=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=tIWU9oeUxImKENb%2FEYXBgqhafIdar9oUY1xONtlQxgvV85Ond%2F8OZWiIRdiYbN9%2F2SiGJ1zqWMbLjQiT2wNAOcXgDkNVjXIgfqdlKxjM5KpNGtxkBVLpmQtJpev1Q2k4Hd%2Fy"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bdccc1bb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1/histograms/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:23 GMT\r\nLocation: https://api.opendota.com/api/players/1/histograms/fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=zdwC7Q01MEdIbQ1GMmhcFEBqtMKZWZDhGFaOSxljEyTP8HEo%2BK3zuLhvmkqBfEay7oxhsY8dZX0KqssrFURMHkdr%2FVD8EQYuLguNF8yWKX9EQ06uIU3OGramPsrq6GNMdq%2BQ"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bddfd16b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Post /request/{match_id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /api/request/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:23 GMT\r\nLocation: https://api.opendota.com/api/request/1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=F2%2F8UzSjMNFZww%2Fnr7cxrkblCozTi49Ie2vgE52QWByl0S54ZduW6XcmHIlyasC%2BxeNJFMm2npUGOKDvJv%2FpcwhobqzPWpx4XIg0NhDc6zF6M44pMKN4W%2FF1%2FydmEEe6%2FBQR"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bdf9ebab71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /api/request/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:24 GMT\r\nLocation: https://api.opendota.com/api/request/1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=7CBMdYCxbsnQUNDUDe32gMrr6%2Bp6wXgf4%2BElPAhME4EFwvWE17O5QQ%2B6OuvvBuI5jtPghBB9eyZfydQT59JRzso4HOkQTjhRdl40Wy8WXdUam9G5owfGNLsC1TcqJeJmWCIn"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7be10fb6b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /scenarios/misc
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/scenarios/misc?scenario=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:24 GMT\r\nLocation: https://api.opendota.com/api/scenarios/misc?scenario=fuzzstring\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=opAW%2BPsWId2EYrwECu9xUw0On84cnXidKROKA%2FPxx8p3qlvT7uZQ5A6V%2FRywCeYWM2OU3umjbjFB8upoYcIb3Len7hbKuyAy8MQdLbatEJv0o5yoks77jUv1cIXx4xdAi3H3"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7be2c8c9b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/scenarios/misc HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:24 GMT\r\nLocation: https://api.opendota.com/api/scenarios/misc\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ZvjoJjrMLwUdAqHDuHM%2FACsmSRHU8BIx6I58qBQKHcwzlJ7jxoo%2BPBvAA1xIPcdTd%2B5DmdsjZ5NCJapaI4XVPx5KpWvVnaCiEwNW%2BFSIrjmc4wMtjRLGGz1GiioPkJiNfoBX"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7be409afb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /players/{account_id}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/players/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:24 GMT\r\nLocation: https://api.opendota.com/api/players/1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=yHllGD2KEdRF36sfMhV7ITGPRqlcBM9msN7QoQ8RptxP2nP9uhEhLdyVeDqCWpzgbj7V4r2O%2BfxWlYwiXAiksWLXk%2Brs4fJQKpW9BP7PWnUhBc%2BR0j9xYRbAwIXX%2B4RULiln"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7be5caeeb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/players/1 HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:25 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:25 GMT\r\nLocation: https://api.opendota.com/api/players/1\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=0InEYksLbeLa1H3SWA%2BD9CxuIjtAIisGmHfSBcwa93PqHVHvYYCfIoqHCL%2FhT3lGT59g1Vln%2BFqaxwKmaIdBZULocKO%2BJ%2Bo9nbLWVCeeryflSDI1yEMb5EGk%2FQcduDgKhnwC"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7be6ec09b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /health
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/health HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:25 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:25 GMT\r\nLocation: https://api.opendota.com/api/health\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=erEfV9azcBCP4GrYiv7%2FiOu7%2B2kkGsukmEBGaxBYqOsUqEDKnpZJnqC4GAQMmXuEtcr2mKvqBiT%2FeYihwsTHsZxJT05rp8R6vTi7xDUmfLlg3ip8C8YRwg4WXyqJl4YOK12x"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7be8ad6db71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/health HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:25 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:25 GMT\r\nLocation: https://api.opendota.com/api/health\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=KP%2BNwVvoU5dYItFDGZZnIMWkazGQJKjfw8AKCp3SyNLei4MB17ymeRDfFDsHOIjRP1py1jauLeLTAaZlW8UF%2B2jZEEAJW6PXUUGvE0KnmbitiN6TKHaT6fQA2GmHncclLFsE"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bea0e76b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /heroes
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/heroes HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:25 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:25 GMT\r\nLocation: https://api.opendota.com/api/heroes\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=StGz8bgVFTO27097g%2B%2FSLKHdDzYn0ReCgI7GlHFYBhSzcjzvdn1SvuDrySnsOvT9r%2FtzM6TwAW69rgs4zEbLD8CiRDryzXdyWfm%2F%2BTyU523sFvHs4D2oNuG1lk%2BF%2BOcKJ%2BBf"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bebcfd9b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/heroes HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:26 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:26 GMT\r\nLocation: https://api.opendota.com/api/heroes\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=YiiJJl4fVFR7tPSqgEIJPc74p7%2ByCqGtfbmL2fJ0G50vRHAhoIYBZrv4jVFd8LWymL8hTvG%2Bh2MmIvUjtrU7kd3CioegvjXw1IQMQqI5Aa45pFAcljg9m6tg%2BZRFXGcjuGuf"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bed08b8b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /metadata
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/metadata HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:26 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:26 GMT\r\nLocation: https://api.opendota.com/api/metadata\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=9f12EPohZywCvUDrzGpgfPGCxRLh3mc773yKW04Azc9HJtSthkgbk1QvudRTeEySNSHl3EQXbiY79ldRzJmafnQ1NZ9wXKlPRNcpJetZkLWEN4QE9EyfWJWrl9X%2FGyAnF0gn"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7beefa19b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/metadata HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:26 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:26 GMT\r\nLocation: https://api.opendota.com/api/metadata\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=0K8VoJ90FhdLV62Luiwqe7K05yRCRVh1d%2BILch7u6F84DgGwZ5FzMNrT%2F%2F2QxuuPVE%2Bc9tHyVTK3915TdDiI3%2F%2BUGZ7qU9sPN3I3uOYNkgr3AW3%2Ba1ha9aam4AZMLXJ15%2BV3"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bf04b03b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+-----------------------------------------------
+Request: Get /distributions
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /api/distributions HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:26 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:26 GMT\r\nLocation: https://api.opendota.com/api/distributions\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=KD%2B5cFaRW%2Bea8WQWljHaqVCCKN0xY6FWm9bhyyUjXGKrH%2F%2FUP7EgpJe1y%2FKMWaQvuxc0vtMNOXyiHcIUfPwZpwIsg82KTJcZv5oheDouY2gX%2FGYDpHUIrOgfgrV8pKko6z8M"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bf1fc0bb71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /api/distributions HTTP/1.1\r\nAccept: application/json\r\nHost: api.opendota.com\r\n\r\n
+	< HTTP/1.1 301 Moved Permanently\r\nDate: Fri, 03 May 2024 10:14:27 GMT\r\nContent-Type: text/html\r\nContent-Length: 167\r\nConnection: keep-alive\r\nCache-Control: max-age=3600\r\nExpires: Fri, 03 May 2024 11:14:27 GMT\r\nLocation: https://api.opendota.com/api/distributions\r\nReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=udsF%2FxWhw6tTPqtjE4ytaZpqZUlfqezQJjCc5qhIcsiHSQ%2BM8RDXNMoesaRP%2BHdNL%2FmJO1ut12sg6RVdZ6xNOtPospdlLj8tXswLodADFR2bvaX64yCrYgcfXUuriOarv9iS"}],"group":"cf-nel","max_age":604800}\r\nNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}\r\nServer: cloudflare\r\nCF-RAY: 87df7bf34cf3b71c-AMS\r\nalt-svc: h3=":443"; ma=86400\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n
+
+

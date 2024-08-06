@@ -77,6 +77,7 @@ class RequestTraceLog():
         self.sequence_id = None
         self.tags = {}
         self.sequence_tags = {}
+        self.replay_blocks = None
         return self
 
     def __eq__(self, other):
@@ -106,7 +107,7 @@ class RequestTraceLog():
     def response(self, value):
         self._response = value
 
-    def to_dict(self, omit_request_text=None):
+    def to_dict(self):
         tags = {}
         if self.request_id is not None:
             tags["request_id"] = self.request_id
@@ -119,15 +120,13 @@ class RequestTraceLog():
 
         tags.update(self.tags)
         tags.update(self.sequence_tags)
-        request_text = None if omit_request_text == True else self.request
-        
         return {
             'sent_timestamp': self.sent_timestamp,
             'received_timestamp': self.received_timestamp,
-            'request': request_text,
+            'request': self.request,
             'response': self.response,
             'request_json': None if self.request_json is None else json.dumps(self.request_json),
-            'response_json': None if self.response_json is None else json.dumps(self.response_json),
+            'response_json': None if self.request_json is None else json.dumps(self.response_json),
             'tags': tags,
             # replay blocks contain a list of tuples.  Each tuple contains strings or None,
             # so it should be safe to serialize directly to JSON

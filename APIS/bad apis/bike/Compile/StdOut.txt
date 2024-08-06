@@ -1,0 +1,116 @@
+[15-05-24 12:11:47] Generating grammar...
+[15-05-24 12:11:47] Getting requests...
+[15-05-24 12:11:47] Getting dependencies...
+[15-05-24 12:11:48] Getting path consumers...
+[15-05-24 12:11:48] Getting query consumers...
+[15-05-24 12:11:48] Getting header consumers...
+[15-05-24 12:11:48] Getting body consumers...
+[15-05-24 12:11:48] Getting producers...
+[15-05-24 12:11:48] Done processing producers
+[15-05-24 12:11:48] Compute dependencies
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/locations"
+  xMsPath = None
+  method = Get }[[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/locations"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/incidents"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] 
+15-05-24 12:11:48Second pass dependencies for request { endpoint = "/v2/incidents"
+  xMsPath = None
+  method = Get }
+] Second pass dependencies for request { endpoint = "/v2/locations"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/incidents"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/locations"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/locations"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/incidents"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/locations"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/incidents"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/incidents"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/locations/markers"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/locations/markers"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/locations/markers"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/incidents/{id}"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/incidents/{id}"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/incidents/{id}"
+  xMsPath = None
+  method = Get }
+[[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/locations/markers"
+  xMsPath = None
+  method = Get }
+15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/locations/markers"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/locations/markers"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/incidents/{id}"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/incidents/{id}"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/incidents/{id}"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/locations/markers"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/locations"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/incidents"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/locations/markers"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/locations"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/incidents"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Second pass dependencies for request { endpoint = "/v2/incidents/{id}"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Done dependencies for request { endpoint = "/v2/incidents/{id}"
+  xMsPath = None
+  method = Get }
+[15-05-24 12:11:48] Assigning equality constraints...
+[15-05-24 12:11:48] Getting ordering constraints...
+[15-05-24 12:11:48] Dependency analysis completed.
+[15-05-24 12:11:48] Generating request primitives...
+Writing new dictionary to C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler_mrops\bad apis\bike\Compile\dict.json
+[15-05-24 12:11:48] Generating python grammar...
+[15-05-24 12:11:48] Get requests
+[15-05-24 12:11:48] Done get requests
+[15-05-24 12:11:48] Done generating python grammar.
+Workflow completed.  See C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler_mrops\bad apis\bike\Compile for REST-ler grammar.

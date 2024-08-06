@@ -1,0 +1,852 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/companies",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sort"
+        },
+        "ContainerName": "companies",
+        "PathContainerName": "companies",
+        "CandidateTypeNames": [
+          "company"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sort",
+        "ProducerParameterName": "sort",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/companies",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "perpage"
+        },
+        "ContainerName": "companies",
+        "PathContainerName": "companies",
+        "CandidateTypeNames": [
+          "company"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "perpage",
+        "ProducerParameterName": "perpage",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/companies",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "page"
+        },
+        "ContainerName": "companies",
+        "PathContainerName": "companies",
+        "CandidateTypeNames": [
+          "company"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "page",
+        "ProducerParameterName": "page",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Number"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/agg/{size}/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "CandidateTypeNames": [
+          "offset"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/agg/{size}/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "CandidateTypeNames": [
+          "limit"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/agg/{size}/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "date",
+            "pathToParameter": [
+              "v1",
+              "historic",
+              "agg",
+              "{size}",
+              "{symbol}"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "CandidateTypeNames": [
+          "date"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Date"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/agg/{size}/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "size",
+            "pathToParameter": [
+              "v1",
+              "historic",
+              "agg"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "agg",
+        "CandidateTypeNames": [
+          "agg"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "size",
+        "ProducerParameterName": "size",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": {
+          "Enum": [
+            "size",
+            "String",
+            [
+              "second",
+              "minute"
+            ],
+            null
+          ]
+        }
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/agg/{size}/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "symbol",
+            "pathToParameter": [
+              "v1",
+              "historic",
+              "agg",
+              "{size}"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "agg",
+        "CandidateTypeNames": [
+          "agg"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "symbol",
+        "ProducerParameterName": "symbol",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/forex/{from}/{to}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "CandidateTypeNames": [
+          "offset"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/forex/{from}/{to}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "CandidateTypeNames": [
+          "limit"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/forex/{from}/{to}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "date",
+            "pathToParameter": [
+              "v1",
+              "historic",
+              "forex",
+              "{from}",
+              "{to}"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "CandidateTypeNames": [
+          "date"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Date"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/forex/{from}/{to}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "to",
+            "pathToParameter": [
+              "v1",
+              "historic",
+              "forex",
+              "{from}"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "forex",
+        "CandidateTypeNames": [
+          "forex"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "to",
+        "ProducerParameterName": "to",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/forex/{from}/{to}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "from",
+            "pathToParameter": [
+              "v1",
+              "historic",
+              "forex"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "forex",
+        "CandidateTypeNames": [
+          "forex"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "from",
+        "ProducerParameterName": "from",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/quotes/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "CandidateTypeNames": [
+          "offset"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/quotes/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "CandidateTypeNames": [
+          "limit"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/quotes/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "date",
+            "pathToParameter": [
+              "v1",
+              "historic",
+              "quotes",
+              "{symbol}"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "quotes",
+        "CandidateTypeNames": [
+          "quote"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Date"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/quotes/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "symbol",
+            "pathToParameter": [
+              "v1",
+              "historic",
+              "quotes"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "quotes",
+        "CandidateTypeNames": [
+          "quote"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "symbol",
+        "ProducerParameterName": "symbol",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/trades/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "CandidateTypeNames": [
+          "offset"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/trades/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "CandidateTypeNames": [
+          "limit"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/trades/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "date",
+            "pathToParameter": [
+              "v1",
+              "historic",
+              "trades",
+              "{symbol}"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "trades",
+        "CandidateTypeNames": [
+          "trade"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Date"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/historic/trades/{symbol}/{date}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "symbol",
+            "pathToParameter": [
+              "v1",
+              "historic",
+              "trades"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "trades",
+        "CandidateTypeNames": [
+          "trade"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "symbol",
+        "ProducerParameterName": "symbol",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/last/currencies/{from}/{to}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "to",
+            "pathToParameter": [
+              "v1",
+              "last",
+              "currencies",
+              "{from}"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "currencies",
+        "CandidateTypeNames": [
+          "currency"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "to",
+        "ProducerParameterName": "to",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/last/currencies/{from}/{to}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "from",
+            "pathToParameter": [
+              "v1",
+              "last",
+              "currencies"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "currencies",
+        "CandidateTypeNames": [
+          "currency"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "from",
+        "ProducerParameterName": "from",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/last/stocks/{symbol}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "symbol",
+            "pathToParameter": [
+              "v1",
+              "last",
+              "stocks"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "stocks",
+        "PathContainerName": "stocks",
+        "CandidateTypeNames": [
+          "stock"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "symbol",
+        "ProducerParameterName": "symbol",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/last_quote/currencies/{from}/{to}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "to",
+            "pathToParameter": [
+              "v1",
+              "last_quote",
+              "currencies",
+              "{from}"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "currencies",
+        "CandidateTypeNames": [
+          "currency"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "to",
+        "ProducerParameterName": "to",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/last_quote/currencies/{from}/{to}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "from",
+            "pathToParameter": [
+              "v1",
+              "last_quote",
+              "currencies"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "currencies",
+        "CandidateTypeNames": [
+          "currency"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "from",
+        "ProducerParameterName": "from",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/v1/last_quote/stocks/{symbol}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "symbol",
+            "pathToParameter": [
+              "v1",
+              "last_quote",
+              "stocks"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "stocks",
+        "PathContainerName": "stocks",
+        "CandidateTypeNames": [
+          "stock"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "symbol",
+        "ProducerParameterName": "symbol",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    }
+  }
+]
