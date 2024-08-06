@@ -1,0 +1,204 @@
+[06-08-24 11:02:17] Generating grammar...
+[06-08-24 11:02:18] Getting requests...
+found unsupported format: decimal
+[06-08-24 11:02:18] Getting dependencies...
+[06-08-24 11:02:18] Getting path consumers...
+[06-08-24 11:02:18] Getting query consumers...
+[06-08-24 11:02:18] Getting header consumers...
+[06-08-24 11:02:18] Getting body consumers...
+found unsupported format: decimal
+found unsupported format: decimal
+found unsupported format: decimal
+[06-08-24 11:02:18] Getting producers...
+[06-08-24 11:02:18] Done processing producers
+[06-08-24 11:02:18] Compute dependencies
+found unsupported format: decimal
+found unsupported format: decimal
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Delete }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Get }
+] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Put }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Post }[
+06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Delete }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Put }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/schema"
+  xMsPath = None
+  method = Get }
+[[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Put }
+06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Patch }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Post }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/schema"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Patch }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Get }
+] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Delete }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Post }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Delete }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Post }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Post }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Put }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/schema"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Post }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Patch }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/schema"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Patch }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Get }
+found unsupported format: decimal
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Delete }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Delete }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/schema"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/schema"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/schema"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/schema"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Put }[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Patch }
+
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Patch }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Put }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Post }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products"
+  xMsPath = None
+  method = Post }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Patch }[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Put }
+
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Patch }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Put }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Delete }
+[06-08-24 11:02:18] Second pass dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Delete }
+[06-08-24 11:02:18] Done dependencies for request { endpoint = "/api/products/{id}"
+  xMsPath = None
+  method = Get }
+[06-08-24 11:02:18] Assigning equality constraints...
+found unsupported format: decimal
+found unsupported format: decimal
+found unsupported format: decimal
+[06-08-24 11:02:18] Getting ordering constraints...
+[06-08-24 11:02:18] Dependency analysis completed.
+[06-08-24 11:02:18] Generating request primitives...
+found unsupported format: decimal
+found unsupported format: decimal
+found unsupported format: decimal
+found unsupported format: decimal
+found unsupported format: decimal
+found unsupported format: decimal
+Writing new dictionary to C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler-fuzzer-mrops\APIS\good apis\Product-Management-API\restler_working_dir\Compile\dict.json
+[06-08-24 11:02:19] Generating python grammar...
+[06-08-24 11:02:19] Get requests
+[06-08-24 11:02:19] Done get requests
+[06-08-24 11:02:19] Done generating python grammar.
+Workflow completed.  See C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler-fuzzer-mrops\APIS\good apis\Product-Management-API\restler_working_dir\Compile for REST-ler grammar.

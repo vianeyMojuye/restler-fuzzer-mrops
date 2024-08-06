@@ -1,0 +1,196 @@
+{
+  "400": {
+    "6db6cdf3-73f3-4adf-b757-9fdcfb02a7be": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/products/740",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/products/740",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/products/740",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/products/740",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/products/740",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/products/740",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/products/740",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/products/740",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/products/740",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/products/740",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  }
+}

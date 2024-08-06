@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler-fuzzer-mrops\restler_bin\engine\restler.py", line 18, in <module>
+    import checkers
+  File "C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler-fuzzer-mrops\restler_bin\engine\checkers\__init__.py", line 7, in <module>
+    from checkers.leakage_rule_checker import *
+  File "C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler-fuzzer-mrops\restler_bin\engine\checkers\leakage_rule_checker.py", line 7, in <module>
+    from checkers.checker_base import *
+  File "C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler-fuzzer-mrops\restler_bin\engine\checkers\checker_base.py", line 7, in <module>
+    from checkers.checker_log import CheckerLog
+  File "C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler-fuzzer-mrops\restler_bin\engine\checkers\checker_log.py", line 9, in <module>
+    import utils.logger as logger
+  File "C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler-fuzzer-mrops\restler_bin\engine\utils\logger.py", line 21, in <module>
+    import engine.primitives as primitives
+  File "C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler-fuzzer-mrops\restler_bin\engine\engine\primitives.py", line 14, in <module>
+    from restler_settings import Settings
+  File "C:\Users\Etudiant UNamur\Desktop\snt_internship\test\restler-fuzzer-mrops\restler_bin\engine\restler_settings.py", line 1132, in <module>
+    primitives.restler_static_string("?"),
+NameError: name 'primitives' is not defined

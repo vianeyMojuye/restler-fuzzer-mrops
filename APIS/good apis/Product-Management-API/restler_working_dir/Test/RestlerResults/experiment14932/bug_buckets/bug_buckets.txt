@@ -1,0 +1,7 @@
+main_driver_500: 1
+Total Buckets: 1
+-------------
+main_driver_500 - Bug was reproduced - main_driver_500_1.replay.txt
+Hash: main_driver_500_831fed1773983a761daf3cae0301270213762de5
+POST /api/products HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8000\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring,\n    "description":fuzzstring,\n    "price":fuzzstring}\r\n
+--------------------------------------------------------------------------------

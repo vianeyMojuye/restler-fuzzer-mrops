@@ -1,0 +1,62 @@
+
+The MROPEquivalence checker for Restler is designed to verify that two sequences of operations on a REST API yield equivalent states or outputs. 
+
+The checker will validate that:
+
+	- Updating a resource with equivalent data results in the same state as creating a new resource with that data.
+	- Deleting a resource and subsequently attempting to access it results in a "resource not found" response.
+
+
+Use Cases :
+
+ 	1 - Update Equivalence with Creation (POST-then-PUT vs. POST):
+
+		- Operation Sequence 1:
+			POST item1 with some initial data.
+			PUT item1 with new data equivalent to a different POST operation.
+		
+		- Operation Sequence 2:
+			POST item2 with data equivalent to the PUT operation in Sequence 1.
+
+		- Expected Outcome: The state and response for GET requests on item1 and item2 should reflect equivalent data.
+
+
+	2 - Deletion Consistency (POST-then-DELETE vs. GET Not Found):
+
+		- Operation Sequence 1:
+			POST item1 with some data.
+			DELETE item1.
+
+		- Operation Sequence 2:
+			GET item1.
+
+		- Expected Outcome: The GET operation should return a "resource not found" error, confirming that item1 does not exist.
+
+
+
+LINK of the API source Code Used For the Experiment: 
+
+	https://github.com/Marial-Nk/Product-Management-API
+
+	Follow the README file to  Run the APP.
+
+
+Bugs Injected :
+
+    The bugs injected can be seen in ../../APIS/good apis/Product-Management-API/products/views.py 
+
+
+	1- Alter the product's description and name  during update operation that means we should have:
+          product['description'] = "This description has been altered by a bug" and product['name'] = "This name has been altered by a bug"
+
+
+       2- Pretend to delete the item but don't actually do it it means instance.delete() will be skipped during the implementation 
+
+
+Results: 
+    
+      The bugs detected by Restler-fuzzer-mrops can be seen in the files: 
+		- checker_update_equivalence.txt
+                - checker_deletion_consistency.txt
+                 
+
