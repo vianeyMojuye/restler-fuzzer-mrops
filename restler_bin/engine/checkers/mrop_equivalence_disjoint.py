@@ -88,7 +88,13 @@ class MropDisjointChecker(CheckerBase):
             @param base_url: base url of the api
             @type  base_url: string
         """
-        
+        # Function to check if a string represents a digit/number
+        def is_string_number(value):
+                try:
+                    float(value)
+                    return True
+                except ValueError:
+                    return False
                 
         def write_file(filename, text):
                 with open(filename, 'a') as f:
@@ -96,31 +102,55 @@ class MropDisjointChecker(CheckerBase):
 
         found = False
                 
-        mystring =  f"{'>'*50}\n{'_'*50}\nchecker_Disjoint Operations POST item1  vs GET item1 \n\n"      
-        print(f"{'>'*15}\nchecker_Disjoint Operations POST item1  vs GET item1  \n\n")
+        mystring =  f"{'>'*50}\n{'_'*50}\nchecker_Disjoint Operations (POST item1, POST item2) then PUT item 1  vs (GET item1, Get item2) \n\n"      
+        print(f"{'>'*15}\nchecker_Disjoint Operations (POST item1, POST item2) then PUT item 1  vs (GET item1, Get item2)  \n\n")
         mystring+= f"1- Execution of POST Request for item1:\n Request:  {endpoint} \n Response : {response} \n"
         print(f"1- Execution of POST Request for item1:\n Request:  {endpoint} \n Response : {response} \n")
 
-        
+        # JSON string
+        json_string = response
+
+        # Convert JSON string to dictionary
+        data = json.loads(json_string)
+
+        # Update the dictionary values based on the conditions
+        for key, value in data.items():
+            
+            if isinstance(value, str) and is_string_number(value):
+                data[key] = "100"
+            else:
+                data[key] = "disjoint checker"
+
+        del data['created_at']
+        del data['updated_at']
+        # Print the updated dictionary
+        # print(data)
         endpoint = endpoint.strip().split(' ')[-1].strip()
         
+        # mystring+= f"2- Execution of PUT Request for item1:\n Request: PUT {endpoint}{id}/ \n data : {data} \n"
+        # print(f"2- Execution of PUT Request for item1:\n Request: PUT {endpoint}/{id} \n data : {data} \n")
+
+        # #send the request
+        # url = f"{base_url}{endpoint}{id}/"
+        # response1 = requests.put(url, json=data)
+        # response1 = json.loads(response1.text)
+        # # response.raise_for_status()
+
+        # mystring+= f"Response PUT item 1 : {response1} \n"
+        # print(f"Response PUT item 1 : {response1} \n")
         
         mystring+= f"\n2- Execution of GET Request for item1:\n Request: GET {endpoint} \n "
         print(f"\n2- Execution of GET Request for item1:\n Request: GET {endpoint} \n" )
         #send the request
-        url = f"{base_url}{endpoint}{id}/"
+        url = f"{base_url}{endpoint}"
         response2 = requests.get(url)
         response2 = json.loads(response2.text)
-        response = json.loads(response)
 
         mystring+= f"Response GET Item 1 : {response2} \n"
         print(f"Response GET Item 1 : {response2} \n")
         
         try :
-
-            data1 = {key: value for key, value in response.items() }
-            data2 = {key: value for key, value in response2.items() }
-            assert data1 == data2
+            assert response2.text == response.text
             mystring+= f"Disjoint and Equality sequences Respected : \n Response POST item 1  == Response GET Item 1 \n"
             print(f"Disjoint and Equality sequences Respected : \n Response POST item 1  == Response GET Item 1 \n")
         except Exception as e:
@@ -135,20 +165,20 @@ class MropDisjointChecker(CheckerBase):
 
         
 
-    def _modif(self, method):
-        #send the request
-        # response_put = self._send_request(parser, data)
-        # print(f"{method} :  {response_put}")
-        # dependencies.set_equivalence_method_codes(response_put.status_code,  response_put.body,method)
-        # print("PUT Code: ", dependencies.equivalence_put_codes)
-        # verify if the status_code are similar
-        r = dependencies.compare_status_codes(dependencies.equivalence_post_codes,method)
+    # def _modif(self, method):
+    #     #send the request
+    #     # response_put = self._send_request(parser, data)
+    #     # print(f"{method} :  {response_put}")
+    #     # dependencies.set_equivalence_method_codes(response_put.status_code,  response_put.body,method)
+    #     # print("PUT Code: ", dependencies.equivalence_put_codes)
+    #     # verify if the status_code are similar
+    #     r = dependencies.compare_status_codes(dependencies.equivalence_post_codes,method)
         
-        if(method == "PUT" and len(dependencies.equivalence_put_codes)>0) :
-            print(f"POST -> PUT   MR Equivalence : OK \n++++++++++++++" if len(r) == 0 else r)
+    #     if(method == "PUT" and len(dependencies.equivalence_put_codes)>0) :
+    #         print(f"POST -> PUT   MR Equivalence : OK \n++++++++++++++" if len(r) == 0 else r)
 
-        if(method == "DELETE" and len(dependencies.equivalence_delete_codes)>0) :
-            print(f"POST -> DELETE   MR Equivalence : OK" if len(r) == 0 else r)
+    #     if(method == "DELETE" and len(dependencies.equivalence_delete_codes)>0) :
+    #         print(f"POST -> DELETE   MR Equivalence : OK" if len(r) == 0 else r)
         
 
     def _render_last_request(self, seq):
@@ -234,9 +264,9 @@ class MropDisjointChecker(CheckerBase):
                 self._print_suspect_sequence(seq, response)
                 print(seq, dependencies.equivalence_post_codes)
 
-                self._modif( "PUT")
+                # self._modif( "PUT")
 
-                self._modif( "DELETE")
+                # self._modif( "DELETE")
 
                 # if seq.last_request.method.startswith('POST') and response.has_valid_code() :
                 #     ###################################################################

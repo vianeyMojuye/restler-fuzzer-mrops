@@ -9,20 +9,20 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-    # def retrieve(self, request, *args, **kwargs):
-    #     # intentional  bug: Cross data contamination
-    #     item_id = int(kwargs.get('pk'))
-    #     if item_id % 2 == 0:
-    #         # For even IDs, return the product with ID 1 (If It Exists)
-    #         try:
-    #             product = Product.objects.get(id=1)
-    #         except Product.DoesNotExist:
-    #             return Response({"error": "Product Not Found"}, status=status.HTTP_404_NOT_FOUND)
-    #     else:
-    #         product = self.get_object()
-    #
-    #     serializer= self.get_serializer(product)
-    #     return  Response(serializer.data)
+    def retrieve(self, request, *args, **kwargs):
+        # intentional  bug: Cross data contamination
+        item_id = int(kwargs.get('pk'))
+        if item_id % 2 == 0:
+            # For even IDs, return the product with ID 20 (If It Exists)
+            try:
+                product = Product.objects.get(id=1)
+            except Product.DoesNotExist:
+                return Response({"error": "Product Not Found"}, status=status.HTTP_404_NOT_FOUND)
+        else:
+            product = self.get_object()
+    
+        serializer= self.get_serializer(product)
+        return  Response(serializer.data)
 
     ################ another bug : UPDate cross data contamination
     # def update(self, request, *args, **kwargs):
@@ -151,11 +151,12 @@ class ProductViewSet(viewsets.ModelViewSet):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def retrieve(self, request, *args, **kwargs):
-        # Retrieve the product object
-        instance = self.get_object()
-        serializer = self.get_serializer(instance)
-        return Response(serializer.data)
+    # def retrieve(self, request, *args, **kwargs):
+    #     # Retrieve the product object
+    #     instance = self.get_object()
+    #     serializer = self.get_serializer(instance)
+    #     return Response(serializer.data)
+        
 
     # ##### Bug 7 : Delete one data affects another
     # def create(self, request, *args, **kwargs):

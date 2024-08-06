@@ -1,0 +1,60 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint Operations POST item1  vs GET item1 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":978,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-06T13:18:31.157004Z","updated_at":"2024-08-06T13:18:31.157004Z"} 
+
+2- Execution of GET Request for item1:
+ Request: GET /api/products/ 
+ Response GET Item 1 : {'error': 'Product Not Found'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Disjoint and Equality relations not Respected : 
+ Response POST item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint Operations POST item1  vs GET item1 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1002,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-06T13:18:37.471673Z","updated_at":"2024-08-06T13:18:37.471673Z"} 
+
+2- Execution of GET Request for item1:
+ Request: GET /api/products/ 
+ Response GET Item 1 : {'error': 'Product Not Found'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Disjoint and Equality relations not Respected : 
+ Response POST item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint Operations POST item1  vs GET item1 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1024,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-06T13:18:44.343249Z","updated_at":"2024-08-06T13:18:44.343249Z"} 
+
+2- Execution of GET Request for item1:
+ Request: GET /api/products/ 
+ Response GET Item 1 : {'error': 'Product Not Found'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Disjoint and Equality relations not Respected : 
+ Response POST item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint Operations POST item1  vs GET item1 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1046,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-06T13:18:50.719826Z","updated_at":"2024-08-06T13:18:50.719826Z"} 
+
+2- Execution of GET Request for item1:
+ Request: GET /api/products/ 
+ Response GET Item 1 : {'error': 'Product Not Found'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Disjoint and Equality relations not Respected : 
+ Response POST item 1  != Response GET Item 1 

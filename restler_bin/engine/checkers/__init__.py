@@ -13,4 +13,5 @@ from checkers.payload_body_checker import *
 from checkers.examples_checker import *
 from checkers.invalid_value_checker import *
 from checkers.mrop_equivalence_checker import *
+from checkers.mrop_disjoint_checker import *
 from checkers.mrop_equality_disjoint_checker import *
