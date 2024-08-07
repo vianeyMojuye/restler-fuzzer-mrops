@@ -15,7 +15,7 @@ class ProductViewSet(viewsets.ModelViewSet):
         if item_id % 2 == 0:
             # For even IDs, return the product with ID 20 (If It Exists)
             try:
-                product = Product.objects.get(id=1)
+                product = Product.objects.get(id=20)
             except Product.DoesNotExist:
                 return Response({"error": "Product Not Found"}, status=status.HTTP_404_NOT_FOUND)
         else:
