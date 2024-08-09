@@ -105,7 +105,7 @@ class MropDisjointChecker(CheckerBase):
         endpoint = endpoint.strip().split(' ')[-1].strip()
         
         
-        mystring+= f"\n2- Execution of GET Request for item1:\n Request: GET {endpoint} \n "
+        mystring+= f"\n2- Execution of GET Request for item1:\n Request: GET {endpoint}/{id} \n "
         print(f"\n2- Execution of GET Request for item1:\n Request: GET {endpoint} \n" )
         #send the request
         url = f"{base_url}{endpoint}{id}/"
