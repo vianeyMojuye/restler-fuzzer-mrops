@@ -16,17 +16,49 @@ PATCH /api/products/{id}
 Request from grammar does not exist in the Request Collection!
 DELETE /api/products/{id}
 
-2024-08-09 17:55:43.422: Initializing: Garbage collection every 30 seconds.
-2024-08-09 17:55:43.431: Generation: 1 
+2024-08-09 19:42:33.820: Initializing: Garbage collection every 30 seconds.
+2024-08-09 19:42:33.831: Generation: 1 
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/')]
 >>>>>>>>>>>>>>>
   
+>>>>>>>>>>>>>>>
+checker_Equality Operations DELETE item1  vs DELETE item2  
+
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE /api/products/2337/ 
+
+Response DELETE Item 1 : 204 
+
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2336/ 
+
+Response DELETE Item 2 : 204 
+
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2337/ 
+
+Response GET Item 1 : {'status_code': 200, 'body': {'id': 2337, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T17:42:34.788069Z', 'updated_at': '2024-08-09T17:42:34.788069Z'}} 
+
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2336/ 
+
+Response GET Item 2 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+
 resp and rule, Method ->  POST
-<engine.core.sequences.Sequence object at 0x0000020E69FA6FB0> []
+<engine.core.sequences.Sequence object at 0x0000024B324FAFB0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}],
 GET=[]
 --------------------
 >>>>>>>>>>>>>>>
@@ -34,23 +66,89 @@ GET=[]
 [('POST', '/api/products/')]
 >>>>>>>>>>>>>>>
   
+>>>>>>>>>>>>>>>
+checker_Equality Operations DELETE item1  vs DELETE item2  
+
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE /api/products/2350/ 
+
+Response DELETE Item 1 : 204 
+
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2349/ 
+
+Response DELETE Item 2 : 204 
+
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2350/ 
+
+Response GET Item 1 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2349/ 
+
+Response GET Item 2 : {'status_code': 200, 'body': {'id': 2349, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '10.10', 'created_at': '2024-08-09T17:42:43.755618Z', 'updated_at': '2024-08-09T17:42:43.755618Z'}} 
+
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+
 resp and rule, Method ->  POST
-<engine.core.sequences.Sequence object at 0x0000020E69FA6FB0> []
+<engine.core.sequences.Sequence object at 0x0000024B324FAFB0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/')]
 >>>>>>>>>>>>>>>
   
+>>>>>>>>>>>>>>>
+checker_Equality Operations DELETE item1  vs DELETE item2  
+
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE /api/products/2361/ 
+
+Response DELETE Item 1 : 204 
+
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2360/ 
+
+Response DELETE Item 2 : 204 
+
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2361/ 
+
+Response GET Item 1 : {'status_code': 200, 'body': {'id': 2361, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '20.00', 'created_at': '2024-08-09T17:42:52.673223Z', 'updated_at': '2024-08-09T17:42:52.673223Z'}} 
+
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2360/ 
+
+Response GET Item 2 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+
 resp and rule, Method ->  POST
-<engine.core.sequences.Sequence object at 0x0000020E69FA6FB0> []
+<engine.core.sequences.Sequence object at 0x0000024B324FAFB0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/')]
@@ -61,45 +159,177 @@ GET=[]
 [('POST', '/api/products/')]
 >>>>>>>>>>>>>>>
   
+>>>>>>>>>>>>>>>
+checker_Equality Operations DELETE item1  vs DELETE item2  
+
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE /api/products/2376/ 
+
+Response DELETE Item 1 : 204 
+
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2375/ 
+
+Response DELETE Item 2 : 204 
+
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2376/ 
+
+Response GET Item 1 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2375/ 
+
+Response GET Item 2 : {'status_code': 200, 'body': {'id': 2375, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '99.00', 'created_at': '2024-08-09T17:43:02.227076Z', 'updated_at': '2024-08-09T17:43:02.227076Z'}} 
+
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+
 resp and rule, Method ->  POST
-<engine.core.sequences.Sequence object at 0x0000020E69FA6FB0> []
+<engine.core.sequences.Sequence object at 0x0000024B324FAFB0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/')]
 >>>>>>>>>>>>>>>
   
+>>>>>>>>>>>>>>>
+checker_Equality Operations DELETE item1  vs DELETE item2  
+
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE /api/products/2387/ 
+
+Response DELETE Item 1 : 204 
+
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2386/ 
+
+Response DELETE Item 2 : 204 
+
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2387/ 
+
+Response GET Item 1 : {'status_code': 200, 'body': {'id': 2387, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T17:43:11.104449Z', 'updated_at': '2024-08-09T17:43:11.104449Z'}} 
+
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2386/ 
+
+Response GET Item 2 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+
 resp and rule, Method ->  POST
-<engine.core.sequences.Sequence object at 0x0000020E69FA6FB0> []
+<engine.core.sequences.Sequence object at 0x0000024B324FAFB0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/')]
 >>>>>>>>>>>>>>>
   
+>>>>>>>>>>>>>>>
+checker_Equality Operations DELETE item1  vs DELETE item2  
+
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE /api/products/2398/ 
+
+Response DELETE Item 1 : 204 
+
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2397/ 
+
+Response DELETE Item 2 : 204 
+
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2398/ 
+
+Response GET Item 1 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2397/ 
+
+Response GET Item 2 : {'status_code': 200, 'body': {'id': 2397, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '10.10', 'created_at': '2024-08-09T17:43:19.854859Z', 'updated_at': '2024-08-09T17:43:19.854859Z'}} 
+
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+
 resp and rule, Method ->  POST
-<engine.core.sequences.Sequence object at 0x0000020E69FA6FB0> []
+<engine.core.sequences.Sequence object at 0x0000024B324FAFB0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/')]
 >>>>>>>>>>>>>>>
   
+>>>>>>>>>>>>>>>
+checker_Equality Operations DELETE item1  vs DELETE item2  
+
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE /api/products/2409/ 
+
+Response DELETE Item 1 : 204 
+
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2408/ 
+
+Response DELETE Item 2 : 204 
+
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2409/ 
+
+Response GET Item 1 : {'status_code': 200, 'body': {'id': 2409, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '20.00', 'created_at': '2024-08-09T17:43:28.724316Z', 'updated_at': '2024-08-09T17:43:28.724316Z'}} 
+
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2408/ 
+
+Response GET Item 2 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+
 resp and rule, Method ->  POST
-<engine.core.sequences.Sequence object at 0x0000020E69FA6FB0> []
+<engine.core.sequences.Sequence object at 0x0000024B324FAFB0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/')]
@@ -111,144 +341,157 @@ GET=[]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F8A290> []
+<engine.core.sequences.Sequence object at 0x0000024B324D9930> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('GET', '/api/schema')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F8A290> []
+<engine.core.sequences.Sequence object at 0x0000024B324D9930> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('GET', '/api/schema')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F8A290> []
+<engine.core.sequences.Sequence object at 0x0000024B324D9930> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('GET', '/api/schema')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F8A290> []
+<engine.core.sequences.Sequence object at 0x0000024B324D9930> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('GET', '/api/schema')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F8A290> []
+<engine.core.sequences.Sequence object at 0x0000024B324D9930> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('GET', '/api/schema')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F8A290> []
+<engine.core.sequences.Sequence object at 0x0000024B324D9930> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('GET', '/api/schema')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F8A290> []
+<engine.core.sequences.Sequence object at 0x0000024B324D9930> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('GET', '/api/schema')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F8A290> []
+<engine.core.sequences.Sequence object at 0x0000024B324D9930> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('GET', '/api/schema')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F8A290> []
+<engine.core.sequences.Sequence object at 0x0000024B324D9930> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('GET', '/api/products/')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F8A2F0> []
+<engine.core.sequences.Sequence object at 0x0000024B324D8BB0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
-2024-08-09 17:56:04.423: Generation: 2 
+POST->POST   MR Equality : OK
+2024-08-09 19:43:47.361: Generation: 2 
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PATCH', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  PATCH
-<engine.core.sequences.Sequence object at 0x0000020E69F8A8F0> []
+<engine.core.sequences.Sequence object at 0x0000024B324D8AF0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PATCH', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  PATCH
-<engine.core.sequences.Sequence object at 0x0000020E69F8A8F0> []
+<engine.core.sequences.Sequence object at 0x0000024B324D8AF0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PATCH', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  PATCH
-<engine.core.sequences.Sequence object at 0x0000020E69F8A8F0> []
+<engine.core.sequences.Sequence object at 0x0000024B324D8AF0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PATCH', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
@@ -260,44 +503,48 @@ GET=[]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  PATCH
-<engine.core.sequences.Sequence object at 0x0000020E69F8A8F0> []
+<engine.core.sequences.Sequence object at 0x0000024B324D8AF0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PATCH', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  PATCH
-<engine.core.sequences.Sequence object at 0x0000020E69F8A8F0> []
+<engine.core.sequences.Sequence object at 0x0000024B324D8AF0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PATCH', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  PATCH
-<engine.core.sequences.Sequence object at 0x0000020E69F8A8F0> []
+<engine.core.sequences.Sequence object at 0x0000024B324D8AF0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PATCH', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  PATCH
-<engine.core.sequences.Sequence object at 0x0000020E69F8A8F0> []
+<engine.core.sequences.Sequence object at 0x0000024B324D8AF0> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PATCH', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
@@ -309,36 +556,37 @@ GET=[]
 >>>>>>>>>>>>>>>
   
 resp and rule, Method ->  GET
-<engine.core.sequences.Sequence object at 0x0000020E69F95120> []
+<engine.core.sequences.Sequence object at 0x0000024B324FB280> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}]
 Listes:
-POST = [],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}],
 GET=[]
 --------------------
+POST->POST   MR Equality : OK
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 >>>>>>>>>>>>>>>
-id1 = 2192
+id1 = 2415
 >>>>>>>>>>>>>>>
 base_url = http://localhost:8000
 >>>>>>>>>>>>>>>
-response.body = {"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}
+response.body = {"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}
 >>>>>>>>>>>>>>>
 checker_Equality Operations PUT item1  vs PUT item1  
 
 
 1- Execution of PUT Request for item1:
- Request: PUT /api/products/2192/ 
- Response : {"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"} 
+ Request: PUT /api/products/2415/ 
+ Response : {"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"} 
 
 
 2- Execution of PUT Request for item1:
- Request: PUT /api/products/2192/ 
- data : {'id': 2192, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T15:56:12.830467Z', 'updated_at': '2024-08-09T15:56:13.496329Z'} 
+ Request: PUT /api/products/2415/ 
+ data : {'id': 2415, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T17:43:54.935016Z', 'updated_at': '2024-08-09T17:43:55.661766Z'} 
 
-Response PUT Item 1 : {'id': 2192, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '100.00', 'created_at': '2024-08-09T15:56:12.830467Z', 'updated_at': '2024-08-09T15:56:15.605639Z'} 
+Response PUT Item 1 : {'id': 2415, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '100.00', 'created_at': '2024-08-09T17:43:54.935016Z', 'updated_at': '2024-08-09T17:43:57.766520Z'} 
 
 ++++++++++++++++++++
  Bug where found ++++++++++++++++++++
@@ -346,72 +594,114 @@ Response PUT Item 1 : {'id': 2192, 'name': 'fuzzstring', 'description': 'descrip
  Response PUT item 1  != Response PUT Item 1 
 
 resp and rule, Method ->  PUT
-<engine.core.sequences.Sequence object at 0x0000020E69F89120> [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}]
+<engine.core.sequences.Sequence object at 0x0000024B324D9F00> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}]
 Listes:
-POST = [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}],
 GET=[]
 --------------------
+[' Two mismatch POST requests were found']
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 >>>>>>>>>>>>>>>
-id1 = 2193
+id1 = 2416
 >>>>>>>>>>>>>>>
 base_url = http://localhost:8000
 >>>>>>>>>>>>>>>
-response.body = {"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}
+response.body = {"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}
 >>>>>>>>>>>>>>>
 checker_Equality Operations PUT item1  vs PUT item1  
 
 
 1- Execution of PUT Request for item1:
- Request: PUT /api/products/2193/ 
- Response : {"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"} 
+ Request: PUT /api/products/2416/ 
+ Response : {"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"} 
 
 
 2- Execution of PUT Request for item1:
- Request: PUT /api/products/2193/ 
- data : {'id': 2193, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '10.10', 'created_at': '2024-08-09T15:56:15.717767Z', 'updated_at': '2024-08-09T15:56:16.506625Z'} 
+ Request: PUT /api/products/2416/ 
+ data : {'id': 2416, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '10.10', 'created_at': '2024-08-09T17:43:57.859810Z', 'updated_at': '2024-08-09T17:43:58.527471Z'} 
 
-Response PUT Item 1 : {'id': 2193, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '10.10', 'created_at': '2024-08-09T15:56:15.717767Z', 'updated_at': '2024-08-09T15:56:18.588080Z'} 
+Response PUT Item 1 : {'id': 2416, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '10.10', 'created_at': '2024-08-09T17:43:57.859810Z', 'updated_at': '2024-08-09T17:44:00.593513Z'} 
 
  Equality sequences Respected : 
  Response PUT item 1  == Response PUT Item 1 
 
 resp and rule, Method ->  PUT
-<engine.core.sequences.Sequence object at 0x0000020E69F89120> [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}]
+<engine.core.sequences.Sequence object at 0x0000024B324D9F00> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}]
 Listes:
-POST = [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}],
 GET=[]
 --------------------
-POST->POST   MR Equality : OK
+[' Two mismatch POST requests were found']
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 >>>>>>>>>>>>>>>
-id1 = 2193
+id1 = 2416
 >>>>>>>>>>>>>>>
 base_url = http://localhost:8000
 >>>>>>>>>>>>>>>
-response.body = {"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}
+response.body = {"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}
 >>>>>>>>>>>>>>>
 checker_Equality Operations PUT item1  vs PUT item1  
 
 
 1- Execution of PUT Request for item1:
- Request: PUT /api/products/2193/ 
- Response : {"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"} 
+ Request: PUT /api/products/2416/ 
+ Response : {"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"} 
 
 
 2- Execution of PUT Request for item1:
- Request: PUT /api/products/2193/ 
- data : {'id': 2193, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '20.00', 'created_at': '2024-08-09T15:56:15.717767Z', 'updated_at': '2024-08-09T15:56:19.138049Z'} 
+ Request: PUT /api/products/2416/ 
+ data : {'id': 2416, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '20.00', 'created_at': '2024-08-09T17:43:57.859810Z', 'updated_at': '2024-08-09T17:44:01.152180Z'} 
 
-Response PUT Item 1 : {'id': 2193, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '20.00', 'created_at': '2024-08-09T15:56:15.717767Z', 'updated_at': '2024-08-09T15:56:21.214538Z'} 
+Response PUT Item 1 : {'id': 2416, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '20.00', 'created_at': '2024-08-09T17:43:57.859810Z', 'updated_at': '2024-08-09T17:44:03.213494Z'} 
+
+ Equality sequences Respected : 
+ Response PUT item 1  == Response PUT Item 1 
+
+resp and rule, Method ->  PUT
+<engine.core.sequences.Sequence object at 0x0000024B324D9F00> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}'}]
+Listes:
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}'}],
+GET=[]
+--------------------
+[' Two mismatch POST requests were found']
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
+>>>>>>>>>>>>>>>
+  
+>>>>>>>>>>>>>>>
+ Request - Endpoint =
+[('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
+>>>>>>>>>>>>>>>
+  
+>>>>>>>>>>>>>>>
+id1 = 2417
+>>>>>>>>>>>>>>>
+base_url = http://localhost:8000
+>>>>>>>>>>>>>>>
+response.body = {"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"}
+>>>>>>>>>>>>>>>
+checker_Equality Operations PUT item1  vs PUT item1  
+
+
+1- Execution of PUT Request for item1:
+ Request: PUT /api/products/2417/ 
+ Response : {"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"} 
+
+
+2- Execution of PUT Request for item1:
+ Request: PUT /api/products/2417/ 
+ data : {'id': 2417, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '99.00', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:05.070807Z'} 
+
+Response PUT Item 1 : {'id': 2417, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '99.00', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:07.129437Z'} 
 
 ++++++++++++++++++++
  Bug where found ++++++++++++++++++++
@@ -419,78 +709,37 @@ Response PUT Item 1 : {'id': 2193, 'name': 'fuzzstring', 'description': 'descrip
  Response PUT item 1  != Response PUT Item 1 
 
 resp and rule, Method ->  PUT
-<engine.core.sequences.Sequence object at 0x0000020E69F89120> [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}'}]
+<engine.core.sequences.Sequence object at 0x0000024B324D9F00> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"}'}]
 Listes:
-POST = [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}'}],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"}'}],
 GET=[]
 --------------------
-POST->POST   MR Equality : OK
+[' Two mismatch POST requests were found']
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 >>>>>>>>>>>>>>>
- Request - Endpoint =
-[('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
->>>>>>>>>>>>>>>
-  
->>>>>>>>>>>>>>>
-id1 = 2194
+id1 = 2417
 >>>>>>>>>>>>>>>
 base_url = http://localhost:8000
 >>>>>>>>>>>>>>>
-response.body = {"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"99.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:22.843389Z"}
+response.body = {"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:07.752486Z"}
 >>>>>>>>>>>>>>>
 checker_Equality Operations PUT item1  vs PUT item1  
 
 
 1- Execution of PUT Request for item1:
- Request: PUT /api/products/2194/ 
- Response : {"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"99.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:22.843389Z"} 
+ Request: PUT /api/products/2417/ 
+ Response : {"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:07.752486Z"} 
 
 
 2- Execution of PUT Request for item1:
- Request: PUT /api/products/2194/ 
- data : {'id': 2194, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '99.00', 'created_at': '2024-08-09T15:56:21.725830Z', 'updated_at': '2024-08-09T15:56:22.843389Z'} 
+ Request: PUT /api/products/2417/ 
+ data : {'id': 2417, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:07.752486Z'} 
 
-Response PUT Item 1 : {'id': 2194, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '99.00', 'created_at': '2024-08-09T15:56:21.725830Z', 'updated_at': '2024-08-09T15:56:24.907187Z'} 
-
- Equality sequences Respected : 
- Response PUT item 1  == Response PUT Item 1 
-
-resp and rule, Method ->  PUT
-<engine.core.sequences.Sequence object at 0x0000020E69F89120> [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"99.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:22.843389Z"}'}]
-Listes:
-POST = [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"99.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:22.843389Z"}'}],
-GET=[]
---------------------
-POST->POST   MR Equality : OK
->>>>>>>>>>>>>>>
- Request - Endpoint =
-[('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
->>>>>>>>>>>>>>>
-  
->>>>>>>>>>>>>>>
-id1 = 2194
->>>>>>>>>>>>>>>
-base_url = http://localhost:8000
->>>>>>>>>>>>>>>
-response.body = {"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:25.497598Z"}
->>>>>>>>>>>>>>>
-checker_Equality Operations PUT item1  vs PUT item1  
-
-
-1- Execution of PUT Request for item1:
- Request: PUT /api/products/2194/ 
- Response : {"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:25.497598Z"} 
-
-
-2- Execution of PUT Request for item1:
- Request: PUT /api/products/2194/ 
- data : {'id': 2194, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T15:56:21.725830Z', 'updated_at': '2024-08-09T15:56:25.497598Z'} 
-
-Response PUT Item 1 : {'id': 2194, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '100.00', 'created_at': '2024-08-09T15:56:21.725830Z', 'updated_at': '2024-08-09T15:56:27.557709Z'} 
+Response PUT Item 1 : {'id': 2417, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '100.00', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:09.838178Z'} 
 
 ++++++++++++++++++++
  Bug where found ++++++++++++++++++++
@@ -498,84 +747,84 @@ Response PUT Item 1 : {'id': 2194, 'name': 'fuzzstring', 'description': 'descrip
  Response PUT item 1  != Response PUT Item 1 
 
 resp and rule, Method ->  PUT
-<engine.core.sequences.Sequence object at 0x0000020E69F89120> [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"99.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:22.843389Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:25.497598Z"}'}]
+<engine.core.sequences.Sequence object at 0x0000024B324D9F00> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:07.752486Z"}'}]
 Listes:
-POST = [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"99.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:22.843389Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:25.497598Z"}'}],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:07.752486Z"}'}],
 GET=[]
 --------------------
-POST->POST   MR Equality : OK
+[' Two mismatch POST requests were found']
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 >>>>>>>>>>>>>>>
-id1 = 2194
+id1 = 2417
 >>>>>>>>>>>>>>>
 base_url = http://localhost:8000
 >>>>>>>>>>>>>>>
-response.body = {"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:28.089024Z"}
+response.body = {"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:10.422504Z"}
 >>>>>>>>>>>>>>>
 checker_Equality Operations PUT item1  vs PUT item1  
 
 
 1- Execution of PUT Request for item1:
- Request: PUT /api/products/2194/ 
- Response : {"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:28.089024Z"} 
+ Request: PUT /api/products/2417/ 
+ Response : {"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:10.422504Z"} 
 
 
 2- Execution of PUT Request for item1:
- Request: PUT /api/products/2194/ 
- data : {'id': 2194, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '10.10', 'created_at': '2024-08-09T15:56:21.725830Z', 'updated_at': '2024-08-09T15:56:28.089024Z'} 
+ Request: PUT /api/products/2417/ 
+ data : {'id': 2417, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '10.10', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:10.422504Z'} 
 
-Response PUT Item 1 : {'id': 2194, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '10.10', 'created_at': '2024-08-09T15:56:21.725830Z', 'updated_at': '2024-08-09T15:56:30.166705Z'} 
+Response PUT Item 1 : {'id': 2417, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '10.10', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:12.503168Z'} 
 
  Equality sequences Respected : 
  Response PUT item 1  == Response PUT Item 1 
 
 resp and rule, Method ->  PUT
-<engine.core.sequences.Sequence object at 0x0000020E69F89120> [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"99.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:22.843389Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:25.497598Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:28.089024Z"}'}]
+<engine.core.sequences.Sequence object at 0x0000024B324D9F00> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:07.752486Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:10.422504Z"}'}]
 Listes:
-POST = [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"99.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:22.843389Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:25.497598Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:28.089024Z"}'}],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:07.752486Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:10.422504Z"}'}],
 GET=[]
 --------------------
-POST->POST   MR Equality : OK
+[' Two mismatch POST requests were found']
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
 >>>>>>>>>>>>>>>
-id1 = 2194
+id1 = 2417
 >>>>>>>>>>>>>>>
 base_url = http://localhost:8000
 >>>>>>>>>>>>>>>
-response.body = {"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:30.719904Z"}
+response.body = {"id":2417,"name":"fuzzstring","description":"description-Randomized","price":"20.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:13.182297Z"}
 >>>>>>>>>>>>>>>
 checker_Equality Operations PUT item1  vs PUT item1  
 
 
 1- Execution of PUT Request for item1:
- Request: PUT /api/products/2194/ 
- Response : {"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:30.719904Z"} 
+ Request: PUT /api/products/2417/ 
+ Response : {"id":2417,"name":"fuzzstring","description":"description-Randomized","price":"20.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:13.182297Z"} 
 
 
 2- Execution of PUT Request for item1:
- Request: PUT /api/products/2194/ 
- data : {'id': 2194, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '20.00', 'created_at': '2024-08-09T15:56:21.725830Z', 'updated_at': '2024-08-09T15:56:30.719904Z'} 
+ Request: PUT /api/products/2417/ 
+ data : {'id': 2417, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '20.00', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:13.182297Z'} 
 
-Response PUT Item 1 : {'id': 2194, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '20.00', 'created_at': '2024-08-09T15:56:21.725830Z', 'updated_at': '2024-08-09T15:56:32.794539Z'} 
+Response PUT Item 1 : {'id': 2417, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '20.00', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:15.293950Z'} 
 
  Equality sequences Respected : 
  Response PUT item 1  == Response PUT Item 1 
 
 resp and rule, Method ->  PUT
-<engine.core.sequences.Sequence object at 0x0000020E69F89120> [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"99.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:22.843389Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:25.497598Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:28.089024Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:30.719904Z"}'}]
+<engine.core.sequences.Sequence object at 0x0000024B324D9F00> [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:07.752486Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:10.422504Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"description-Randomized","price":"20.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:13.182297Z"}'}]
 Listes:
-POST = [{'status_code': '200', 'resp_body': '{"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:16.506625Z"}'}, {'status_code': '200', 'resp_body': '{"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"99.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:22.843389Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:25.497598Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:28.089024Z"}'}, {'status_code': '200', 'resp_body': '{"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:30.719904Z"}'}],
+POST = [{'status_code': '201', 'resp_body': '{"id":2337,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:42:34.788069Z","updated_at":"2024-08-09T17:42:34.788069Z"}'}, {'status_code': '201', 'resp_body': '{"id":2350,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:42:43.802898Z","updated_at":"2024-08-09T17:42:43.802898Z"}'}, {'status_code': '201', 'resp_body': '{"id":2361,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:42:52.673223Z","updated_at":"2024-08-09T17:42:52.673223Z"}'}, {'status_code': '201', 'resp_body': '{"id":2376,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:43:02.272234Z","updated_at":"2024-08-09T17:43:02.272234Z"}'}, {'status_code': '201', 'resp_body': '{"id":2387,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:11.104449Z","updated_at":"2024-08-09T17:43:11.104449Z"}'}, {'status_code': '201', 'resp_body': '{"id":2398,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:43:19.903857Z","updated_at":"2024-08-09T17:43:19.903857Z"}'}, {'status_code': '201', 'resp_body': '{"id":2409,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:28.724316Z","updated_at":"2024-08-09T17:43:28.724316Z"}'}, {'status_code': '200', 'resp_body': '{"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"description-Randomized","price":"10.10","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:43:58.527471Z"}'}, {'status_code': '200', 'resp_body': '{"id":2416,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T17:43:57.859810Z","updated_at":"2024-08-09T17:44:01.152180Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:07.752486Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:10.422504Z"}'}, {'status_code': '200', 'resp_body': '{"id":2417,"name":"fuzzstring","description":"description-Randomized","price":"20.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:13.182297Z"}'}],
 GET=[]
 --------------------
-POST->POST   MR Equality : OK
+[' Two mismatch POST requests were found']
 >>>>>>>>>>>>>>>
  Request - Endpoint =
 [('POST', '/api/products/'), ('PUT', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
@@ -586,5 +835,5 @@ POST->POST   MR Equality : OK
 [('POST', '/api/products/'), ('DELETE', '/api/products/_READER_DELIM_api_products_post_id_READER_DELIM/')]
 >>>>>>>>>>>>>>>
   
-2024-08-09 17:56:34.652: Terminating garbage collection. Waiting for max 300 seconds. 
+2024-08-09 19:44:17.049: Terminating garbage collection. Waiting for max 300 seconds. 
 Done.

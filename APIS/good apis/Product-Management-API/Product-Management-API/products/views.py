@@ -82,6 +82,26 @@ class ProductViewSet(viewsets.ModelViewSet):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+    def destroy(self, request, *args, **kwargs):
+        """
+        Delete a product by ID, but introduce a bug that only allows deletion of items with even IDs.
+        """
+         # Extract the requested item ID
+        requested_id = int(kwargs.get('pk'))
+        try:
+            product = Product.objects.get(id=requested_id)
+        except Product.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        # Introduce the bug: Only delete products with even IDs
+        if int(requested_id) % 2 == 0:
+            product.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        else:
+            # If the ID is odd, do not delete and return a 204 No Content response
+            return Response(status=status.HTTP_204_NO_CONTENT)
+
+
       ##### Bug 3 : POST item1 different than get Item1
 
     # def create(self, request, *args, **kwargs):

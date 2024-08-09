@@ -160,6 +160,90 @@ class MropEqualityChecker(CheckerBase):
             write_file("checker_equality.txt", mystring)
        
 
+    def checker_del_equality(self, id, endpoint, response,base_url):
+        """ Delete equality checker with the id of the item1 in the response
+            @param id: id of the item1 in the response
+            @type  id: string   
+            @param endpoint: endpoint of the item1 in the response
+            @type  endpoint: string
+            @return: None
+            @rtype : None   
+            @param response: response of the item1 in the response
+            @type  response: string 
+            @param base_url: base url of the api
+            @type  base_url: string
+        """
+        
+       
+                
+        def write_file(filename, text):
+                with open(filename, 'a') as f:
+                    f.write(text)
+
+        found = False
+                
+        endpoint = endpoint.strip().split(' ')[-1].strip()
+
+        mystring =  f"{'>'*50}\n{'_'*50}\nchecker_Equality Operations DELETE item1  vs DELETE item2 \n\n"      
+        print(f"{'>'*15}\nchecker_Equality Operations DELETE item1  vs DELETE item2  \n\n")
+        mystring+= f"1- Execution of DELETE Request for item1:\n Request: DELETE  {endpoint}{id}/ \n "
+        print(f"1- Execution of DELETE Request for item1:\n Request: DELETE {endpoint}{id}/ \n")
+
+        #delete the item1
+        url = f"{base_url}{endpoint}{id}/"
+        response = requests.delete(url)
+    
+        
+
+
+        mystring+= f"Response (STATUS CODE) DELETE Item 1 : {response.status_code} \n"
+        print(f"Response DELETE Item 1 : {response.status_code} \n")
+       
+        mystring+= f"\n2- Execution of DELETE Request for item2:\n Request: DELETE {endpoint}{int(id)-1}/ \n "
+        print(f"\n2- Execution of DELETE Request for item2:\n Request: DELETE {endpoint}{int(id)-1}/ \n" )
+        #send the request
+        url = f"{base_url}{endpoint}{int(id)-1}/"
+        response2 = requests.delete(url)
+      
+
+        mystring+= f"Response DELETE Item 2 : {response2.status_code} \n"
+        print(f"Response DELETE Item 2 : {response2.status_code} \n")
+
+        #get request for item1
+        mystring+= f"\n3- Execution of GET Request for item1:\n Request: GET {endpoint}{id}/ \n "
+        print(f"\n3- Execution of GET Request for item1:\n Request: GET {endpoint}{id}/ \n" )
+        url = f"{base_url}{endpoint}{id}/"
+        response3 = requests.get(url)
+        response3 = {"status_code": response3.status_code, "body": json.loads(response3.text)}
+
+        mystring+= f"Response GET Item 1 : {response3} \n"
+        print(f"Response GET Item 1 : {response3} \n")
+
+        #get request for item2
+        mystring+= f"\n4- Execution of GET Request for item2:\n Request: GET {endpoint}{int(id)-1}/ \n "
+        print(f"\n4- Execution of GET Request for item2:\n Request: GET {endpoint}{int(id)-1}/ \n" )
+        url = f"{base_url}{endpoint}{int(id)-1}/"
+        response4 = requests.get(url)
+        response4 = {"status_code": response4.status_code, "body": json.loads(response4.text)}
+
+        mystring+= f"Response GET Item 2 : {response4} \n"
+        print(f"Response GET Item 2 : {response4} \n")
+        
+        
+        try :
+
+            assert response3['status_code'] == response4['status_code'] == 404
+            mystring+= f" Equality sequences Respected : \n(After Deletion of Item1 and Item2) Response PUT item 1  == Response PUT Item 1 \n"
+            print(f" Equality sequences Respected : \n(After Deletion of Item1 and Item2) Response PUT item 1  == Response PUT Item 1 \n")
+        except Exception as e:
+            
+            found = True
+            mystring+= f"{'+'*20}\n Bug where found {'+'*20}\n  Equality relations not Respected Error in DELETE item : \n (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 \n"
+            print(f"{'+'*20}\n Bug where found {'+'*20}\n  Equality relations not Respected Error in DELETE item : \n (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 \n")
+        if found :
+            write_file("checker_del_equality.txt", mystring)
+       
+
       
 
 
@@ -242,21 +326,33 @@ class MropEqualityChecker(CheckerBase):
              #store the reponse status code of post_request somewhere
             m = [(s.method , s.endpoint ) for s in seq ]
             print(f"{'>'*15}\n Request - Endpoint =\n{m}\n{'>'*15}\n  ")      
-            if seq.last_request.method.startswith('PUT') and response.has_valid_code() :
+            if (seq.last_request.method.startswith('PUT') or seq.last_request.method.startswith('POST') ) and response.has_valid_code() :
 
 
-                 #get the id of the item1  in the response
-                id1 = response.body.split('id":')[1].split(',')[0].split('"')[0]
-                print(f"{'>'*15}\nid1 = {id1}")
-                #get the base url of the api
-                with open('../base_url.txt', 'r') as f:
-                    base_url = f.read()
-                print(f"{'>'*15}\nbase_url = {base_url}")
-                print(f"{'>'*15}\nresponse.body = {response.body}")
+                if seq.last_request.method.startswith('PUT') :
+                    #get the id of the item1  in the response
+                    id1 = response.body.split('id":')[1].split(',')[0].split('"')[0]
+                    print(f"{'>'*15}\nid1 = {id1}")
+                    #get the base url of the api
+                    with open('../base_url.txt', 'r') as f:
+                        base_url = f.read()
+                    print(f"{'>'*15}\nbase_url = {base_url}")
+                    print(f"{'>'*15}\nresponse.body = {response.body}")
 
-                endpoint = endpoint.split('_READER_DELIM_')[0].replace("PUT ", "")
-                #call the checker_equality function
-                self.checker_equality(id1, endpoint, response.body, base_url)
+                    endpoint = endpoint.split('_READER_DELIM_')[0].replace("PUT ", "")
+                    #call the checker_equality function
+                    self.checker_equality(id1, endpoint, response.body, base_url)
+                else :
+                     #get the id of the item1  in the response
+                    id1 = response.body.split('id":')[1].split(',')[0].split('"')[0]
+                    #get the base url of the api
+                    with open('../base_url.txt', 'r') as f:
+                        base_url = f.read()
+                    # print(f"{'>'*15}\nbase_url = {base_url}")
+                    # print(f"{'>'*15}\nresponse.body = {response.body}")
+                    #call the checker_del_equality function
+                    self.checker_del_equality(id1, endpoint, response.body, base_url)
+                
 
 
 

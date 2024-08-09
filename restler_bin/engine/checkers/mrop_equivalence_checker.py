@@ -324,14 +324,14 @@ class MropEquivalenceChecker(CheckerBase):
                 dependencies.set_equivalence_method_codes(response.status_code,  response.body)
 
 
-            if seq.last_request.method.startswith('PUT') and response.has_valid_code() :
+            # if seq.last_request.method.startswith('PUT') and response.has_valid_code() :
 
-                dependencies.set_equivalence_method_codes(response.status_code,  response.body, "PUT")
+            #     dependencies.set_equivalence_method_codes(response.status_code,  response.body, "PUT")
 
             
-            if seq.last_request.method.startswith('DELETE') and response.has_valid_code() :
+            # if seq.last_request.method.startswith('DELETE') and response.has_valid_code() :
 
-                dependencies.set_equivalence_method_codes(response.status_code,  response.body, "DELETE")
+            #     dependencies.set_equivalence_method_codes(response.status_code,  response.body, "DELETE")
     
             # Append the rendered data to the sent list as we will not be rendering
             # with the sequence's render function

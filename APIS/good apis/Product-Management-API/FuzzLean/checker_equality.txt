@@ -3,13 +3,13 @@ __________________________________________________
 checker_Equality Operations PUT item1  vs PUT item1 
 
 1- Execution of PUT Request for item1:
- Request: PUT  /api/products/2192/ 
- Response : {"id":2192,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:12.830467Z","updated_at":"2024-08-09T15:56:13.496329Z"} 
+ Request: PUT  /api/products/2415/ 
+ Response : {"id":2415,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:43:54.935016Z","updated_at":"2024-08-09T17:43:55.661766Z"} 
 
 2- Execution of PUT Request for item1:
- Request: PUT /api/products/2192/ 
- data : {'id': 2192, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T15:56:12.830467Z', 'updated_at': '2024-08-09T15:56:13.496329Z'} 
-Response PUT Item 1 : {'id': 2192, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '100.00', 'created_at': '2024-08-09T15:56:12.830467Z', 'updated_at': '2024-08-09T15:56:15.605639Z'} 
+ Request: PUT /api/products/2415/ 
+ data : {'id': 2415, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T17:43:54.935016Z', 'updated_at': '2024-08-09T17:43:55.661766Z'} 
+Response PUT Item 1 : {'id': 2415, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '100.00', 'created_at': '2024-08-09T17:43:54.935016Z', 'updated_at': '2024-08-09T17:43:57.766520Z'} 
 ++++++++++++++++++++
  Bug where found ++++++++++++++++++++
   Equality relations not Respected Error in PUT item : 
@@ -19,13 +19,13 @@ __________________________________________________
 checker_Equality Operations PUT item1  vs PUT item1 
 
 1- Execution of PUT Request for item1:
- Request: PUT  /api/products/2193/ 
- Response : {"id":2193,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:56:15.717767Z","updated_at":"2024-08-09T15:56:19.138049Z"} 
+ Request: PUT  /api/products/2417/ 
+ Response : {"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:05.070807Z"} 
 
 2- Execution of PUT Request for item1:
- Request: PUT /api/products/2193/ 
- data : {'id': 2193, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '20.00', 'created_at': '2024-08-09T15:56:15.717767Z', 'updated_at': '2024-08-09T15:56:19.138049Z'} 
-Response PUT Item 1 : {'id': 2193, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '20.00', 'created_at': '2024-08-09T15:56:15.717767Z', 'updated_at': '2024-08-09T15:56:21.214538Z'} 
+ Request: PUT /api/products/2417/ 
+ data : {'id': 2417, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '99.00', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:05.070807Z'} 
+Response PUT Item 1 : {'id': 2417, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '99.00', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:07.129437Z'} 
 ++++++++++++++++++++
  Bug where found ++++++++++++++++++++
   Equality relations not Respected Error in PUT item : 
@@ -35,13 +35,13 @@ __________________________________________________
 checker_Equality Operations PUT item1  vs PUT item1 
 
 1- Execution of PUT Request for item1:
- Request: PUT  /api/products/2194/ 
- Response : {"id":2194,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:56:21.725830Z","updated_at":"2024-08-09T15:56:25.497598Z"} 
+ Request: PUT  /api/products/2417/ 
+ Response : {"id":2417,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T17:44:03.826333Z","updated_at":"2024-08-09T17:44:07.752486Z"} 
 
 2- Execution of PUT Request for item1:
- Request: PUT /api/products/2194/ 
- data : {'id': 2194, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T15:56:21.725830Z', 'updated_at': '2024-08-09T15:56:25.497598Z'} 
-Response PUT Item 1 : {'id': 2194, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '100.00', 'created_at': '2024-08-09T15:56:21.725830Z', 'updated_at': '2024-08-09T15:56:27.557709Z'} 
+ Request: PUT /api/products/2417/ 
+ data : {'id': 2417, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:07.752486Z'} 
+Response PUT Item 1 : {'id': 2417, 'name': 'fuzzstring', 'description': 'description-Randomized', 'price': '100.00', 'created_at': '2024-08-09T17:44:03.826333Z', 'updated_at': '2024-08-09T17:44:09.838178Z'} 
 ++++++++++++++++++++
  Bug where found ++++++++++++++++++++
   Equality relations not Respected Error in PUT item : 

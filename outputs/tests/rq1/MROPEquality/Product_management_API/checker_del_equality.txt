@@ -1,0 +1,161 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Equality Operations DELETE item1  vs DELETE item2 
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE  /api/products/2337/ 
+ Response (STATUS CODE) DELETE Item 1 : 204 
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2336/ 
+ Response DELETE Item 2 : 204 
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2337/ 
+ Response GET Item 1 : {'status_code': 200, 'body': {'id': 2337, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T17:42:34.788069Z', 'updated_at': '2024-08-09T17:42:34.788069Z'}} 
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2336/ 
+ Response GET Item 2 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Equality Operations DELETE item1  vs DELETE item2 
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE  /api/products/2350/ 
+ Response (STATUS CODE) DELETE Item 1 : 204 
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2349/ 
+ Response DELETE Item 2 : 204 
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2350/ 
+ Response GET Item 1 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2349/ 
+ Response GET Item 2 : {'status_code': 200, 'body': {'id': 2349, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '10.10', 'created_at': '2024-08-09T17:42:43.755618Z', 'updated_at': '2024-08-09T17:42:43.755618Z'}} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Equality Operations DELETE item1  vs DELETE item2 
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE  /api/products/2361/ 
+ Response (STATUS CODE) DELETE Item 1 : 204 
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2360/ 
+ Response DELETE Item 2 : 204 
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2361/ 
+ Response GET Item 1 : {'status_code': 200, 'body': {'id': 2361, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '20.00', 'created_at': '2024-08-09T17:42:52.673223Z', 'updated_at': '2024-08-09T17:42:52.673223Z'}} 
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2360/ 
+ Response GET Item 2 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Equality Operations DELETE item1  vs DELETE item2 
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE  /api/products/2376/ 
+ Response (STATUS CODE) DELETE Item 1 : 204 
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2375/ 
+ Response DELETE Item 2 : 204 
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2376/ 
+ Response GET Item 1 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2375/ 
+ Response GET Item 2 : {'status_code': 200, 'body': {'id': 2375, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '99.00', 'created_at': '2024-08-09T17:43:02.227076Z', 'updated_at': '2024-08-09T17:43:02.227076Z'}} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Equality Operations DELETE item1  vs DELETE item2 
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE  /api/products/2387/ 
+ Response (STATUS CODE) DELETE Item 1 : 204 
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2386/ 
+ Response DELETE Item 2 : 204 
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2387/ 
+ Response GET Item 1 : {'status_code': 200, 'body': {'id': 2387, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-09T17:43:11.104449Z', 'updated_at': '2024-08-09T17:43:11.104449Z'}} 
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2386/ 
+ Response GET Item 2 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Equality Operations DELETE item1  vs DELETE item2 
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE  /api/products/2398/ 
+ Response (STATUS CODE) DELETE Item 1 : 204 
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2397/ 
+ Response DELETE Item 2 : 204 
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2398/ 
+ Response GET Item 1 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2397/ 
+ Response GET Item 2 : {'status_code': 200, 'body': {'id': 2397, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '10.10', 'created_at': '2024-08-09T17:43:19.854859Z', 'updated_at': '2024-08-09T17:43:19.854859Z'}} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Equality Operations DELETE item1  vs DELETE item2 
+
+1- Execution of DELETE Request for item1:
+ Request: DELETE  /api/products/2409/ 
+ Response (STATUS CODE) DELETE Item 1 : 204 
+
+2- Execution of DELETE Request for item2:
+ Request: DELETE /api/products/2408/ 
+ Response DELETE Item 2 : 204 
+
+3- Execution of GET Request for item1:
+ Request: GET /api/products/2409/ 
+ Response GET Item 1 : {'status_code': 200, 'body': {'id': 2409, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '20.00', 'created_at': '2024-08-09T17:43:28.724316Z', 'updated_at': '2024-08-09T17:43:28.724316Z'}} 
+
+4- Execution of GET Request for item2:
+ Request: GET /api/products/2408/ 
+ Response GET Item 2 : {'status_code': 404, 'body': {'detail': 'No Product matches the given query.'}} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+  Equality relations not Respected Error in DELETE item : 
+ (After Deletion of Item1 and Item2) Response GET item 1  != Response GET Item 1 
