@@ -1,0 +1,41 @@
+################################################################################
+ MropEqualityChecker_400
+
+ Hash: MropEqualityChecker_400_d59922aad207aea297fca0a293e6ba6e049341f2
+
+ To attempt to reproduce this bug using restler, run restler with the command
+ line option of --replay_log <path_to_this_log>.
+ If an authentication token is required, you must also specify the token_refresh_cmd.
+
+ This log may contain specific values for IDs or names that were generated
+ during fuzzing, using the fuzzing dictionary. Such names will be re-played
+ without modification. You must update the replay log manually with any changes
+ required to execute the requests in your environment (for example, replacing
+ pre-created account, subscription, or other resource IDs, as needed).
+################################################################################
+
+-> POST /api/products/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8000\r\nContent-Type: application/json\r\n\r\n{\n    "name":"fuzzstring",\n    "description":"fuzzstring",\n    "price":"99"}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 201 Created\r\nDate: Fri, 09 Aug 2024 15:55:43 GMT\r\nServer: WSGIServer/0.2 CPython/3.10.5\r\nContent-Type: application/json\r\nVary: Accept, Cookie\r\nAllow: GET, POST, HEAD, OPTIONS\r\nX-Frame-Options: DENY\r\nContent-Length: 160\r\nX-Content-Type-Options: nosniff\r\nReferrer-Policy: same-origin\r\nCross-Origin-Opener-Policy: same-origin\r\n\r\n{"id":2103,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T15:55:43.546848Z","updated_at":"2024-08-09T15:55:43.546848Z"}'
+
+-> POST /api/products/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8000\r\nContent-Type: application/json\r\n\r\n{\n    "name":"fuzzstring",\n    "description":"fuzzstring",\n    "price":"100"}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 201 Created\r\nDate: Fri, 09 Aug 2024 15:55:44 GMT\r\nServer: WSGIServer/0.2 CPython/3.10.5\r\nContent-Type: application/json\r\nVary: Accept, Cookie\r\nAllow: GET, POST, HEAD, OPTIONS\r\nX-Frame-Options: DENY\r\nContent-Length: 161\r\nX-Content-Type-Options: nosniff\r\nReferrer-Policy: same-origin\r\nCross-Origin-Opener-Policy: same-origin\r\n\r\n{"id":2114,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T15:55:44.436819Z","updated_at":"2024-08-09T15:55:44.436819Z"}'
+
+-> POST /api/products/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8000\r\nContent-Type: application/json\r\n\r\n{\n    "name":"fuzzstring",\n    "description":"fuzzstring",\n    "price":"10.1"}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 201 Created\r\nDate: Fri, 09 Aug 2024 15:55:45 GMT\r\nServer: WSGIServer/0.2 CPython/3.10.5\r\nContent-Type: application/json\r\nVary: Accept, Cookie\r\nAllow: GET, POST, HEAD, OPTIONS\r\nX-Frame-Options: DENY\r\nContent-Length: 160\r\nX-Content-Type-Options: nosniff\r\nReferrer-Policy: same-origin\r\nCross-Origin-Opener-Policy: same-origin\r\n\r\n{"id":2127,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T15:55:45.336703Z","updated_at":"2024-08-09T15:55:45.336703Z"}'
+
+-> POST /api/products/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8000\r\nContent-Type: application/json\r\n\r\n{\n    "name":"fuzzstring",\n    "description":"fuzzstring",\n    "price":"20"}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 201 Created\r\nDate: Fri, 09 Aug 2024 15:55:46 GMT\r\nServer: WSGIServer/0.2 CPython/3.10.5\r\nContent-Type: application/json\r\nVary: Accept, Cookie\r\nAllow: GET, POST, HEAD, OPTIONS\r\nX-Frame-Options: DENY\r\nContent-Length: 160\r\nX-Content-Type-Options: nosniff\r\nReferrer-Policy: same-origin\r\nCross-Origin-Opener-Policy: same-origin\r\n\r\n{"id":2138,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T15:55:46.461630Z","updated_at":"2024-08-09T15:55:46.462635Z"}'
+
+-> POST /api/products/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8000\r\nContent-Type: application/json\r\n\r\n{\n    "name":"fuzzstring",\n    "description":"fuzzstring",\n    "price":"fuzzstring"}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 400 Bad Request\r\nDate: Fri, 09 Aug 2024 15:55:47 GMT\r\nServer: WSGIServer/0.2 CPython/3.10.5\r\nContent-Type: application/json\r\nVary: Accept, Cookie\r\nAllow: GET, POST, HEAD, OPTIONS\r\nX-Frame-Options: DENY\r\nContent-Length: 41\r\nX-Content-Type-Options: nosniff\r\nReferrer-Policy: same-origin\r\nCross-Origin-Opener-Policy: same-origin\r\n\r\n{"price":["A valid number is required."]}'
+

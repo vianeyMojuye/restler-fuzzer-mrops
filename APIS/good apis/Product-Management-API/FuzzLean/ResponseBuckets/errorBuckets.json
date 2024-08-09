@@ -1,11 +1,11 @@
 {
   "400": {
-    "9c2abf79-6fba-4483-a06c-a3cd952ea1f0": [
+    "3176898a-8495-415c-afda-187fd0708524": [
       {
         "request": {
           "RequestData": {
             "method": "PUT",
-            "path": "/api/products/1140",
+            "path": "/api/products/2194",
             "query": "",
             "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
           }
@@ -24,7 +24,7 @@
         "request": {
           "RequestData": {
             "method": "PUT",
-            "path": "/api/products/1140",
+            "path": "/api/products/2194",
             "query": "",
             "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
           }
@@ -43,7 +43,7 @@
         "request": {
           "RequestData": {
             "method": "PUT",
-            "path": "/api/products/1140",
+            "path": "/api/products/2194",
             "query": "",
             "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
           }
@@ -62,7 +62,7 @@
         "request": {
           "RequestData": {
             "method": "PUT",
-            "path": "/api/products/1140",
+            "path": "/api/products/2194",
             "query": "",
             "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
           }
@@ -81,7 +81,7 @@
         "request": {
           "RequestData": {
             "method": "PUT",
-            "path": "/api/products/1140",
+            "path": "/api/products/2194",
             "query": "",
             "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
           }
@@ -100,7 +100,7 @@
         "request": {
           "RequestData": {
             "method": "PUT",
-            "path": "/api/products/1140",
+            "path": "/api/products/2194",
             "query": "",
             "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
           }
@@ -119,7 +119,7 @@
         "request": {
           "RequestData": {
             "method": "PUT",
-            "path": "/api/products/1140",
+            "path": "/api/products/2194",
             "query": "",
             "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
           }
@@ -138,7 +138,7 @@
         "request": {
           "RequestData": {
             "method": "PUT",
-            "path": "/api/products/1140",
+            "path": "/api/products/2194",
             "query": "",
             "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
           }
@@ -157,7 +157,7 @@
         "request": {
           "RequestData": {
             "method": "PUT",
-            "path": "/api/products/1140",
+            "path": "/api/products/2194",
             "query": "",
             "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
           }
@@ -176,7 +176,7 @@
         "request": {
           "RequestData": {
             "method": "PUT",
-            "path": "/api/products/1140",
+            "path": "/api/products/2194",
             "query": "",
             "body": "{\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\",\n    \"price\":\"fuzzstring\"}\r\n"
           }
@@ -186,6 +186,200 @@
             "code": 400,
             "codeDescription": "Bad Request",
             "content": "{\"price\":[\"A valid number is required.\"]}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  },
+  "404": {
+    "7d1dfdd4-7d38-4f95-bbcd-41c9edacf52c": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/api/products/2195",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"No Product matches the given query.\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/api/products/2195",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"No Product matches the given query.\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/api/products/2195",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"No Product matches the given query.\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/api/products/2195",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"No Product matches the given query.\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/api/products/2195",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"No Product matches the given query.\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/api/products/2195",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"No Product matches the given query.\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/api/products/2195",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"No Product matches the given query.\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/api/products/2195",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"No Product matches the given query.\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/api/products/2195",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"No Product matches the given query.\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/api/products/2195",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"No Product matches the given query.\"}",
             "isFailure": true,
             "isBug": false
           }

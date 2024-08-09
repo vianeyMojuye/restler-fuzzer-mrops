@@ -1,0 +1,60 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint Operations POST item1  vs GET item1 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1446,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T10:31:43.542387Z","updated_at":"2024-08-09T10:31:43.542387Z"} 
+
+2- Execution of GET Request for item1:
+ Request: GET /api/products//1446 
+ Response GET Item 1 : {'id': 20, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:25:20.275473Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Disjoint and Equality relations not Respected Error in GET item : 
+ Response POST item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint Operations POST item1  vs GET item1 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1470,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T10:32:01.990199Z","updated_at":"2024-08-09T10:32:01.990345Z"} 
+
+2- Execution of GET Request for item1:
+ Request: GET /api/products//1470 
+ Response GET Item 1 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:31:49.758126Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Disjoint and Equality relations not Respected Error in GET item : 
+ Response POST item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint Operations POST item1  vs GET item1 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1492,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T10:32:20.519417Z","updated_at":"2024-08-09T10:32:20.519417Z"} 
+
+2- Execution of GET Request for item1:
+ Request: GET /api/products//1492 
+ Response GET Item 1 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:08.219548Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Disjoint and Equality relations not Respected Error in GET item : 
+ Response POST item 1  != Response GET Item 1 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint Operations POST item1  vs GET item1 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1514,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T10:32:38.250829Z","updated_at":"2024-08-09T10:32:38.251829Z"} 
+
+2- Execution of GET Request for item1:
+ Request: GET /api/products//1514 
+ Response GET Item 1 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:26.693549Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Disjoint and Equality relations not Respected Error in GET item : 
+ Response POST item 1  != Response GET Item 1 

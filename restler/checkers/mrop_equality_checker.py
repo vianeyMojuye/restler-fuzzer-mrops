@@ -16,13 +16,15 @@ import engine.dependencies as dependencies
 from engine.core.request_utilities import NO_TOKEN_SPECIFIED
 from engine.core.request_utilities import NO_SHADOW_TOKEN_SPECIFIED
 
+import requests 
+
 
 STATIC_OAUTH_TOKEN = 'static_oauth_token'
 
 
 
 
-class MropEqualityDisjointChecker(CheckerBase):
+class MropEqualityChecker(CheckerBase):
     """ Checker For EqualityDisjointMROP Operation """
 
     
@@ -64,31 +66,102 @@ class MropEqualityDisjointChecker(CheckerBase):
         self._render_last_request(self._sequence)
 
     
-    def _render_data_modif_post_get(self, s, resp_body):
+    # def _render_data_modif_post_get(self, s, resp_body):
+    #     """
+    #         modif the post rendered_data into a get request
+    #         @param resp_body : the POST response body
+    #         @param resp_body : str
+
+    #         @return :
+    #            s_modified : the modified  (Delete) rendered_data
+    #            s_modified : str
+    #     """
+
+    #     # Parsing the response body to extract the new 'id' and 'checksum' values
+    #     resp_data = json.loads(resp_body)
+    #     new_id = resp_data["id"]
+
+    #     # Replace the POST method with GET and update the URI with the new 'id'
+
+    #     s_modified = s.replace("POST /api/blog/posts", f"GET /api/blog/posts/{new_id}", 1)
+
+    #     # Replace the original 'id' value with the new 'id' in the JSON body
+    #     # Since 'id' is a unique identifier, its value should be replaced only in the JSON body, not in the URI again
+    #     import re
+    #     s_modified = re.sub(r'\{[^}]*\}', f'', s_modified)
+
+    #     return s_modified
+
+
+
+    def checker_equality(self, id, endpoint, response,base_url):
+        """ Update equality checker with the id of the item1 in the response
+            @param id: id of the item1 in the response
+            @type  id: string   
+            @param endpoint: endpoint of the item1 in the response
+            @type  endpoint: string
+            @return: None
+            @rtype : None   
+            @param response: response of the item1 in the response
+            @type  response: string 
+            @param base_url: base url of the api
+            @type  base_url: string
         """
-            modif the post rendered_data into a get request
-            @param resp_body : the POST response body
-            @param resp_body : str
+        
+        # Function to check if a string represents a digit/number
+        def is_string_number(value):
+                try:
+                    float(value)
+                    return True
+                except ValueError:
+                    return False
+                
+        def write_file(filename, text):
+                with open(filename, 'a') as f:
+                    f.write(text)
 
-            @return :
-               s_modified : the modified  (Delete) rendered_data
-               s_modified : str
-        """
+        found = False
+                
+        mystring =  f"{'>'*50}\n{'_'*50}\nchecker_Equality Operations PUT item1  vs PUT item1 \n\n"      
+        print(f"{'>'*15}\nchecker_Equality Operations PUT item1  vs PUT item1  \n\n")
+        mystring+= f"1- Execution of PUT Request for item1:\n Request: PUT  {endpoint}{id}/ \n Response : {response} \n"
+        print(f"1- Execution of PUT Request for item1:\n Request: PUT {endpoint}{id}/ \n Response : {response} \n")
 
-        # Parsing the response body to extract the new 'id' and 'checksum' values
-        resp_data = json.loads(resp_body)
-        new_id = resp_data["id"]
+        
+        endpoint = endpoint.strip().split(' ')[-1].strip()
+        
+         # Convert JSON string to dictionary
+        data = json.loads(response)
+       
+        mystring+= f"\n2- Execution of PUT Request for item1:\n Request: PUT {endpoint}{id}/ \n data : {data} \n"
+        print(f"\n2- Execution of PUT Request for item1:\n Request: PUT {endpoint}{id}/ \n data : {data} \n" )
+        #send the request
+        url = f"{base_url}{endpoint}{id}/"
+        response2 = requests.put(url, json=data)
+        response2 = json.loads(response2.text)
+        response = json.loads(response)
 
-        # Replace the POST method with GET and update the URI with the new 'id'
+        mystring+= f"Response PUT Item 1 : {response2} \n"
+        print(f"Response PUT Item 1 : {response2} \n")
+        
+        try :
 
-        s_modified = s.replace("POST /api/blog/posts", f"GET /api/blog/posts/{new_id}", 1)
+            data1 = {key: value for key, value in response.items() if  key != 'created_at' and key != 'updated_at'}
+            data2 = {key: value for key, value in response2.items() if  key != 'created_at' and key != 'updated_at'}
+            assert data1 == data2
+            mystring+= f" Equality sequences Respected : \n Response PUT item 1  == Response PUT Item 1 \n"
+            print(f" Equality sequences Respected : \n Response PUT item 1  == Response PUT Item 1 \n")
+        except Exception as e:
+            
+            found = True
+            mystring+= f"{'+'*20}\n Bug where found {'+'*20}\n  Equality relations not Respected Error in PUT item : \n Response PUT item 1  != Response PUT Item 1 \n"
+            print(f"{'+'*20}\n Bug where found {'+'*20}\n  Equality relations not Respected Error in PUT item : \n Response PUT item 1  != Response PUT Item 1 \n")
+        if found :
+            write_file("checker_equality.txt", mystring)
+       
 
-        # Replace the original 'id' value with the new 'id' in the JSON body
-        # Since 'id' is a unique identifier, its value should be replaced only in the JSON body, not in the URI again
-        import re
-        s_modified = re.sub(r'\{[^}]*\}', f'', s_modified)
+      
 
-        return s_modified
 
 
     def _modif(self, method):
@@ -155,6 +228,8 @@ class MropEqualityDisjointChecker(CheckerBase):
                 request._current_combination_id += 1
                 continue
 
+
+            endpoint = rendered_data.strip().split('\n')[0].strip().rsplit(" ", 1)[0]
             rendered_data = seq.resolve_dependencies(rendered_data)
             # print("rendered data : \n", rendered_data)
             response = self._send_request(parser, rendered_data)
@@ -167,15 +242,28 @@ class MropEqualityDisjointChecker(CheckerBase):
              #store the reponse status code of post_request somewhere
             m = [(s.method , s.endpoint ) for s in seq ]
             print(f"{'>'*15}\n Request - Endpoint =\n{m}\n{'>'*15}\n  ")      
-            if seq.last_request.method.startswith('POST') and response.has_valid_code() :
+            if seq.last_request.method.startswith('PUT') and response.has_valid_code() :
 
-                body = json.loads(response.body)
+
+                 #get the id of the item1  in the response
+                id1 = response.body.split('id":')[1].split(',')[0].split('"')[0]
+                print(f"{'>'*15}\nid1 = {id1}")
+                #get the base url of the api
+                with open('../base_url.txt', 'r') as f:
+                    base_url = f.read()
+                print(f"{'>'*15}\nbase_url = {base_url}")
+                print(f"{'>'*15}\nresponse.body = {response.body}")
+
+                endpoint = endpoint.split('_READER_DELIM_')[0].replace("PUT ", "")
+                #call the checker_equality function
+                self.checker_equality(id1, endpoint, response.body, base_url)
+
+
+
                 dependencies.set_equivalence_method_codes(response.status_code,  response.body)
 
-            if seq.last_request.method.startswith('GET') and response.has_valid_code() :
 
-                dependencies.set_equivalence_method_codes(response.status_code,  response.body, "GET")
-    
+          
             # Append the rendered data to the sent list as we will not be rendering
             # with the sequence's render function
             seq.append_data_to_sent_list(request.method_endpoint_hex_definition,

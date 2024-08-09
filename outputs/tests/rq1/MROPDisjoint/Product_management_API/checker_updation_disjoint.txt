@@ -1,0 +1,168 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint_Update Operations POST item1, GET item2 vs PUT item1, GET item2 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1446,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T10:31:43.542387Z","updated_at":"2024-08-09T10:31:43.542387Z"} 
+
+2- Before item1 Updation: Execution of GET Request for item2:
+ Request:  /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'fuzzstring', 'description': 'fuzzstring', 'price': '100.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:25:20.275473Z'} 
+
+3- Execution of PUT Request for item1:
+ Request: PUT /api/products/1446/ 
+ data : {'id': 'checker_updation_disjoint', 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50'} 
+Response PUT item 1 : {'id': 1446, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-09T10:31:43.542387Z', 'updated_at': '2024-08-09T10:31:49.770746Z'} 
+
+4- After item1 Updation: Execution of GET Request for item2:
+ Request: GET /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:31:49.758126Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Updation Disjoint  relations and Equality not Respected : 
+Responses (Before and After item1 Updation) GET item 2  !=  GET Item 2 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint_Update Operations POST item1, GET item2 vs PUT item1, GET item2 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1459,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T10:31:52.975279Z","updated_at":"2024-08-09T10:31:52.975279Z"} 
+
+2- Before item1 Updation: Execution of GET Request for item2:
+ Request:  /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:31:49.758126Z'} 
+
+3- Execution of PUT Request for item1:
+ Request: PUT /api/products/1459/ 
+ data : {'id': 'checker_updation_disjoint', 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50'} 
+Response PUT item 1 : {'id': 1459, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-09T10:31:52.975279Z', 'updated_at': '2024-08-09T10:31:59.258356Z'} 
+
+4- After item1 Updation: Execution of GET Request for item2:
+ Request: GET /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:31:49.758126Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Updation Disjoint  relations and Equality not Respected : 
+Responses (Before and After item1 Updation) GET item 2  !=  GET Item 2 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint_Update Operations POST item1, GET item2 vs PUT item1, GET item2 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1470,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T10:32:01.990199Z","updated_at":"2024-08-09T10:32:01.990345Z"} 
+
+2- Before item1 Updation: Execution of GET Request for item2:
+ Request:  /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:31:49.758126Z'} 
+
+3- Execution of PUT Request for item1:
+ Request: PUT /api/products/1470/ 
+ data : {'id': 'checker_updation_disjoint', 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50'} 
+Response PUT item 1 : {'id': 1470, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-09T10:32:01.990199Z', 'updated_at': '2024-08-09T10:32:08.237362Z'} 
+
+4- After item1 Updation: Execution of GET Request for item2:
+ Request: GET /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:08.219548Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Updation Disjoint  relations and Equality not Respected : 
+Responses (Before and After item1 Updation) GET item 2  !=  GET Item 2 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint_Update Operations POST item1, GET item2 vs PUT item1, GET item2 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1481,"name":"fuzzstring","description":"fuzzstring","price":"99.00","created_at":"2024-08-09T10:32:11.641002Z","updated_at":"2024-08-09T10:32:11.641002Z"} 
+
+2- Before item1 Updation: Execution of GET Request for item2:
+ Request:  /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:08.219548Z'} 
+
+3- Execution of PUT Request for item1:
+ Request: PUT /api/products/1481/ 
+ data : {'id': 'checker_updation_disjoint', 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50'} 
+Response PUT item 1 : {'id': 1481, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-09T10:32:11.641002Z', 'updated_at': '2024-08-09T10:32:17.875375Z'} 
+
+4- After item1 Updation: Execution of GET Request for item2:
+ Request: GET /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:08.219548Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Updation Disjoint  relations and Equality not Respected : 
+Responses (Before and After item1 Updation) GET item 2  !=  GET Item 2 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint_Update Operations POST item1, GET item2 vs PUT item1, GET item2 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1492,"name":"fuzzstring","description":"fuzzstring","price":"100.00","created_at":"2024-08-09T10:32:20.519417Z","updated_at":"2024-08-09T10:32:20.519417Z"} 
+
+2- Before item1 Updation: Execution of GET Request for item2:
+ Request:  /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:08.219548Z'} 
+
+3- Execution of PUT Request for item1:
+ Request: PUT /api/products/1492/ 
+ data : {'id': 'checker_updation_disjoint', 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50'} 
+Response PUT item 1 : {'id': 1492, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-09T10:32:20.519417Z', 'updated_at': '2024-08-09T10:32:26.706581Z'} 
+
+4- After item1 Updation: Execution of GET Request for item2:
+ Request: GET /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:26.693549Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Updation Disjoint  relations and Equality not Respected : 
+Responses (Before and After item1 Updation) GET item 2  !=  GET Item 2 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint_Update Operations POST item1, GET item2 vs PUT item1, GET item2 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1503,"name":"fuzzstring","description":"fuzzstring","price":"10.10","created_at":"2024-08-09T10:32:29.391546Z","updated_at":"2024-08-09T10:32:29.391546Z"} 
+
+2- Before item1 Updation: Execution of GET Request for item2:
+ Request:  /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:26.693549Z'} 
+
+3- Execution of PUT Request for item1:
+ Request: PUT /api/products/1503/ 
+ data : {'id': 'checker_updation_disjoint', 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50'} 
+Response PUT item 1 : {'id': 1503, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-09T10:32:29.391546Z', 'updated_at': '2024-08-09T10:32:35.611582Z'} 
+
+4- After item1 Updation: Execution of GET Request for item2:
+ Request: GET /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:26.693549Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Updation Disjoint  relations and Equality not Respected : 
+Responses (Before and After item1 Updation) GET item 2  !=  GET Item 2 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+__________________________________________________
+checker_Disjoint_Update Operations POST item1, GET item2 vs PUT item1, GET item2 
+
+1- Execution of POST Request for item1:
+ Request:  POST /api/products/ 
+ Response : {"id":1514,"name":"fuzzstring","description":"fuzzstring","price":"20.00","created_at":"2024-08-09T10:32:38.250829Z","updated_at":"2024-08-09T10:32:38.251829Z"} 
+
+2- Before item1 Updation: Execution of GET Request for item2:
+ Request:  /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:26.693549Z'} 
+
+3- Execution of PUT Request for item1:
+ Request: PUT /api/products/1514/ 
+ data : {'id': 'checker_updation_disjoint', 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50'} 
+Response PUT item 1 : {'id': 1514, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-09T10:32:38.250829Z', 'updated_at': '2024-08-09T10:32:44.464176Z'} 
+
+4- After item1 Updation: Execution of GET Request for item2:
+ Request: GET /api/products/20/ 
+ Response GET Item 2 : {'id': 20, 'name': 'checker_updation_disjoint', 'description': 'checker_updation_disjoint', 'price': '50.00', 'created_at': '2024-08-06T05:32:56.180763Z', 'updated_at': '2024-08-09T10:32:44.444507Z'} 
+++++++++++++++++++++
+ Bug where found ++++++++++++++++++++
+ Updation Disjoint  relations and Equality not Respected : 
+Responses (Before and After item1 Updation) GET item 2  !=  GET Item 2 

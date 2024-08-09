@@ -4,50 +4,82 @@ from rest_framework.response import  Response
 from rest_framework import status
 from .models import Product
 from .serializers import ProductSerializer
+import random
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-    def retrieve(self, request, *args, **kwargs):
-        # intentional  bug: Cross data contamination
-        item_id = int(kwargs.get('pk'))
-        if item_id % 2 == 0:
-            # For even IDs, return the product with ID 20 (If It Exists)
-            try:
-                product = Product.objects.get(id=20)
-            except Product.DoesNotExist:
-                return Response({"error": "Product Not Found"}, status=status.HTTP_404_NOT_FOUND)
-        else:
-            product = self.get_object()
+    # def retrieve(self, request, *args, **kwargs):
+    #     # intentional  bug: Cross data contamination
+    #     item_id = int(kwargs.get('pk'))
+    #     if item_id % 2 == 0:
+    #         # For even IDs, return the product with ID 20 (If It Exists)
+    #         try:
+    #             product = Product.objects.get(id=20)
+    #         except Product.DoesNotExist:
+    #             return Response({"error": "Product Not Found"}, status=status.HTTP_404_NOT_FOUND)
+    #     else:
+    #         product = self.get_object()
     
-        serializer= self.get_serializer(product)
-        return  Response(serializer.data)
+    #     serializer= self.get_serializer(product)
+    #     return  Response(serializer.data)
 
-    ################ another bug : UPDate cross data contamination
+    # ################ another bug : UPDate cross data contamination
     # def update(self, request, *args, **kwargs):
     #     # Extract the requested item ID
     #     requested_id = int(kwargs.get('pk'))
-    #
-    #     # Intentional bug: Cross-data contamination
-    #     if requested_id % 2 == 0:
-    #         # For even IDs, mistakenly update item with ID 1 (if it exists)
-    #         update_target_id = 1
-    #     else:
-    #         # Otherwise, proceed with the normal ID
-    #         update_target_id = requested_id
-    #
+
     #     try:
-    #         product = Product.objects.get(id=update_target_id)
+    #         product = Product.objects.get(id=requested_id)
     #     except Product.DoesNotExist:
     #         return Response({"error": "Product not found"}, status=status.HTTP_404_NOT_FOUND)
-    #
+    
+    #     # Intentional bug: Cross-data contamination
+    #     if requested_id % 2 == 0:
+    #         # For even IDs, mistakenly update item with ID 20 (if it exists)
+    #         # update_target_id = 20
+    #         product_to_contaminate = Product.objects.get(id=20)
+    #         # Apply the same update to product 2
+    #         product_to_contaminate.name = request.data.get('name', product_to_contaminate.name)
+    #         product_to_contaminate.description = request.data.get('description', product_to_contaminate.description)
+    #         product_to_contaminate.price = request.data.get('price', product_to_contaminate.price)
+    #         product_to_contaminate.save()
+
+   
+    
     #     serializer = self.get_serializer(product, data=request.data, partial=True)
     #     if serializer.is_valid():
     #         serializer.save()
     #         return Response(serializer.data)
     #     else:
     #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+     ##### Bug :Update an existing product, but introduces a randomness bug.
+
+    def update(self, request, *args, **kwargs):
+        """
+        Update an existing product, but introduces a randomness bug.
+        """
+        # Extract the requested item ID
+        requested_id = int(kwargs.get('pk'))
+        try:
+            product = Product.objects.get(id=requested_id)
+        except Product.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        # Introduce randomness: Sometimes update a field with a random value
+        if random.choice([True, False]):
+            request.data['description'] = f"description-Randomized"
+            
+        
+        serializer = ProductSerializer(product, data=request.data, partial=True)
+
+         
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
       ##### Bug 3 : POST item1 different than get Item1
@@ -107,12 +139,12 @@ class ProductViewSet(viewsets.ModelViewSet):
     #     else:
     #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     #
-    def destroy(self, request, *args, **kwargs):
-        # Intentional bug: Pretend to delete the item but don't actually do it
-        instance = self.get_object()
-        # Logically, we should call instance.delete() here, but we'll skip it to simulate a bug
-        # instance.delete()  # This line is intentionally omitted to introduce the bug
-        return Response(status=status.HTTP_204_NO_CONTENT)
+    # def destroy(self, request, *args, **kwargs):
+    #     # Intentional bug: Pretend to delete the item but don't actually do it
+    #     instance = self.get_object()
+    #     # Logically, we should call instance.delete() here, but we'll skip it to simulate a bug
+    #     # instance.delete()  # This line is intentionally omitted to introduce the bug
+    #     return Response(status=status.HTTP_204_NO_CONTENT)
     #
     # def retrieve(self, request, *args, **kwargs):
     #     # Retrieve the product object
@@ -121,35 +153,35 @@ class ProductViewSet(viewsets.ModelViewSet):
     #     return Response(serializer.data)
 
     ############ Bug 6 : POST item 1 then PUT item1 compare with POST item2 (was supposed to have same description output) but they don't have
-    def create(self, request, *args, **kwargs):
-        # Standard creation logic
-        serializer = self.get_serializer(data=request.data)
-        if serializer.is_valid():
-            product = serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    # def create(self, request, *args, **kwargs):
+    #     # Standard creation logic
+    #     serializer = self.get_serializer(data=request.data)
+    #     if serializer.is_valid():
+    #         product = serializer.save()
+    #         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    #     else:
+    #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def update(self, request, *args, **kwargs):
-        # Get the product instance
-        product = self.get_object()
+    # def update(self, request, *args, **kwargs):
+    #     # Get the product instance
+    #     product = self.get_object()
         
-        # Deserialize the incoming data
-        serializer = self.get_serializer(product, data=request.data, partial=True)
-        if serializer.is_valid():
-            # Intentional bug: Alter the product's description during update
-            validated_data = serializer.validated_data
-            if 'description' in validated_data:
-                # Injecting bug: change description to something static
-                validated_data['description'] = "This description has been altered by a bug"
-                validated_data['name'] = "This name has been altered by a bug"
+    #     # Deserialize the incoming data
+    #     serializer = self.get_serializer(product, data=request.data, partial=True)
+    #     if serializer.is_valid():
+    #         # Intentional bug: Alter the product's description during update
+    #         validated_data = serializer.validated_data
+    #         if 'description' in validated_data:
+    #             # Injecting bug: change description to something static
+    #             validated_data['description'] = "This description has been altered by a bug"
+    #             validated_data['name'] = "This name has been altered by a bug"
 
-            # Save the product with the (possibly altered) validated data
-            serializer.update(product, validated_data)
+    #         # Save the product with the (possibly altered) validated data
+    #         serializer.update(product, validated_data)
             
-            return Response(serializer.data)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    #         return Response(serializer.data)
+    #     else:
+    #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     # def retrieve(self, request, *args, **kwargs):
     #     # Retrieve the product object

@@ -73,6 +73,121 @@ class MropDisjointChecker(CheckerBase):
 
 
     
+    def disjoint_Update_checker(self, id, endpoint, response,base_url): 
+        """ Update disjoint checker with the id of the item1 in the response
+            @param id: id of the item1 in the response
+            @type  id: string   
+            @param endpoint: endpoint of the item1 in the response
+            @type  endpoint: string
+            @return: None
+            @rtype : None   
+            @param response: response of the item1 in the response
+            @type  response: string 
+            @param base_url: base url of the api
+            @type  base_url: string
+        """
+        # Function to check if a string represents a digit/number
+        def is_string_number(value):
+                try:
+                    float(value)
+                    return True
+                except ValueError:
+                    return False
+                
+        def write_file(filename, text):
+                with open(filename, 'a') as f:
+                    f.write(text)
+
+        found = False      
+
+        mystring =  f"{'>'*50}\n{'_'*50}\nchecker_Disjoint_Update Operations POST item1, GET item2 vs PUT item1, GET item2 \n\n"      
+        print(f"{'>'*15}\nchecker_Disjoint Operations POST item1, GET item2 vs PUT item1, GET item2  \n\n")
+        mystring+= f"1- Execution of POST Request for item1:\n Request:  {endpoint} \n Response : {response} \n"
+        print(f"1- Execution of POST Request for item1:\n Request:  {endpoint} \n Response : {response} \n")
+
+        
+        endpoint = endpoint.strip().split(' ')[-1].strip()
+        
+        mystring+= f"\n2- Before item1 Updation: Execution of GET Request for item2:\n Request:  {endpoint}{20}/ \n "
+        print(f"\n2- Before item1 Updation: Execution of GET Request for item2:\n Request:  {endpoint}{20}/ \n")
+        #send the request
+        url = f"{base_url}{endpoint}{20}/"
+        response2 = requests.get(url)
+        response2 = json.loads(response2.text)
+    
+
+        mystring+= f"Response GET Item 2 : {response2} \n"
+        print(f"Response GET Item 2 : {response2} \n")
+
+
+        
+
+        #Execution of PUT Request for item1:
+        #  PUT {endpoint}{id}/
+        #  data : {data}
+
+        # Convert JSON string to dictionary
+        data = json.loads(response)
+        # Update the dictionary values based on the conditions
+        for key, value in data.items():
+            
+            if isinstance(value, str) and is_string_number(value):
+                data[key] = "50"
+            else:
+                data[key] = "checker_updation_disjoint"
+
+        del data['created_at']
+        del data['updated_at']
+        
+        mystring+= f"\n3- Execution of PUT Request for item1:\n Request: PUT {endpoint}{id}/ \n data : {data} \n"
+        print(f"\n3- Execution of PUT Request for item1:\n Request: PUT {endpoint}{id}/ \n data : {data} \n")
+       
+        #send the request
+        url = f"{base_url}{endpoint}{id}/"
+        response1 = requests.put(url, json=data)
+        response1 = json.loads(response1.text)
+        # response.raise_for_status()
+
+        mystring+= f"Response PUT item 1 : {response1} \n"
+        print(f"Response PUT item 1 : {response1} \n")
+
+
+        #Execution of GET Request for item2:
+        #  GET {endpoint}{id2}/     
+        #  Response GET Item 2 : {response2}
+
+        id2 = 20
+        mystring+= f"\n4- After item1 Updation: Execution of GET Request for item2:\n Request: GET {endpoint}{id2}/ \n "
+        print(f"\n4- After item1 Updation: Execution of GET Request for item2:\n Request: GET {endpoint}{id2}/ \n ")
+        #send the request
+        url = f"{base_url}{endpoint}{id2}/"
+        response3 = requests.get(url)
+        response3 = json.loads(response3.text)
+
+        mystring+= f"Response GET Item 2 : {response3} \n"
+        print(f"Response GET Item 2 : {response3} \n")
+
+        
+        try :
+
+            data1 = {key: value for key, value in response.items() if  key != 'created_at' and key != 'updated_at'}
+            data2 = {key: value for key, value in response1.items() if  key != 'created_at' and key != 'updated_at'}
+            data3 = {key: value for key, value in response2.items() }
+            data4 = {key: value for key, value in response3.items() }
+            assert data1 != data2 and data3 == data4
+            mystring+= f"Updation Disjoint and Equality sequences Respected : \n Response POST item 1  != Response PUT Item 1 and Responses(Before and After item1 Updation) GET item 2  ==  GET Item 2 \n"
+            print(f"Updation Disjoint and Equality sequences Respected : \n Response POST item 1  != Response PUT Item 1 and Responses(Before and After item1 Updation) GET item 2  == GET Item 2 \n")
+        except Exception as e:
+            
+            found = True
+            mystring+= f"{'+'*20}\n Bug where found {'+'*20}\n Updation Disjoint  relations and Equality not Respected : \nResponses (Before and After item1 Updation) GET item 2  !=  GET Item 2 \n"
+            print(f"{'+'*20}\n Bug where found {'+'*20}\n Updation Disjoint  relations and Equality not Respected : \nResponses (Before and After item1 Updation) GET item 2  !=  GET Item 2 \n")
+                   
+        if found :
+            write_file("checker_updation_disjoint.txt", mystring)
+
+
+
     
  
     def checker_disjoint(self, id, endpoint, response,base_url):
@@ -126,8 +241,8 @@ class MropDisjointChecker(CheckerBase):
         except Exception as e:
             
             found = True
-            mystring+= f"{'+'*20}\n Bug where found {'+'*20}\n Disjoint and Equality relations not Respected : \n Response POST item 1  != Response GET Item 1 \n"
-            print(f"{'+'*20}\n Bug where found {'+'*20}\n Disjoint and Equality relations not Respected : \n Response POST item 1  != Response GET Item 1 \n")
+            mystring+= f"{'+'*20}\n Bug where found {'+'*20}\n Disjoint and Equality relations not Respected Error in GET item : \n Response POST item 1  != Response GET Item 1 \n"
+            print(f"{'+'*20}\n Bug where found {'+'*20}\n Disjoint and Equality relations not Respected Error in GET item : \n Response POST item 1  != Response GET Item 1 \n")
         
         if found :
             write_file("checker_disjoint_equality.txt", mystring)
@@ -219,6 +334,8 @@ class MropDisjointChecker(CheckerBase):
                 print(f"{'>'*15}\nresponse.body = {response.body}")
                 #call the checker_disjoint function
                 self.checker_disjoint(id1, endpoint, response.body, base_url)
+
+                self.disjoint_Update_checker(id1, endpoint, response.body, base_url)
            
 
                 dependencies.set_equivalence_method_codes(response.status_code,  response.body)
