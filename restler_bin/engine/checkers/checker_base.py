@@ -92,8 +92,9 @@ class CheckerBase:
 
         import time
         start_time = time.time()  # Start time
+        Bug = True # set this to True  in case of bug seeding (after introducing a bug to your API)
 
-        for i in range(11):
+        for _ in range(11):
             
             response = request_utilities.send_request_data(
                 rendered_data, req_timeout_sec=Settings().max_request_execution_time,
@@ -134,7 +135,10 @@ class CheckerBase:
         import csv 
 
         # Write to CSV
-        csv_file_path = 'time_result.csv'
+        if Bug:
+            csv_file_path = '../time_result_bug.csv'
+        else:
+            csv_file_path = '../time_result.csv'
 
         #header
         header = ["method","endpoint","endpointLength","executionTime"]
@@ -150,15 +154,57 @@ class CheckerBase:
             # Write the data rows
             writer.writerows(results)
 
+        # calculate the average time of each method and store into the csv file under average_time column
+        import pandas as pd
 
-        # import pandas as pd
+        # Reading the CSV data into a DataFrame
+        df = pd.read_csv(csv_file_path)
 
-        # # Convert to DataFrame for better visualization
-        # df = pd.read_csv(csv_file_path)
-        # print(df)
-        # # Split the request into lines and get the first line
-        # first_line = rendered_data.strip().split('\n')[0].strip()
-        # f.write(f" {first_line} :  {execution_time} \n")
+        # Calculating the average execution time for each method
+        average_times = df.groupby('method')['executionTime'].mean()
+
+        # Map the average times back to the original data
+        df['average_time'] = df['method'].map(average_times)
+        #  Save the DataFrame back to a itsCSV file to keep the changes
+        df.to_csv(csv_file_path, index=False)
+
+        # Create a dictionary to hold both averages and thresholds
+        method_thresholds = {}
+        #to be printed
+        result = ""
+        found = False
+        if Bug:
+            # compare the average time of each method and see if it is too high than the threshold
+            # Since the average times are already in the column 'average_time',
+            # we simply need to compute these existing values per method.
+            # Reading the CSV data into a DataFrame before bug seeding
+            df = pd.read_csv("../time_result.csv")
+            method_averages = df.groupby('method')['average_time'].mean().to_dict()
+
+            for method in method_averages:
+                # Calculate threshold which is 125% of the average time
+                method_thresholds[method] = float(method_averages[method]*1.25)
+                   
+            # Reading the CSV data into a DataFrame after bug seeding
+            df = pd.read_csv("../time_result_bug.csv")
+            method_averages = df.groupby('method')['average_time'].mean().to_dict()
+            
+            #compare the average time of each method and see if it is too high than the threshold
+            for method in method_averages:
+                if method_averages[method] > method_thresholds[method]:
+                    result = result + f"Regression : Method {method} is too slow. Average time: {method_averages[method]}, Threshold: {method_thresholds[method]}"
+                    print(f"Regression : Method {method} is too slow. Average time: {method_averages[method]}, Threshold: {method_thresholds[method]}")
+                    found = True
+                else:
+                    result = result + f"Method {method} is not too slow. Average time: {method_averages[method]}, Threshold: {method_thresholds[method]}"
+                    print(f"Method {method} is not too slow. Average time: {method_averages[method]}, Threshold: {method_thresholds[method]}")
+                    
+            
+            if found:
+                #open the file and write the result
+                with open('checker_time_performance.txt', 'a') as f:
+                    f.write(result)
+
 
         Monitor().increment_requests_count(self.__class__.__name__)
         return response

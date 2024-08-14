@@ -5,6 +5,7 @@ from rest_framework import status
 from .models import Product
 from .serializers import ProductSerializer
 import random
+import time
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
@@ -67,7 +68,9 @@ class ProductViewSet(viewsets.ModelViewSet):
             product = Product.objects.get(id=requested_id)
         except Product.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
-
+        
+        # Introduce a delay for POST requests
+        time.sleep(5)  # Delays for 5 seconds
         # Introduce randomness: Sometimes update a field with a random value
         if random.choice([True, False]):
             request.data['description'] = f"description-Randomized"
@@ -92,7 +95,9 @@ class ProductViewSet(viewsets.ModelViewSet):
             product = Product.objects.get(id=requested_id)
         except Product.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
-
+        
+        # Introduce a delay for POST requests
+        time.sleep(5)  # Delays for 5 seconds
         # Introduce the bug: Only delete products with even IDs
         if int(requested_id) % 2 == 0:
             product.delete()
